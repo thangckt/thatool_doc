@@ -23,4 +23,4 @@ For Linux CentOS 6 - GLIBC 2.12
 
 | MPI | GPU | Link                                                                                                                              |
 | --- | --- | --------------------------------------------------------------------------------------------------------------------------------- |
-| [X] | [] | [torch-2.3.0a0-cp311-linux_x86_64_tachyon.whl](https://drive.google.com/file/d/1WNQ78b1GKPaiVa8Ll7I-WWdYXlTpXxyp/view?usp=drive_link) |
+| [X] | [] | [torch-2.3.0a0-cp311-linux_x86_64_tachyon.whl](https://drive.google.com/file/d/1m4pDCdUheDTEDZxKQfmQ6JQhfyg1CrMN/view?usp=drive_link) |
