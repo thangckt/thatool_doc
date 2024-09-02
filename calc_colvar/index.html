@@ -1,0 +1,6076 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="C.Thang Nguyen">
+      
+      
+      
+        <link rel="prev" href="../io_path_tool/">
+      
+      
+        <link rel="next" href="../calc_free_energy/">
+      
+      
+      <link rel="icon" href="../1images/one-note-128-o.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.32">
+    
+    
+      
+        <title>Calc colvar - thamd</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.5bb4cdcc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../_extend_theme/extra_css/full_width.css">
+    
+      <link rel="stylesheet" href="../_extend_theme/extra_css/font_size.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-QM7DWGY7ZT"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-QM7DWGY7ZT",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-QM7DWGY7ZT",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#thamd.calc.colvar" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="thamd" class="md-header__button md-logo" aria-label="thamd" data-md-component="logo">
+      
+  <img src="../1images/one-note-128-o.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            thamd
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Calc colvar
+            
+          </span>
+        </div>
+      </div>
+    </div>
+      
+        
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io" class="md-tabs__link">
+        
+  
+    
+  
+  home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href=".." class="md-tabs__link">
+          
+  
+    
+  
+  thamd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/thaml_doc" class="md-tabs__link">
+        
+  
+    
+  
+  thaml
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/thvid_doc" class="md-tabs__link">
+        
+  
+    
+  
+  thvid
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/thutil" class="md-tabs__link">
+        
+  
+    
+  
+  thutil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/cluster" class="md-tabs__link">
+        
+  
+    
+  
+  cluster
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/ref" class="md-tabs__link">
+        
+  
+    
+  
+  refs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/odd" class="md-tabs__link">
+        
+  
+    
+  
+  odd
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/blog" class="md-tabs__link">
+        
+  
+    
+  
+  blog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/tv/" class="md-tabs__link">
+        
+  
+    
+  
+  tv
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/contact" class="md-tabs__link">
+        
+  
+    
+  
+  contact
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="thamd" class="md-nav__button md-logo" aria-label="thamd" data-md-component="logo">
+      
+  <img src="../1images/one-note-128-o.png" alt="logo">
+
+    </a>
+    thamd
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href=".." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    thamd
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            thamd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    io
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            io
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io_traj/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Io traj
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io_read_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Io read data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io_read_block/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Io read block
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io_script/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Io script
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io_path_tool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Io path tool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    calc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            calc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Calc colvar
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Calc colvar
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#thamd.calc.colvar" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;colvar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" colvar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.RATIONAL" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;RATIONAL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" RATIONAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.RATIONAL.r0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;r0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.RATIONAL.d0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;d0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.RATIONAL.n" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;n
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.RATIONAL.m" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;m
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.RATIONAL.dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;dmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.RATIONAL.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.HEAVISIDE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;HEAVISIDE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" HEAVISIDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.HEAVISIDE.dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;dmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.HEAVISIDE.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.HEAVISIDE.der" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;der
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.CUBIC" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;CUBIC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" CUBIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.CUBIC.d0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;d0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.CUBIC.dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;dmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.CUBIC.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;SMAP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" SMAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.a" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.b" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.d0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;d0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.r0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;r0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.tol" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;tol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.findDmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;findDmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.findDmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;findDmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.find_Dmin_Dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;find_Dmin_Dmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.estimate_ab" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;estimate_ab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.estimate_ab_old_manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;estimate_ab_old_manual
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_CoordNum" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cv_CoordNum
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" cv_CoordNum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_CoordNum.coord_number" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;coord_number
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_PairANGLE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cv_PairANGLE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" cv_PairANGLE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_PairANGLE.PairANGLE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;PairANGLE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_Steinhardt" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cv_Steinhardt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" cv_Steinhardt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_Steinhardt.Ql_Steinhardt" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;Ql_Steinhardt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_Steinhardt.Local_Ql_Steinhardt" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;Local_Ql_Steinhardt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_fccCUBIC" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cv_fccCUBIC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" cv_fccCUBIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_fccCUBIC.fccCUBIC" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;fccCUBIC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_localCRYSTALLINITY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cv_localCRYSTALLINITY
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" cv_localCRYSTALLINITY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_localCRYSTALLINITY.localCRYSTALLINITY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;localCRYSTALLINITY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_localCRYSTALLINITY.compute_Gvectors_FCC" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_Gvectors_FCC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_slip_atom" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cv_slip_atom
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" cv_slip_atom">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_slip_atom.slip_atom" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;slip_atom
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.find_neighbor" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;find_neighbor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" find_neighbor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.find_neighbor.find_neighbor_gen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_neighbor_gen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.find_neighbor.find_neighbor_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_neighbor_list
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.sph_harmonics" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;sph_harmonics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" sph_harmonics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.sph_harmonics.yl_i" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;yl_i
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;switch_function
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" switch_function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.RATIONAL" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;RATIONAL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" RATIONAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.RATIONAL.r0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;r0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.RATIONAL.d0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;d0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.RATIONAL.n" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;n
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.RATIONAL.m" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;m
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.RATIONAL.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.RATIONAL.dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;dmax
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.HEAVISIDE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;HEAVISIDE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" HEAVISIDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.HEAVISIDE.dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;dmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.HEAVISIDE.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.HEAVISIDE.der" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;der
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.CUBIC" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;CUBIC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" CUBIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.CUBIC.d0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;d0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.CUBIC.dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;dmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.CUBIC.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;SMAP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" SMAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.a" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.b" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.d0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;d0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.r0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;r0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.tol" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;tol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.findDmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;findDmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.findDmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;findDmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.find_Dmin_Dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;find_Dmin_Dmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.estimate_ab" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;estimate_ab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.estimate_ab_old_manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;estimate_ab_old_manual
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;voronoi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" voronoi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi.Voro3D" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Voro3D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" Voro3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Bulk_gen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;fAtomicVol_Bulk_gen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Plate_gen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;fAtomicVol_Plate_gen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Bulk" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;fAtomicVol_Bulk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Plate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;fAtomicVol_Plate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi.layer_extractor" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;layer_extractor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi.surface_detect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;surface_detect
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calc_free_energy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calc free energy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    plot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../latex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    latex
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    qflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    recipe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    utils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            utils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utils/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utils_fit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utils fit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/thaml_doc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    thaml
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/thvid_doc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    thvid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/thutil" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    thutil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/cluster" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cluster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/ref" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    refs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/odd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    odd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/blog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/tv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tv
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/contact" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#thamd.calc.colvar" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;colvar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" colvar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.RATIONAL" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;RATIONAL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" RATIONAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.RATIONAL.r0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;r0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.RATIONAL.d0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;d0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.RATIONAL.n" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;n
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.RATIONAL.m" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;m
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.RATIONAL.dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;dmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.RATIONAL.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.HEAVISIDE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;HEAVISIDE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" HEAVISIDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.HEAVISIDE.dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;dmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.HEAVISIDE.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.HEAVISIDE.der" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;der
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.CUBIC" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;CUBIC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" CUBIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.CUBIC.d0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;d0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.CUBIC.dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;dmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.CUBIC.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;SMAP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" SMAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.a" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.b" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.d0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;d0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.r0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;r0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.tol" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;tol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.findDmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;findDmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.findDmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;findDmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.find_Dmin_Dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;find_Dmin_Dmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.estimate_ab" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;estimate_ab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.SMAP.estimate_ab_old_manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;estimate_ab_old_manual
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_CoordNum" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cv_CoordNum
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" cv_CoordNum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_CoordNum.coord_number" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;coord_number
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_PairANGLE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cv_PairANGLE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" cv_PairANGLE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_PairANGLE.PairANGLE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;PairANGLE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_Steinhardt" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cv_Steinhardt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" cv_Steinhardt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_Steinhardt.Ql_Steinhardt" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;Ql_Steinhardt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_Steinhardt.Local_Ql_Steinhardt" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;Local_Ql_Steinhardt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_fccCUBIC" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cv_fccCUBIC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" cv_fccCUBIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_fccCUBIC.fccCUBIC" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;fccCUBIC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_localCRYSTALLINITY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cv_localCRYSTALLINITY
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" cv_localCRYSTALLINITY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_localCRYSTALLINITY.localCRYSTALLINITY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;localCRYSTALLINITY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_localCRYSTALLINITY.compute_Gvectors_FCC" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_Gvectors_FCC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_slip_atom" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cv_slip_atom
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" cv_slip_atom">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.cv_slip_atom.slip_atom" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;slip_atom
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.find_neighbor" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;find_neighbor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" find_neighbor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.find_neighbor.find_neighbor_gen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_neighbor_gen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.find_neighbor.find_neighbor_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_neighbor_list
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.sph_harmonics" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;sph_harmonics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" sph_harmonics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.sph_harmonics.yl_i" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;yl_i
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;switch_function
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" switch_function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.RATIONAL" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;RATIONAL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" RATIONAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.RATIONAL.r0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;r0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.RATIONAL.d0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;d0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.RATIONAL.n" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;n
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.RATIONAL.m" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;m
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.RATIONAL.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.RATIONAL.dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;dmax
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.HEAVISIDE" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;HEAVISIDE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" HEAVISIDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.HEAVISIDE.dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;dmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.HEAVISIDE.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.HEAVISIDE.der" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;der
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.CUBIC" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;CUBIC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" CUBIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.CUBIC.d0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;d0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.CUBIC.dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;dmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.CUBIC.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;SMAP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" SMAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.a" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.b" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.d0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;d0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.r0" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;r0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.tol" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;tol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.eval" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;eval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.findDmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;findDmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.findDmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;findDmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.find_Dmin_Dmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;find_Dmin_Dmax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.estimate_ab" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;estimate_ab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.switch_function.SMAP.estimate_ab_old_manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;estimate_ab_old_manual
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;voronoi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" voronoi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi.Voro3D" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Voro3D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" Voro3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Bulk_gen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;fAtomicVol_Bulk_gen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Plate_gen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;fAtomicVol_Plate_gen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Bulk" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;fAtomicVol_Bulk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Plate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;fAtomicVol_Plate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi.layer_extractor" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;layer_extractor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.calc.colvar.voronoi.surface_detect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;surface_detect
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Calc colvar</h1>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="thamd.calc.colvar" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>thamd.calc.colvar</code>
+
+
+<a href="#thamd.calc.colvar" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>This module contains classes and functions to compute Order parameters, Collective variables,...</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="thamd.calc.colvar.RATIONAL" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">RATIONAL</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">d0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">dmax_tol</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.RATIONAL" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>Create an Object of SWITCHING FUNCTION</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>r0</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>The r_0 parameter of the switching function</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>d0</code></b>
+              (<code>float</code>, default:
+                  <code>0.0</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The d_0 parameter of the switching function</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>n</code></b>
+              (<code> (float</code>, default:
+                  <code>6</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The n parameter of the switching function</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>m</code></b>
+              (<code> (float</code>, default:
+                  <code>12</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The m parameter of the switching function</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>Obj</code></b> (              <code>object</code>
+)          –
+          <div class="doc-md-description">
+            <p>Object of the switching function</p>
+          </div>
+        </li>
+    </ul>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>Dmin != D0
+D0, R0    : are the parameter of switching function
+Dmin, Dmax : are the bounds at which the switching take affect</p>
+</details>
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">sw</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">SwitchFunc</span><span class="o">.</span><span class="n">RATIONAL</span><span class="p">(</span><span class="n">r0</span><span class="o">=</span><span class="mf">6.3</span><span class="p">,</span> <span class="n">d0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+
+      <p>create some intiatial attributes...</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.calc.colvar.RATIONAL.r0" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">r0</span> <span class="o">=</span> <span class="n">r0</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.RATIONAL.r0" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.calc.colvar.RATIONAL.d0" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">d0</span> <span class="o">=</span> <span class="n">d0</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.RATIONAL.d0" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.calc.colvar.RATIONAL.n" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">n</span> <span class="o">=</span> <span class="n">n</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.RATIONAL.n" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.calc.colvar.RATIONAL.m" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">m</span> <span class="o">=</span> <span class="n">m</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.RATIONAL.m" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.RATIONAL.dmax" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">dmax</span><span class="p">(</span><span class="n">dmax_tol</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.RATIONAL.dmax" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.RATIONAL.eval" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="nb">eval</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">compute_der</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.RATIONAL.eval" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>compute &amp; return value and derivation of sw function
+Input x can be a scalar or a 1d numpy ndarray</p>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="thamd.calc.colvar.HEAVISIDE" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">HEAVISIDE</span><span class="p">(</span><span class="n">r0</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.HEAVISIDE" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>create some intiatial attributes...</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.calc.colvar.HEAVISIDE.dmax" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dmax</span> <span class="o">=</span> <span class="n">r0</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.HEAVISIDE.dmax" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.HEAVISIDE.eval" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="nb">eval</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span></code>
+
+<a href="#thamd.calc.colvar.HEAVISIDE.eval" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>compute value of sw function</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.HEAVISIDE.der" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">der</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="nb">list</span> <span class="o">|</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span></code>
+
+<a href="#thamd.calc.colvar.HEAVISIDE.der" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>compute derivative of sw function</p>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="thamd.calc.colvar.CUBIC" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">CUBIC</span><span class="p">(</span><span class="n">d0</span><span class="p">,</span> <span class="n">dmax</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.CUBIC" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>Create an Object of SWITCHING FUNCTION</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>d0</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>The r_0 parameter of the switching function</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>dmax</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>The d_0 parameter of the switching function</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>Obj</code></b> (              <code>object</code>
+)          –
+          <div class="doc-md-description">
+            <p>Object of the switching function</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    
+      <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>        <span class="n">sw</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">SwitchFunc</span><span class="o">.</span><span class="n">CUBIC</span><span class="p">(</span><span class="n">d0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">dmax</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+
+      <p>create some intiatial attributes...</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.calc.colvar.CUBIC.d0" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">d0</span> <span class="o">=</span> <span class="n">d0</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.CUBIC.d0" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.calc.colvar.CUBIC.dmax" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dmax</span> <span class="o">=</span> <span class="n">dmax</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.CUBIC.dmax" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.CUBIC.eval" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="nb">eval</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">compute_der</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.CUBIC.eval" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>compute &amp; return value and derivation of sw function</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>x</code></b>
+              (<code>float or ndarray</code>)
+          –
+          <div class="doc-md-description">
+            <p>input values</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>f</code></b> (              <code>float or ndarray</code>
+)          –
+          <div class="doc-md-description">
+            <p>value of the switching function</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+<b><code>df</code></b> (              <code>(float or ndarray, optional)</code>
+)          –
+          <div class="doc-md-description">
+            <p>value of the derivative of the switching function. Just return if <code>compute_der=True</code></p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="thamd.calc.colvar.SMAP" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">SMAP</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">d0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.SMAP" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>create some intiatial attributes...</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.calc.colvar.SMAP.a" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">a</span> <span class="o">=</span> <span class="n">a</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.SMAP.a" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.calc.colvar.SMAP.b" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">b</span> <span class="o">=</span> <span class="n">b</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.SMAP.b" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.calc.colvar.SMAP.d0" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">d0</span> <span class="o">=</span> <span class="n">d0</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.SMAP.d0" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.calc.colvar.SMAP.r0" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">r0</span> <span class="o">=</span> <span class="n">r0</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.SMAP.r0" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.calc.colvar.SMAP.tol" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">tol</span> <span class="o">=</span> <span class="n">tol</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.SMAP.tol" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.SMAP.eval" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="nb">eval</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">compute_der</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.SMAP.eval" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.SMAP.findDmax" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">findDmax</span><span class="p">(</span><span class="n">tol</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">upper_bound</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">gridSize</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.SMAP.findDmax" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.SMAP.findDmin" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">findDmin</span><span class="p">(</span><span class="n">tol</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lower_bound</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">gridSize</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.SMAP.findDmin" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.SMAP.find_Dmin_Dmax" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">find_Dmin_Dmax</span><span class="p">(</span><span class="n">tol</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">gridSize</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">upper_bound</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.SMAP.find_Dmin_Dmax" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>find Dmin and Dmax of function based on given tolerance</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.SMAP.estimate_ab" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">estimate_ab</span><span class="p">(</span><span class="n">target_Dmin</span><span class="p">,</span> <span class="n">target_Dmax</span><span class="p">,</span> <span class="n">init_a</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">init_b</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.SMAP.estimate_ab" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Estimate a and b parameters of SMAP function based on given <code>R0</code>, <code>Dmax</code> and <code>Dmin</code>.
+This version employs <code>scipy.optimize.minimize</code></p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>target_Dmin</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>target Dmin</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>target_Dmax</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>target Dmax</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>search_step</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>incremental value of A/B for searching. Defaults to 0.2.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>tol</code></b>
+              (<code>float</code>, default:
+                  <code>0.001</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>tolerance of Dmin/Dmax. Defaults to 1e-3. Should be smaller than 1e-3 (larger value will cause problem)</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>A</code></b>
+              (<code>int</code>)
+          –
+          <div class="doc-md-description">
+            <p>initial value of A. Defaults to 10.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>B</code></b>
+              (<code>int</code>)
+          –
+          <div class="doc-md-description">
+            <p>initial value of B. Defaults to 20.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>A</code></b> (              <code>float</code>
+)          –
+          <div class="doc-md-description">
+            <p>found A</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+<b><code>B</code></b> (              <code>float</code>
+)          –
+          <div class="doc-md-description">
+            <p>found B</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.SMAP.estimate_ab_old_manual" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">estimate_ab_old_manual</span><span class="p">(</span><span class="n">target_Dmin</span><span class="p">,</span> <span class="n">target_Dmax</span><span class="p">,</span> <span class="n">init_a</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">init_b</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">search_step</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.SMAP.estimate_ab_old_manual" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Estimate a and b parameters of SMAP function based on given <code>R0</code>, <code>Dmax</code> and <code>Dmin</code>.
+This version use manual search.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>target_Dmin</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>target Dmin</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>target_Dmax</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>target Dmax</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>search_step</code></b>
+              (<code>float</code>, default:
+                  <code>0.1</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>incremental value of A/B for searching. Defaults to 0.2.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>tol</code></b>
+              (<code>float</code>, default:
+                  <code>0.001</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>tolerance of Dmin/Dmax. Defaults to 1e-3. Should be smaller than 1e-3 (larger value will cause problem)</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>A</code></b>
+              (<code>int</code>)
+          –
+          <div class="doc-md-description">
+            <p>initial value of A. Defaults to 10.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>B</code></b>
+              (<code>int</code>)
+          –
+          <div class="doc-md-description">
+            <p>initial value of B. Defaults to 20.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>A</code></b> (              <code>float</code>
+)          –
+          <div class="doc-md-description">
+            <p>found A</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+<b><code>B</code></b> (              <code>float</code>
+)          –
+          <div class="doc-md-description">
+            <p>found B</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h3 id="thamd.calc.colvar.cv_CoordNum" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>cv_CoordNum</code>
+
+
+<a href="#thamd.calc.colvar.cv_CoordNum" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.cv_CoordNum.coord_number" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">coord_number</span><span class="p">(</span><span class="n">Points</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.cv_CoordNum.coord_number" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>The Coordination is the size of input "Points", this function just weight it with a switching function
+* Compulsory Inputs:
+** optional Inputs:
+        switchFunc=[1,1...,1] : Nx1 array, contain values of switching function s(Rj) (Rj is positions of atom j)
+Returns:
+        coord  : scalar, Order Parameter
+    Examples: S = thamd.OrderPara.Coordination([1,0,0; 0,1,0], SW=sw)
+By Cao Thang, Aug 2020</p>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h3 id="thamd.calc.colvar.cv_PairANGLE" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>cv_PairANGLE</code>
+
+
+<a href="#thamd.calc.colvar.cv_PairANGLE" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.cv_PairANGLE.PairANGLE" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">PairANGLE</span><span class="p">(</span><span class="n">Points</span><span class="p">,</span> <span class="n">CENTER</span><span class="p">,</span> <span class="n">SIGMA</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.cv_PairANGLE.PairANGLE" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Order Parameter based on pair functions of Angles in the first shell:</p>
+
+
+<details class="agrs" open>
+  <summary>Agrs</summary>
+  <p>Points   : Nx3 Matrix, contain bonding vectors between neighboring  atoms j and ref atom i
+CENTER=[pi/3, pi/2, 2*pi/3, pi] : list, centers of Gaussians
+SIGMA =[0.03,0.04,0.04,0.03]   : list, sigmas of Gaussians
+switchFunc=[1,1...,1] : Nx1 array, contain values of switching function s(Rj) (Rj is positions of atom j)</p>
+</details>
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>gamma</code></b> (              <code>float</code>
+)          –
+          <div class="doc-md-description">
+            <p>Order Parameter</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">S</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">OrderPara</span><span class="o">.</span><span class="n">FCCcubic</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">SW</span><span class="o">=</span><span class="n">sw</span><span class="p">)</span>
+</code></pre></div>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>Require to best chose Rcut for Switching function</p>
+</details>
+
+<details class="refs" open>
+  <summary>Refs</summary>
+  <ol>
+<li>Gobbob et al., "Nucleation of Molecular Crystals Driven by Relative Information Entropy"</li>
+</ol>
+</details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h3 id="thamd.calc.colvar.cv_Steinhardt" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>cv_Steinhardt</code>
+
+
+<a href="#thamd.calc.colvar.cv_Steinhardt" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.cv_Steinhardt.Ql_Steinhardt" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">Ql_Steinhardt</span><span class="p">(</span><span class="n">ql_i</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.cv_Steinhardt.Ql_Steinhardt" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>compute origincal Stainhardt of l-th order
+Args:
+        ql_i   : a vector of (2l+1) complex components, qlm(i) vector of atom i
+Returns:
+        Ql      : scalar value of l-th order Stainhardt parameter</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.cv_Steinhardt.Local_Ql_Steinhardt" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">Local_Ql_Steinhardt</span><span class="p">(</span><span class="n">ql_i</span><span class="p">,</span> <span class="n">qlm_j</span><span class="p">,</span> <span class="n">SW</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.cv_Steinhardt.Local_Ql_Steinhardt" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>compute Local Stainhardt of l-th order (modified Steinhardt as: 10.1021/acs.jctc.6b01073)
+Args:
+        ql_i   : 1x(2l+1) array, vector of (2l+1) complex components, qlm(i) vector of atom i
+        qlm_j   : Nx(2l+1) array, rows are vectors of (2l+1) complex components, qlm(j) of all neighbors j of atom i
+Returns:
+        Local_Ql_i      : scalar value of l-th order Stainhardt parameter of atom i
+* PreRequire: compute ql_i complex vector for all atoms before this function can be used</p>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h3 id="thamd.calc.colvar.cv_fccCUBIC" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>cv_fccCUBIC</code>
+
+
+<a href="#thamd.calc.colvar.cv_fccCUBIC" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.cv_fccCUBIC.fccCUBIC" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">fccCUBIC</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">27</span><span class="p">,</span> <span class="n">zDirect</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span> <span class="n">switch_function</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.cv_fccCUBIC.fccCUBIC" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Function to Calculate FCC CUBIC parameters.</p>
+<p>By thangckt, Mar 2020</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>points</code></b>
+              (<code>Nx3 np.array</code>)
+          –
+          <div class="doc-md-description">
+            <p>array contains bonding vectors between neighboring  atoms j and ref atom i</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>alpha</code></b>
+              (<code>int</code>, default:
+                  <code>27</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>coefficient of harmonic function. Default to 27.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>zDirect</code></b>
+              (<code>str</code>, default:
+                  <code>&#39;001&#39;</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>direction of Z-direction, available '001'  '110'  '111'. Default to '001'.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>switch_function</code></b>
+              (<code>list</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>list contain values of switching function s(Rj) (Rj is positions of atom j). Default to None.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>param</code></b> (              <code>float</code>
+)          –
+          <div class="doc-md-description">
+            <p>Order Parameter.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">S</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">colvar</span><span class="o">.</span><span class="n">fccCUBIC</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">zDirect</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span> <span class="n">switch_function</span><span class="o">=</span><span class="n">sw</span><span class="p">)</span>
+</code></pre></div>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>Must choose suitable Rcut for Switching function.</p>
+</details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h3 id="thamd.calc.colvar.cv_localCRYSTALLINITY" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>cv_localCRYSTALLINITY</code>
+
+
+<a href="#thamd.calc.colvar.cv_localCRYSTALLINITY" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.cv_localCRYSTALLINITY.localCRYSTALLINITY" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">localCRYSTALLINITY</span><span class="p">(</span><span class="n">points</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">g_vectors</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">],</span> <span class="n">switch_function</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.cv_localCRYSTALLINITY.localCRYSTALLINITY" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Function to Calculate Order Parameter with multi_vectors K.</p>
+<p>By thangckt, Apr 2019</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>points</code></b>
+              (<code>Nx3 np.array</code>)
+          –
+          <div class="doc-md-description">
+            <p>array contains bonding vectors between neighboring  atoms j and ref atom i
+    g_vectors (tuple): 2d-tuple contains "directions_vectors" for g_vectors  (ex: ((4*pi/a)<em>(1,0,0), (4*pi/a)</em>(0,1,0)). The actual g_vectors will be computed in function. Default to ((1,0,0)).</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>switch_function</code></b>
+              (<code>object</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>switching function s(Rj) (Rj is positions of atom j). Default to None.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>aveLC</code></b> (              <code>float</code>
+)          –
+          <div class="doc-md-description">
+            <p>is average Order Parameter , tage over on input g_factors, 0 &lt;= LC &lt;=1</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+<b><code>LC</code></b> (              <code>list</code>
+)          –
+          <div class="doc-md-description">
+            <p>list of real numbers, are Order Parameters corresponding to each g-vector 0 &lt;= LC &lt;=1</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+<b><code>S</code></b> (              <code>list</code>
+)          –
+          <div class="doc-md-description">
+            <p>(not computed) Kx1 vetor of complex numbers, are Static Structure Factors corresponding to each g-vector</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">S</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">colvar</span><span class="o">.</span><span class="n">localCRYSTALLINITY</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">switch_function</span><span class="o">=</span><span class="n">sw</span><span class="p">,</span> <span class="n">zDirect</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>If multi g-vectors is input, then OrderPara is take by averaging over all g-vectors.</p>
+</details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.cv_localCRYSTALLINITY.compute_Gvectors_FCC" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">compute_Gvectors_FCC</span><span class="p">(</span><span class="n">g_directions</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">]</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span> <span class="n">lattice_constant</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">zDirect</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;001&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">]</span></code>
+
+<a href="#thamd.calc.colvar.cv_localCRYSTALLINITY.compute_Gvectors_FCC" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Function to convert reciprocal vectors G to be used in <code>localCRYSTALLINITY</code>.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>g_directions</code></b>
+              (<code>list</code>, default:
+                  <code>[[1, 0, 0]]</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>2d-list contains "directions_vectors" for g_vectors  (ex: ((1,0,0), (0,1,0)). The actual g_vectors will be computed. Default to ((1,0,0)).</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>lattice_constant</code></b>
+              (<code>float</code>, default:
+                  <code>1.0</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>lattice constant of crystal. Default to 1.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>zDirect</code></b>
+              (<code>str</code>, default:
+                  <code>&#39;001&#39;</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>direction of Z-direction, available '001'  '110'  '111'. Default to '001'.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>g_vectors</code></b> (              <code>list</code>
+)          –
+          <div class="doc-md-description">
+            <p>2d-list contains g_vectors</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h3 id="thamd.calc.colvar.cv_slip_atom" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>cv_slip_atom</code>
+
+
+<a href="#thamd.calc.colvar.cv_slip_atom" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.cv_slip_atom.slip_atom" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">slip_atom</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">d_ref</span><span class="p">,</span> <span class="n">d_diff</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.cv_slip_atom.slip_atom" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Function to Calculate FCC CUBIC parameters.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>points</code></b>
+              (<code>Nx3 np.array</code>)
+          –
+          <div class="doc-md-description">
+            <p>array contains bonding vectors between neighboring  atoms j and ref atom i</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>d_ref</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>reference distance.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>d_diff</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>difference distance to referred as dislocation.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>param</code></b> (              <code>float</code>
+)          –
+          <div class="doc-md-description">
+            <p>Order Parameter.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">S</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">colvar</span><span class="o">.</span><span class="n">fccCUBIC</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">;</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">zDirect</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span> <span class="n">switch_function</span><span class="o">=</span><span class="n">sw</span><span class="p">)</span>
+</code></pre></div>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>Must choose suitable Rcut for Switching function.</p>
+</details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h3 id="thamd.calc.colvar.find_neighbor" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>find_neighbor</code>
+
+
+<a href="#thamd.calc.colvar.find_neighbor" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.find_neighbor.find_neighbor_gen" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">find_neighbor_gen</span><span class="p">(</span><span class="n">points</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">]],</span> <span class="n">box</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">]],</span> <span class="n">bound_cond</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">cutoff_neighbor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">k_neighbor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">k_cutoff</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">keep_ref</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">[</span><span class="nb">list</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span></code>
+
+<a href="#thamd.calc.colvar.find_neighbor.find_neighbor_gen" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>find Nearest_Neighbors, return generator of Nearest_IDs, "Nearest relative-Position vetors from atom i"
+Ver 2: spatial.cKDTree</p>
+<p>thangckt, Sep 2019. Update: Aug 2022 to use generator</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>points</code></b>
+              (<code><span title="numpy.array">array</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>Nx3 array contain positions of atoms</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>box</code></b>
+              (<code><span title="numpy.array">array</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>simulation box</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>bound_cond</code></b>
+              (<code>list</code>, default:
+                  <code>[1, 1, 1]</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>boundary condition</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>cutoff_neighbor</code></b>
+              (<code>float</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>find neighbors within a Cutoff.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>k_neighbor</code></b>
+              (<code>int</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>find k nearest neighbors</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>keep_ref</code></b>
+              (<code>bool</code>, default:
+                  <code>False</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>include referal-atom in result</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>obj</code></b> (              <code>generator</code>
+)          –
+          <div class="doc-md-description">
+            <p>this output a GEN contains (Idx_neigh, Rij_vectors)</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">GEN</span> <span class="o">=</span> <span class="n">colvar</span><span class="o">.</span><span class="n">find_neighbors_gen</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="n">bound_cond</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">cutoff_neighbor</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">keep_ref</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+
+<details class="old-version" open>
+  <summary>old version</summary>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">access</span> <span class="n">items</span> <span class="ow">in</span> <span class="n">generator</span> <span class="k">with</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        <span class="k">for</span> <span class="n">Near_ID</span><span class="p">,</span> <span class="n">Rij_vector</span> <span class="ow">in</span> <span class="n">GEN</span><span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                <span class="nb">print</span> <span class="p">(</span><span class="n">Near_ID</span><span class="p">,</span> <span class="n">Rij_vector</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="o">-</span> <span class="n">Idx_neigh</span>    <span class="p">:</span> <span class="n">Nx1</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">Mx1</span><span class="o">-</span><span class="n">vectors</span><span class="p">,</span> <span class="n">contain</span> <span class="n">Image_IDs</span><span class="p">(</span><span class="nb">id</span> <span class="n">of</span> <span class="n">the</span> <span class="n">original</span> <span class="n">atoms</span> <span class="n">before</span> <span class="n">make</span> <span class="n">periodicity</span><span class="p">)</span> <span class="n">of</span> <span class="n">Nearest</span> <span class="n">atoms</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="o">-</span> <span class="n">Rij_vectors</span> <span class="p">:</span> <span class="n">Nx1</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">Mx3</span><span class="o">-</span><span class="n">Matrices</span><span class="p">,</span> <span class="n">contain</span> <span class="n">Nearest</span> <span class="n">Rij</span> <span class="n">relative</span><span class="o">-</span><span class="n">Position</span> <span class="n">vetors</span> <span class="kn">from</span> <span class="nn">Ref.atom</span> <span class="n">i</span> <span class="p">(</span><span class="n">Nearest</span> <span class="n">Positions</span><span class="p">)</span>
+</code></pre></div>
+</details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.find_neighbor.find_neighbor_list" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">find_neighbor_list</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="n">bound_cond</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">cutoff_neighbor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">k_neighbor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">k_cutoff</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">keep_ref</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.find_neighbor.find_neighbor_list" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>find Nearest_Neighbors, return list of Nearest_IDs, "Nearest relative-Position vetors from atom i"
+Ver 2: spatial.cKDTree</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>points</code></b>
+              (<code><span title="numpy.array">array</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>Nx3 array contain positions of atoms</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>box</code></b>
+              (<code><span title="numpy.array">array</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>simulation box</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>bound_cond</code></b>
+              (<code>list</code>, default:
+                  <code>[1, 1, 1]</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>boundary condition</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>cutoff_neighbor</code></b>
+              (<code>float</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>find neighbors within a Cutoff.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>k_neighbor</code></b>
+              (<code>int</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>find k nearest neighbors</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>keep_ref</code></b>
+              (<code>bool</code>, default:
+                  <code>False</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>include referal-atom in result</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>Idx_neigh</code></b> (              <code><span title="numpy.array">array</span></code>
+)          –
+          <div class="doc-md-description">
+            <p>Nx1 list of Mx1-vectors, contain Image_IDs(id of the original atoms before make periodicity) of Nearest atoms</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+<b><code>Rij_vectors</code></b> (              <code><span title="numpy.array">array</span></code>
+)          –
+          <div class="doc-md-description">
+            <p>Nx1 list of Mx3-Matrices, contain Nearest Rij relative-Position vetors from Ref.atom i (Nearest Positions)</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Idx_neigh</span><span class="p">,</span> <span class="n">Rij_vectors</span> <span class="o">=</span> <span class="n">colvar</span><span class="o">.</span><span class="n">find_neighbors_list</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="n">bound_cond</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">cutoff_neighbor</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">keep_ref</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>don't compute Rij_Bond to save memory
+Rij_Bonds (np.array): Nx1 list of scalars, contain Rij_bonds from Ref.atom to Nearest_atoms (Nearest-bonds)</p>
+</details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h3 id="thamd.calc.colvar.sph_harmonics" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>sph_harmonics</code>
+
+
+<a href="#thamd.calc.colvar.sph_harmonics" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.sph_harmonics.yl_i" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">yl_i</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">Rij</span><span class="p">,</span> <span class="n">SW</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;real&#39;</span><span class="p">,</span> <span class="n">normalization</span><span class="o">=</span><span class="s1">&#39;4pi&#39;</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.sph_harmonics.yl_i" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Compute vector of Spherical Harmonics for a set of point (ylm vector have (2l+1) components)</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>l</code></b>
+              (<code>int)         </code>)
+          –
+          <div class="doc-md-description">
+            <p>degree of Spherical Harmonic</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>Rij</code></b>
+              (<code>array - like</code>)
+          –
+          <div class="doc-md-description">
+            <p>Nx3 array contain Rij of nearest neighbors compute from atom i</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>SW</code></b>
+              (<code> (array-like</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Nx1 values of switching function. Default to 'None'</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>kind</code></b>
+              (<code> (str</code>, default:
+                  <code>&#39;real&#39;</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>kind of return result. Possible <code>complex</code>/<code>real</code>. Default to <code>complex</code></p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>normalization</code></b>
+              (<code>str</code>, default:
+                  <code>&#39;4pi&#39;</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>'4pi', 'ortho', 'schmidt', or 'unnorm' for geodesy 4pi normalized, orthonormalized, Schmidt semi-normalized, or unnormalized spherical harmonic functions, respectively. Default to '4pi'</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>deg</code></b>
+              (<code>bool</code>, default:
+                  <code>False</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>If True, theta and phi are expressed in degrees. Default to <code>False</code></p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>yl</code></b> (              <code>array - like</code>
+)          –
+          <div class="doc-md-description">
+            <p>vector of (2l+1) components</p>
+          </div>
+        </li>
+    </ul>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>This functions used the function <code>spharm_lm()</code> from <a href="https://shtools.github.io/SHTOOLS/pyspharm_lm.html">pyshtools</a></p>
+</details>
+
+<details class="refs" open>
+  <summary>Refs</summary>
+  <ol>
+<li><a href="https://scipython.com/blog/visualizing-the-real-forms-of-the-spherical-harmonics/">Visualizing the real forms of the spherical harmonics</a></li>
+<li>In <code>scipy.special.sph_harm</code> function the azimuthal coordinate, theta, comes before the polar coordinate, phi; anh may return complex number only</li>
+</ol>
+</details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h3 id="thamd.calc.colvar.switch_function" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>switch_function</code>
+
+
+<a href="#thamd.calc.colvar.switch_function" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="thamd.calc.colvar.switch_function.RATIONAL" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">RATIONAL</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">d0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">dmax_tol</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.switch_function.RATIONAL" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>Create an Object of SWITCHING FUNCTION</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>r0</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>The r_0 parameter of the switching function</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>d0</code></b>
+              (<code>float</code>, default:
+                  <code>0.0</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The d_0 parameter of the switching function</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>n</code></b>
+              (<code> (float</code>, default:
+                  <code>6</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The n parameter of the switching function</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>m</code></b>
+              (<code> (float</code>, default:
+                  <code>12</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The m parameter of the switching function</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>Obj</code></b> (              <code>object</code>
+)          –
+          <div class="doc-md-description">
+            <p>Object of the switching function</p>
+          </div>
+        </li>
+    </ul>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>Dmin != D0
+D0, R0    : are the parameter of switching function
+Dmin, Dmax : are the bounds at which the switching take affect</p>
+</details>
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">sw</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">SwitchFunc</span><span class="o">.</span><span class="n">RATIONAL</span><span class="p">(</span><span class="n">r0</span><span class="o">=</span><span class="mf">6.3</span><span class="p">,</span> <span class="n">d0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+
+      <p>create some intiatial attributes...</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="thamd.calc.colvar.switch_function.RATIONAL.r0" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">r0</span> <span class="o">=</span> <span class="n">r0</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.switch_function.RATIONAL.r0" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="thamd.calc.colvar.switch_function.RATIONAL.d0" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">d0</span> <span class="o">=</span> <span class="n">d0</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.switch_function.RATIONAL.d0" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="thamd.calc.colvar.switch_function.RATIONAL.n" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">n</span> <span class="o">=</span> <span class="n">n</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.switch_function.RATIONAL.n" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="thamd.calc.colvar.switch_function.RATIONAL.m" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">m</span> <span class="o">=</span> <span class="n">m</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.switch_function.RATIONAL.m" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.calc.colvar.switch_function.RATIONAL.eval" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="nb">eval</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">compute_der</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.switch_function.RATIONAL.eval" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>compute &amp; return value and derivation of sw function
+Input x can be a scalar or a 1d numpy ndarray</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.calc.colvar.switch_function.RATIONAL.dmax" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">dmax</span><span class="p">(</span><span class="n">dmax_tol</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.switch_function.RATIONAL.dmax" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="thamd.calc.colvar.switch_function.HEAVISIDE" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">HEAVISIDE</span><span class="p">(</span><span class="n">r0</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.switch_function.HEAVISIDE" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>create some intiatial attributes...</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="thamd.calc.colvar.switch_function.HEAVISIDE.dmax" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dmax</span> <span class="o">=</span> <span class="n">r0</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.switch_function.HEAVISIDE.dmax" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.calc.colvar.switch_function.HEAVISIDE.eval" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="nb">eval</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span></code>
+
+<a href="#thamd.calc.colvar.switch_function.HEAVISIDE.eval" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>compute value of sw function</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.calc.colvar.switch_function.HEAVISIDE.der" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">der</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="nb">list</span> <span class="o">|</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span></code>
+
+<a href="#thamd.calc.colvar.switch_function.HEAVISIDE.der" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>compute derivative of sw function</p>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="thamd.calc.colvar.switch_function.CUBIC" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">CUBIC</span><span class="p">(</span><span class="n">d0</span><span class="p">,</span> <span class="n">dmax</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.switch_function.CUBIC" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>Create an Object of SWITCHING FUNCTION</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>d0</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>The r_0 parameter of the switching function</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>dmax</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>The d_0 parameter of the switching function</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>Obj</code></b> (              <code>object</code>
+)          –
+          <div class="doc-md-description">
+            <p>Object of the switching function</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    
+      <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>        <span class="n">sw</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">SwitchFunc</span><span class="o">.</span><span class="n">CUBIC</span><span class="p">(</span><span class="n">d0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">dmax</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+
+      <p>create some intiatial attributes...</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="thamd.calc.colvar.switch_function.CUBIC.d0" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">d0</span> <span class="o">=</span> <span class="n">d0</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.switch_function.CUBIC.d0" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="thamd.calc.colvar.switch_function.CUBIC.dmax" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dmax</span> <span class="o">=</span> <span class="n">dmax</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.switch_function.CUBIC.dmax" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.calc.colvar.switch_function.CUBIC.eval" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="nb">eval</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">compute_der</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.switch_function.CUBIC.eval" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>compute &amp; return value and derivation of sw function</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>x</code></b>
+              (<code>float or ndarray</code>)
+          –
+          <div class="doc-md-description">
+            <p>input values</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>f</code></b> (              <code>float or ndarray</code>
+)          –
+          <div class="doc-md-description">
+            <p>value of the switching function</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+<b><code>df</code></b> (              <code>(float or ndarray, optional)</code>
+)          –
+          <div class="doc-md-description">
+            <p>value of the derivative of the switching function. Just return if <code>compute_der=True</code></p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="thamd.calc.colvar.switch_function.SMAP" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">SMAP</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">d0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.switch_function.SMAP" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>create some intiatial attributes...</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="thamd.calc.colvar.switch_function.SMAP.a" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">a</span> <span class="o">=</span> <span class="n">a</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.switch_function.SMAP.a" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="thamd.calc.colvar.switch_function.SMAP.b" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">b</span> <span class="o">=</span> <span class="n">b</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.switch_function.SMAP.b" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="thamd.calc.colvar.switch_function.SMAP.d0" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">d0</span> <span class="o">=</span> <span class="n">d0</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.switch_function.SMAP.d0" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="thamd.calc.colvar.switch_function.SMAP.r0" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">r0</span> <span class="o">=</span> <span class="n">r0</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.switch_function.SMAP.r0" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="thamd.calc.colvar.switch_function.SMAP.tol" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">tol</span> <span class="o">=</span> <span class="n">tol</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#thamd.calc.colvar.switch_function.SMAP.tol" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.calc.colvar.switch_function.SMAP.eval" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="nb">eval</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">compute_der</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.switch_function.SMAP.eval" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.calc.colvar.switch_function.SMAP.findDmax" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">findDmax</span><span class="p">(</span><span class="n">tol</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">upper_bound</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">gridSize</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.switch_function.SMAP.findDmax" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.calc.colvar.switch_function.SMAP.findDmin" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">findDmin</span><span class="p">(</span><span class="n">tol</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lower_bound</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">gridSize</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.switch_function.SMAP.findDmin" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.calc.colvar.switch_function.SMAP.find_Dmin_Dmax" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">find_Dmin_Dmax</span><span class="p">(</span><span class="n">tol</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">gridSize</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">upper_bound</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.switch_function.SMAP.find_Dmin_Dmax" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>find Dmin and Dmax of function based on given tolerance</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.calc.colvar.switch_function.SMAP.estimate_ab" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">estimate_ab</span><span class="p">(</span><span class="n">target_Dmin</span><span class="p">,</span> <span class="n">target_Dmax</span><span class="p">,</span> <span class="n">init_a</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">init_b</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.switch_function.SMAP.estimate_ab" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Estimate a and b parameters of SMAP function based on given <code>R0</code>, <code>Dmax</code> and <code>Dmin</code>.
+This version employs <code>scipy.optimize.minimize</code></p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>target_Dmin</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>target Dmin</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>target_Dmax</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>target Dmax</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>search_step</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>incremental value of A/B for searching. Defaults to 0.2.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>tol</code></b>
+              (<code>float</code>, default:
+                  <code>0.001</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>tolerance of Dmin/Dmax. Defaults to 1e-3. Should be smaller than 1e-3 (larger value will cause problem)</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>A</code></b>
+              (<code>int</code>)
+          –
+          <div class="doc-md-description">
+            <p>initial value of A. Defaults to 10.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>B</code></b>
+              (<code>int</code>)
+          –
+          <div class="doc-md-description">
+            <p>initial value of B. Defaults to 20.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>A</code></b> (              <code>float</code>
+)          –
+          <div class="doc-md-description">
+            <p>found A</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+<b><code>B</code></b> (              <code>float</code>
+)          –
+          <div class="doc-md-description">
+            <p>found B</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.calc.colvar.switch_function.SMAP.estimate_ab_old_manual" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">estimate_ab_old_manual</span><span class="p">(</span><span class="n">target_Dmin</span><span class="p">,</span> <span class="n">target_Dmax</span><span class="p">,</span> <span class="n">init_a</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">init_b</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">search_step</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.switch_function.SMAP.estimate_ab_old_manual" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Estimate a and b parameters of SMAP function based on given <code>R0</code>, <code>Dmax</code> and <code>Dmin</code>.
+This version use manual search.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>target_Dmin</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>target Dmin</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>target_Dmax</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>target Dmax</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>search_step</code></b>
+              (<code>float</code>, default:
+                  <code>0.1</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>incremental value of A/B for searching. Defaults to 0.2.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>tol</code></b>
+              (<code>float</code>, default:
+                  <code>0.001</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>tolerance of Dmin/Dmax. Defaults to 1e-3. Should be smaller than 1e-3 (larger value will cause problem)</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>A</code></b>
+              (<code>int</code>)
+          –
+          <div class="doc-md-description">
+            <p>initial value of A. Defaults to 10.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>B</code></b>
+              (<code>int</code>)
+          –
+          <div class="doc-md-description">
+            <p>initial value of B. Defaults to 20.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>A</code></b> (              <code>float</code>
+)          –
+          <div class="doc-md-description">
+            <p>found A</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+<b><code>B</code></b> (              <code>float</code>
+)          –
+          <div class="doc-md-description">
+            <p>found B</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h3 id="thamd.calc.colvar.voronoi" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>voronoi</code>
+
+
+<a href="#thamd.calc.colvar.voronoi" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="thamd.calc.colvar.voronoi.Voro3D" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">Voro3D</span><span class="p">()</span></code>
+
+<a href="#thamd.calc.colvar.voronoi.Voro3D" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>Voro ++ library</p>
+
+      
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Bulk_gen" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">fAtomicVol_Bulk_gen</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="n">coord_number</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Bulk_gen" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>compute atomic-volume of each atom in Bulk models
+Args:
+        P        : Nx3 Matrix contain positions of atoms
+        box      : simulation box
+        coord_number=False : compute coordiation number
+Returns:
+        atomicVol            : 1xM array of atomic volume
+        coord, cell_neighbor : 1xN list, Nxlist index of neighbors of each atom in original input points</p>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">gen2</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">fAtomicVol_Bulk_gen</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="n">coord_number</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>   <span class="c1"># gen2 = (tomicVol_i, cell_neighbor_i)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">gen3</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">fAtomicVol_Bulk_gen</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="n">coord_number</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>    <span class="c1"># gen3 = (tomicVol_i, cell_neighbor_i, coord_i)</span>
+</code></pre></div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Plate_gen" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">fAtomicVol_Plate_gen</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="n">bound_cond</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">max_edge</span><span class="o">=</span><span class="mf">3.1</span><span class="p">,</span> <span class="n">surf_deep</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">virtual_surface</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">coord_number</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Plate_gen" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>compute atomic-volume of each atom in Plate models
+update Ver2: copy layer 2<sup>nd</sup> and 3<sup>rd</sup> to cover free surface, offset distance = inter-layer distance. So, no need to input offset value
+Args:
+        P        : Nx3 Matrix contain positions of atoms
+        box   : simulation box</p>
+<p>**Optional:
+        bound_cond=(1, 1, 0)  : tuple of boundary condtions
+        max_edge=3.1 : value to to compute face-area = max_edge**2
+        surf_deep=15 : = max(peak) - min(valey), unit in Angstrom, use to reduce input data to save memory
+        virtual_surface=True  : apply virtual surface to cover real surface before compute Voronoi
+                + offset=False: extract 2 layers near outmost layer, and use to cover surface, offset_distance is auto computed based on atomic arrangement
+                + offset=true: extract 1 layer near outmost layer, and use to cover surface with offset_distance = offset value
+        coord_number=False : compute coordiation number
+Returns:
+        atomicVol            : 1xM array of atomic volume
+        coord, cell_neighbor : 1xN list, Nxlist index of neighbors of each atom in original input points</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Bulk" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">fAtomicVol_Bulk</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="n">coord_number</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Bulk" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>compute atomic-volume of each atom in Bulk models
+Args:
+        P        : Nx3 Matrix contain positions of atoms
+        box      : simulation box
+**Optional:
+        coord_number=False : compute coordiation number
+Returns:
+        atomicVol            : 1xM array of atomic volume
+        coord, cell_neighbor : 1xN list, Nxlist index of neighbors of each atom in original input points</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Plate" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">fAtomicVol_Plate</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="n">bound_cond</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">max_edge</span><span class="o">=</span><span class="mf">3.1</span><span class="p">,</span> <span class="n">surf_deep</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">virtual_surface</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">coord_number</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.voronoi.Voro3D.fAtomicVol_Plate" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>compute atomic-volume of each atom in Plate models
+update Ver2: copy layer 2<sup>nd</sup> and 3<sup>rd</sup> to cover free surface, offset distance = inter-layer distance. So, no need to input offset value
+Args:
+        P        : Nx3 Matrix contain positions of atoms
+        box   : simulation box</p>
+<p>**Optional:
+        bound_cond=(1, 1, 0)  : tuple of boundary condtions
+        max_edge=3.1 : value to to compute face-area = max_edge**2
+        surf_deep=15 : = max(peak) - min(valey), unit in Angstrom, use to reduce input data to save memory
+        virtual_surface=True  : apply virtual surface to cover real surface before compute Voronoi
+                + offset=False: extract 2 layers near outmost layer, and use to cover surface, offset_distance is auto computed based on atomic arrangement
+                + offset=true: extract 1 layer near outmost layer, and use to cover surface with offset_distance = offset value
+        coord_number=False : compute coordiation number
+Returns:
+        atomicVol            : 1xM array of atomic volume
+        coord, cell_neighbor : 1xN list, Nxlist index of neighbors of each atom in original input points</p>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.voronoi.layer_extractor" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">layer_extractor</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">bound_cond</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">layer_num</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_edge</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">surf_deep</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;max_face_perimeter&#39;</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.voronoi.layer_extractor" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Extract atoms of outermost layers, based on Voronoi analysis
+Args:
+          P   : Nx3 Matrix contain positions of atoms
+          bound_cond=(1, 1, 0)  : tuple of boundary condtions
+          layer_num   : number of Layers need to extract (layer_num=0 will extract all layers)
+          max_edge  : value to to compute face-area = max_edge**2
+          surf_deep : = max(peak) - min(valey), unit in Angstrom, use to reduce input data to save memory
+          method   : 'max_face_perimeter'  or   'max_face_area'
+Returns:
+        hiLayerIndex, loLayerIndex: list of lists (1xM index of atoms in each layer)
+By Cao Thang, Jan 2020</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.calc.colvar.voronoi.surface_detect" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">surface_detect</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">bound_cond</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">max_edge</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">surf_deep</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;max_face_perimeter&#39;</span><span class="p">)</span></code>
+
+<a href="#thamd.calc.colvar.voronoi.surface_detect" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Extract atoms on free surface, are atoms have Voronoi with max(faceArea) &gt;= max_edge**2
+Agrs:
+    P   : Nx3 Matrix contain positions of atoms
+    bound_cond=(1, 1, 0)  : tuple of boundary condtions
+    max_edge  : value to to compute face-area = max_edge**2
+    surf_deep : = max(peak) - min(valey), unit in Angstrom, use to reduce input data to save memory
+    method   : 'max_face_perimeter'  or   'max_face_area'</p>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          –
+          <div class="doc-md-description">
+            <p>hiSurIndex, loSurIndex: 1xM array, index of surface atoms in the original input points</p>
+          </div>
+        </li>
+    </ul>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>experimental choose: max_edge=0.73*latticeConst
+only 1 pair of surface is detect each time</p>
+</details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../io_path_tool/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Io path tool">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Io path tool
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../calc_free_energy/" class="md-footer__link md-footer__link--next" aria-label="Next: Calc free energy">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Calc free energy
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 <a href="https://thangckt.github.io">thangckt</a>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.expand", "navigation.indexes", "navigation.tracking", "navigation.top", "search.suggest", "toc.follow", "navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.header", "navigation.footer"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.482e4c9f.min.js"></script>
+      
+        <script src="../_extend_theme/extra_js/gg_adsense.js"></script>
+      
+    
+  </body>
+</html>

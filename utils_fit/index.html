@@ -1,0 +1,3570 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="C.Thang Nguyen">
+      
+      
+      
+        <link rel="prev" href="../utils/">
+      
+      
+      
+      <link rel="icon" href="../1images/one-note-128-o.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.32">
+    
+    
+      
+        <title>Utils fit - thamd</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.5bb4cdcc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../_extend_theme/extra_css/full_width.css">
+    
+      <link rel="stylesheet" href="../_extend_theme/extra_css/font_size.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-QM7DWGY7ZT"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-QM7DWGY7ZT",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-QM7DWGY7ZT",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#thamd.utils.fit" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="thamd" class="md-header__button md-logo" aria-label="thamd" data-md-component="logo">
+      
+  <img src="../1images/one-note-128-o.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            thamd
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Utils fit
+            
+          </span>
+        </div>
+      </div>
+    </div>
+      
+        
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io" class="md-tabs__link">
+        
+  
+    
+  
+  home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href=".." class="md-tabs__link">
+          
+  
+    
+  
+  thamd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/thaml_doc" class="md-tabs__link">
+        
+  
+    
+  
+  thaml
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/thvid_doc" class="md-tabs__link">
+        
+  
+    
+  
+  thvid
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/thutil" class="md-tabs__link">
+        
+  
+    
+  
+  thutil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/cluster" class="md-tabs__link">
+        
+  
+    
+  
+  cluster
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/ref" class="md-tabs__link">
+        
+  
+    
+  
+  refs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/odd" class="md-tabs__link">
+        
+  
+    
+  
+  odd
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/blog" class="md-tabs__link">
+        
+  
+    
+  
+  blog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/tv/" class="md-tabs__link">
+        
+  
+    
+  
+  tv
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://thangckt.github.io/contact" class="md-tabs__link">
+        
+  
+    
+  
+  contact
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="thamd" class="md-nav__button md-logo" aria-label="thamd" data-md-component="logo">
+      
+  <img src="../1images/one-note-128-o.png" alt="logo">
+
+    </a>
+    thamd
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href=".." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    thamd
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            thamd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    io
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            io
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io_traj/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Io traj
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io_read_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Io read data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io_read_block/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Io read block
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io_script/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Io script
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io_path_tool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Io path tool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    calc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            calc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calc_colvar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calc colvar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calc_free_energy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calc free energy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    plot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../latex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    latex
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    qflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    recipe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    utils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            utils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utils/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Utils fit
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Utils fit
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#thamd.utils.fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;fit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" fit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.curve_intersect_shapely" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;curve_intersect_shapely
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.polyfit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;polyfit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.find_slope" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_slope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.find_roots" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_roots
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.find_extrema" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_extrema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.find_convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_convergence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.extrapolate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;extrapolate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.curve_intersect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;curve_intersect
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" curve_intersect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.curve_intersect.curve_intersect_shapely" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;curve_intersect_shapely
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.curve_intersect.___curve_intersect_numpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;___curve_intersect_numpy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;fit_root
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" fit_root">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root.polyfit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;polyfit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root.find_slope" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_slope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root.find_roots" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_roots
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root.find_extrema" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_extrema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root.find_convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_convergence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root.extrapolate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;extrapolate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root.___uncertainty_weighted_fit_linear" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;___uncertainty_weighted_fit_linear
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;user_lmfit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" user_lmfit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;UserLmfit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" UserLmfit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.Linear" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;Linear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.inverseTemperature" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;inverseTemperature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.ExpDecay" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;ExpDecay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sizeEffect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sizeEffect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.unNormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;unNormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.NormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;NormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_2unNormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_2unNormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_3unNormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_3unNormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_4unNormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_4unNormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_5unNormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_5unNormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_2NormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_2NormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_3NormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_3NormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_4NormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_4NormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_5NormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_5NormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.DoseResp" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;DoseResp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.BiDoseResp" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;BiDoseResp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.Carreau" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;Carreau
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.Cross" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;Cross
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.GammaCFD" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;GammaCFD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/thaml_doc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    thaml
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/thvid_doc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    thvid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/thutil" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    thutil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/cluster" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cluster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/ref" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    refs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/odd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    odd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/blog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/tv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tv
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://thangckt.github.io/contact" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#thamd.utils.fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;fit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" fit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.curve_intersect_shapely" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;curve_intersect_shapely
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.polyfit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;polyfit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.find_slope" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_slope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.find_roots" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_roots
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.find_extrema" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_extrema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.find_convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_convergence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.extrapolate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;extrapolate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.curve_intersect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;curve_intersect
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" curve_intersect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.curve_intersect.curve_intersect_shapely" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;curve_intersect_shapely
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.curve_intersect.___curve_intersect_numpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;___curve_intersect_numpy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;fit_root
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" fit_root">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root.polyfit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;polyfit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root.find_slope" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_slope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root.find_roots" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_roots
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root.find_extrema" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_extrema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root.find_convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;find_convergence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root.extrapolate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;extrapolate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.fit_root.___uncertainty_weighted_fit_linear" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;___uncertainty_weighted_fit_linear
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;user_lmfit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" user_lmfit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;UserLmfit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" UserLmfit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.Linear" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;Linear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.inverseTemperature" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;inverseTemperature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.ExpDecay" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;ExpDecay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sizeEffect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sizeEffect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.unNormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;unNormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.NormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;NormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_2unNormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_2unNormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_3unNormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_3unNormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_4unNormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_4unNormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_5unNormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_5unNormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_2NormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_2NormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_3NormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_3NormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_4NormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_4NormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_5NormalGaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sum_5NormalGaussian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.DoseResp" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;DoseResp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.BiDoseResp" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;BiDoseResp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.Carreau" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;Carreau
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.Cross" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;Cross
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thamd.utils.fit.user_lmfit.UserLmfit.GammaCFD" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;GammaCFD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Utils fit</h1>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="thamd.utils.fit" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>thamd.utils.fit</code>
+
+
+<a href="#thamd.utils.fit" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="thamd.utils.fit.curve_intersect_shapely" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">curve_intersect_shapely</span><span class="p">(</span><span class="n">line1</span><span class="p">,</span> <span class="n">line2</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.curve_intersect_shapely" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>find the intersection points between 2 lines
+Args:
+        line1 (array like): Nx2 arrays, contains data points of curve 1
+        line2 (array like): Nx2 arrays, contains data points of curve 2</p>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>Points</code></b> (              <code>array like</code>
+)          –
+          <div class="doc-md-description">
+            <p>Nx2 arrays, contains data points of intersection points</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="thamd.utils.fit.polyfit" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sigma_y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">uncert</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.polyfit" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Polynomial fitting for y = f(x) relation, which returns uncertainties of coefficients.
+The fitted polynomial(s) are in the form</p>
+<div class="codehilite"><pre><span></span><code>p(x) = a0 + a1*x + a2*x^2 + ... + an*x^n
+</code></pre></div>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>x,y</code></b>
+              (<code>array</code>)
+          –
+          <div class="doc-md-description">
+            <p>1D array of x and y data</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>deg</code></b>
+              (<code>int</code>, default:
+                  <code>1</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>degree of polynomial</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>sigma_y</code></b>
+              (<code>array</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>1D array of standard deviation of y data. Use in weighted least square fitting.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>uncert</code></b>
+              (<code>bool</code>, default:
+                  <code>False</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>return uncertainties of coefficients. Defaults to False.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>**kwargs</code></b>
+          –
+          <div class="doc-md-description">
+            <p>additional arguments, adapt all args from <code>np.polyfit</code></p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>pars</code></b> (              <code>array</code>
+)          –
+          <div class="doc-md-description">
+            <p>1D array of coefficients</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+<b><code>uncert</code></b> (              <code>array</code>
+)          –
+          <div class="doc-md-description">
+            <p>1D array of standard deviation of coefficients</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="thamd.utils.fit.find_slope" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">find_slope</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.find_slope" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Compute slope of a linear relation y = A + B*x.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>x</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of x value</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>y</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of y value</p>
+          </div>
+        </li>
+    </ul>
+
+
+<details class="return" open>
+  <summary>Return</summary>
+  <p>slope (float): the slope to linear relation</p>
+</details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="thamd.utils.fit.find_roots" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">find_roots</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.find_roots" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>find roots for y = f(x) relation in polynomial form.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>x</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of x value</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>y</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of y value</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>order</code></b>
+              (<code>int</code>, default:
+                  <code>1</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>order of polynomial. Defaults to 1.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>roots</code></b> (              <code>list</code>
+)          –
+          <div class="doc-md-description">
+            <p>list of roots</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="thamd.utils.fit.find_extrema" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">find_extrema</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">retun_fit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.find_extrema" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>find extrema points (der=0) for y = f(x) relation in polynomial form.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>x</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of x value</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>y</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of y value</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>order</code></b>
+              (<code>int</code>, default:
+                  <code>2</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>order of polynomial. Defaults to 2.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>retun_fit</code></b>
+              (<code>bool</code>, default:
+                  <code>False</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>return fitted params. Defaults to False.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>p</code></b> (              <code>list</code>
+)          –
+          <div class="doc-md-description">
+            <p>list of flex points.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="thamd.utils.fit.find_convergence" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">find_convergence</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-06</span><span class="p">,</span> <span class="n">grid_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">convergence_side</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.find_convergence" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+      <p>y is a function of x, then find value of x that y converge with a tolerance &lt; tol.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>x</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of x value</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>y</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of y value</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>tol</code></b>
+              (<code>float</code>, default:
+                  <code>1e-06</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>tolerance of the slope (dy/dx). Defaults to 1e-6.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>grid_size</code></b>
+              (<code>float</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>set grid size of x if need to interpolate finer data. Defaults to 0.001.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>convergence_side</code></b>
+              (<code>str</code>, default:
+                  <code>&#39;right&#39;</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>find the first x on the left or right side. Defaults to "right".</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          –
+          <div class="doc-md-description">
+            <p>best_x, best_y (float): found x and y value that y converge with a tolerance &lt; tol.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>Value <code>df['dy'] = df['y'].diff()</code> depends on grid size. Should use <code>df['dy'] = df['y'].diff()/ df['x'].diff()</code>.</p>
+</details>
+
+<details class="references" open>
+  <summary>References</summary>
+  <ol>
+<li><a href="https://docs.scipy.org/doc/scipy/tutorial/interpolate.html">https://docs.scipy.org/doc/scipy/tutorial/interpolate.html</a></li>
+</ol>
+</details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="thamd.utils.fit.extrapolate" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">extrapolate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">left_side</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">right_side</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">grid_size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">list</span><span class="p">,</span> <span class="nb">list</span><span class="p">]</span></code>
+
+<a href="#thamd.utils.fit.extrapolate" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h3 id="thamd.utils.fit.curve_intersect" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>curve_intersect</code>
+
+
+<a href="#thamd.utils.fit.curve_intersect" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.utils.fit.curve_intersect.curve_intersect_shapely" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">curve_intersect_shapely</span><span class="p">(</span><span class="n">line1</span><span class="p">,</span> <span class="n">line2</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.curve_intersect.curve_intersect_shapely" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>find the intersection points between 2 lines
+Args:
+        line1 (array like): Nx2 arrays, contains data points of curve 1
+        line2 (array like): Nx2 arrays, contains data points of curve 2</p>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>Points</code></b> (              <code>array like</code>
+)          –
+          <div class="doc-md-description">
+            <p>Nx2 arrays, contains data points of intersection points</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.utils.fit.curve_intersect.___curve_intersect_numpy" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">___curve_intersect_numpy</span><span class="p">(</span><span class="n">curve1</span><span class="p">,</span> <span class="n">curve2</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.curve_intersect.___curve_intersect_numpy" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>find the intersection points between 2 curves</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>curve1</code></b>
+              (<code>array like</code>)
+          –
+          <div class="doc-md-description">
+            <p>Nx2 arrays in form (x,y), contains data points of curve 1</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>curve2</code></b>
+              (<code>array like</code>)
+          –
+          <div class="doc-md-description">
+            <p>Nx2 arrays in form (x,y), contains data points of curve 2</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>degree</code></b>
+              (<code>int</code>, default:
+                  <code>3</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>degree of polynomial function to fit the curve</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>bounds</code></b>
+              (<code>tuple</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>(min, max) of x, to select points in bounds</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>Points</code></b> (              <code>array like</code>
+)          –
+          <div class="doc-md-description">
+            <p>Nx2 arrays, contains data points of intersection points</p>
+          </div>
+        </li>
+    </ul>
+
+
+<details class="refs" open>
+  <summary>Refs</summary>
+  <p>[1] <a href="http://t.ly/2_a-K">http://t.ly/2_a-K</a></p>
+</details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h3 id="thamd.utils.fit.fit_root" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>fit_root</code>
+
+
+<a href="#thamd.utils.fit.fit_root" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.utils.fit.fit_root.polyfit" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sigma_y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">uncert</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.fit_root.polyfit" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Polynomial fitting for y = f(x) relation, which returns uncertainties of coefficients.
+The fitted polynomial(s) are in the form</p>
+<div class="codehilite"><pre><span></span><code>p(x) = a0 + a1*x + a2*x^2 + ... + an*x^n
+</code></pre></div>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>x,y</code></b>
+              (<code>array</code>)
+          –
+          <div class="doc-md-description">
+            <p>1D array of x and y data</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>deg</code></b>
+              (<code>int</code>, default:
+                  <code>1</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>degree of polynomial</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>sigma_y</code></b>
+              (<code>array</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>1D array of standard deviation of y data. Use in weighted least square fitting.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>uncert</code></b>
+              (<code>bool</code>, default:
+                  <code>False</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>return uncertainties of coefficients. Defaults to False.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>**kwargs</code></b>
+          –
+          <div class="doc-md-description">
+            <p>additional arguments, adapt all args from <code>np.polyfit</code></p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>pars</code></b> (              <code>array</code>
+)          –
+          <div class="doc-md-description">
+            <p>1D array of coefficients</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+<b><code>uncert</code></b> (              <code>array</code>
+)          –
+          <div class="doc-md-description">
+            <p>1D array of standard deviation of coefficients</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.utils.fit.fit_root.find_slope" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">find_slope</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.fit_root.find_slope" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Compute slope of a linear relation y = A + B*x.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>x</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of x value</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>y</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of y value</p>
+          </div>
+        </li>
+    </ul>
+
+
+<details class="return" open>
+  <summary>Return</summary>
+  <p>slope (float): the slope to linear relation</p>
+</details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.utils.fit.fit_root.find_roots" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">find_roots</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.fit_root.find_roots" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>find roots for y = f(x) relation in polynomial form.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>x</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of x value</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>y</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of y value</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>order</code></b>
+              (<code>int</code>, default:
+                  <code>1</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>order of polynomial. Defaults to 1.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>roots</code></b> (              <code>list</code>
+)          –
+          <div class="doc-md-description">
+            <p>list of roots</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.utils.fit.fit_root.find_extrema" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">find_extrema</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">retun_fit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.fit_root.find_extrema" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>find extrema points (der=0) for y = f(x) relation in polynomial form.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>x</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of x value</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>y</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of y value</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>order</code></b>
+              (<code>int</code>, default:
+                  <code>2</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>order of polynomial. Defaults to 2.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>retun_fit</code></b>
+              (<code>bool</code>, default:
+                  <code>False</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>return fitted params. Defaults to False.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>p</code></b> (              <code>list</code>
+)          –
+          <div class="doc-md-description">
+            <p>list of flex points.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.utils.fit.fit_root.find_convergence" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">find_convergence</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-06</span><span class="p">,</span> <span class="n">grid_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">convergence_side</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.fit_root.find_convergence" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>y is a function of x, then find value of x that y converge with a tolerance &lt; tol.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>x</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of x value</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>y</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>a list/array of y value</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>tol</code></b>
+              (<code>float</code>, default:
+                  <code>1e-06</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>tolerance of the slope (dy/dx). Defaults to 1e-6.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>grid_size</code></b>
+              (<code>float</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>set grid size of x if need to interpolate finer data. Defaults to 0.001.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>convergence_side</code></b>
+              (<code>str</code>, default:
+                  <code>&#39;right&#39;</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>find the first x on the left or right side. Defaults to "right".</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          –
+          <div class="doc-md-description">
+            <p>best_x, best_y (float): found x and y value that y converge with a tolerance &lt; tol.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>Value <code>df['dy'] = df['y'].diff()</code> depends on grid size. Should use <code>df['dy'] = df['y'].diff()/ df['x'].diff()</code>.</p>
+</details>
+
+<details class="references" open>
+  <summary>References</summary>
+  <ol>
+<li><a href="https://docs.scipy.org/doc/scipy/tutorial/interpolate.html">https://docs.scipy.org/doc/scipy/tutorial/interpolate.html</a></li>
+</ol>
+</details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.utils.fit.fit_root.extrapolate" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">extrapolate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">left_side</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">right_side</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">grid_size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">list</span><span class="p">,</span> <span class="nb">list</span><span class="p">]</span></code>
+
+<a href="#thamd.utils.fit.fit_root.extrapolate" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thamd.utils.fit.fit_root.___uncertainty_weighted_fit_linear" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">___uncertainty_weighted_fit_linear</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sigma_y</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.fit_root.___uncertainty_weighted_fit_linear" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Compute uncertainties in coefficients A and B of y = A + B*x from the weighted least square fitting.</p>
+<p>Apply when the measured data y_i has different uncertainties sigma_y_i, the weights w_i = 1/(sigma_y_i^2).</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>x,y</code></b>
+              (<code>array</code>)
+          –
+          <div class="doc-md-description">
+            <p>1D array of x and y data</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>sigma_y</code></b>
+              (<code>array</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>1D array of standard deviation of y data. Use in weighted least square fitting.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>pars</code></b> (              <code>array</code>
+)          –
+          <div class="doc-md-description">
+            <p>1D array of coefficients A and B</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+<b><code>uncertainties</code></b> (              <code>tuple</code>
+)          –
+          <div class="doc-md-description">
+            <p>1D array (sigma_intercept, sigma_slope) of standard deviation of A and B</p>
+          </div>
+        </li>
+    </ul>
+
+
+<details class="references" open>
+  <summary>References</summary>
+  <ol>
+<li>Taylor_1997_An introduction to error analysis: the study of uncertainties in physical measurements, page 198.</li>
+<li><a href="https://numpy.org/doc/stable/reference/generated/numpy.polynomial.polynomial.polyfit.html">https://numpy.org/doc/stable/reference/generated/numpy.polynomial.polynomial.polyfit.html</a></li>
+</ol>
+</details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h3 id="thamd.utils.fit.user_lmfit" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>user_lmfit</code>
+
+
+<a href="#thamd.utils.fit.user_lmfit" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="thamd.utils.fit.user_lmfit.UserLmfit" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code>UserLmfit</code>
+
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>The class contains set of objective function of fitting use by LMFIT package
+NOTEs:
+- defined function followed the convection of LMFIT: the first argument of the function is taken
+as the independent variable, held in independent_vars, and the rest of the functions positional
+arguments (and, in certain cases, keyword arguments – see below) are used for Parameter names.
+<a href="https://lmfit.github.io/lmfit-py/model.html">https://lmfit.github.io/lmfit-py/model.html</a>
+- This Class defines curve-forms that are not vailable in LMFIT's built-in models</p>
+<ul>
+<li>
+<p>Attributes:
+        swType       : (default='RATIONAL') Type of witching function,
+        r0, d0       : The r_0 parameter of the switching function</p>
+</li>
+<li>
+<p>Methods:
+        fFunc    : compute &amp; return value and derivation of sw function
+        fDmax    : estimate value of Dmax</p>
+</li>
+</ul>
+<p>Ex: func = thamd.CurveLib.Linear(x)</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.Linear" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">Linear</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a0</span><span class="p">,</span> <span class="n">a1</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.Linear" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>this func is available in LMFIT, just play as an example here</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.inverseTemperature" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">inverseTemperature</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.inverseTemperature" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.ExpDecay" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">ExpDecay</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">lambd</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.ExpDecay" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.sizeEffect" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">sizeEffect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.sizeEffect" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>system size-dependence on term N^(&#8532;</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.unNormalGaussian" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">unNormalGaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">amp</span><span class="p">,</span> <span class="n">cen</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.unNormalGaussian" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>The unNormalize Gaussian function</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.NormalGaussian" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">NormalGaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">amp</span><span class="p">,</span> <span class="n">cen</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.NormalGaussian" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>The Normalize Gaussian function</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.sum_2unNormalGaussian" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">sum_2unNormalGaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">amp1</span><span class="p">,</span> <span class="n">amp2</span><span class="p">,</span> <span class="n">cen1</span><span class="p">,</span> <span class="n">cen2</span><span class="p">,</span> <span class="n">sig1</span><span class="p">,</span> <span class="n">sig2</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_2unNormalGaussian" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>The sum of 2 Gaussian function</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.sum_3unNormalGaussian" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">sum_3unNormalGaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">amp1</span><span class="p">,</span> <span class="n">amp2</span><span class="p">,</span> <span class="n">amp3</span><span class="p">,</span> <span class="n">cen1</span><span class="p">,</span> <span class="n">cen2</span><span class="p">,</span> <span class="n">cen3</span><span class="p">,</span> <span class="n">sig1</span><span class="p">,</span> <span class="n">sig2</span><span class="p">,</span> <span class="n">sig3</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_3unNormalGaussian" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>The sum of 3 Gaussian function</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.sum_4unNormalGaussian" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">sum_4unNormalGaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">amp1</span><span class="p">,</span> <span class="n">amp2</span><span class="p">,</span> <span class="n">amp3</span><span class="p">,</span> <span class="n">amp4</span><span class="p">,</span> <span class="n">cen1</span><span class="p">,</span> <span class="n">cen2</span><span class="p">,</span> <span class="n">cen3</span><span class="p">,</span> <span class="n">cen4</span><span class="p">,</span> <span class="n">sig1</span><span class="p">,</span> <span class="n">sig2</span><span class="p">,</span> <span class="n">sig3</span><span class="p">,</span> <span class="n">sig4</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_4unNormalGaussian" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>The sum of 4 Gaussian function</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.sum_5unNormalGaussian" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">sum_5unNormalGaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">amp1</span><span class="p">,</span> <span class="n">amp2</span><span class="p">,</span> <span class="n">amp3</span><span class="p">,</span> <span class="n">amp4</span><span class="p">,</span> <span class="n">amp5</span><span class="p">,</span> <span class="n">cen1</span><span class="p">,</span> <span class="n">cen2</span><span class="p">,</span> <span class="n">cen3</span><span class="p">,</span> <span class="n">cen4</span><span class="p">,</span> <span class="n">cen5</span><span class="p">,</span> <span class="n">sig1</span><span class="p">,</span> <span class="n">sig2</span><span class="p">,</span> <span class="n">sig3</span><span class="p">,</span> <span class="n">sig4</span><span class="p">,</span> <span class="n">sig5</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_5unNormalGaussian" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>The sum of 5 Gaussian function</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.sum_2NormalGaussian" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">sum_2NormalGaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">amp1</span><span class="p">,</span> <span class="n">amp2</span><span class="p">,</span> <span class="n">cen1</span><span class="p">,</span> <span class="n">cen2</span><span class="p">,</span> <span class="n">sig1</span><span class="p">,</span> <span class="n">sig2</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_2NormalGaussian" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>The sum of 2 Gaussian function</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.sum_3NormalGaussian" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">sum_3NormalGaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">amp1</span><span class="p">,</span> <span class="n">amp2</span><span class="p">,</span> <span class="n">amp3</span><span class="p">,</span> <span class="n">cen1</span><span class="p">,</span> <span class="n">cen2</span><span class="p">,</span> <span class="n">cen3</span><span class="p">,</span> <span class="n">sig1</span><span class="p">,</span> <span class="n">sig2</span><span class="p">,</span> <span class="n">sig3</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_3NormalGaussian" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>The sum of 3 Gaussian function</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.sum_4NormalGaussian" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">sum_4NormalGaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">amp1</span><span class="p">,</span> <span class="n">amp2</span><span class="p">,</span> <span class="n">amp3</span><span class="p">,</span> <span class="n">amp4</span><span class="p">,</span> <span class="n">cen1</span><span class="p">,</span> <span class="n">cen2</span><span class="p">,</span> <span class="n">cen3</span><span class="p">,</span> <span class="n">cen4</span><span class="p">,</span> <span class="n">sig1</span><span class="p">,</span> <span class="n">sig2</span><span class="p">,</span> <span class="n">sig3</span><span class="p">,</span> <span class="n">sig4</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_4NormalGaussian" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>The sum of 4 Gaussian function</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.sum_5NormalGaussian" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">sum_5NormalGaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">amp1</span><span class="p">,</span> <span class="n">amp2</span><span class="p">,</span> <span class="n">amp3</span><span class="p">,</span> <span class="n">amp4</span><span class="p">,</span> <span class="n">amp5</span><span class="p">,</span> <span class="n">cen1</span><span class="p">,</span> <span class="n">cen2</span><span class="p">,</span> <span class="n">cen3</span><span class="p">,</span> <span class="n">cen4</span><span class="p">,</span> <span class="n">cen5</span><span class="p">,</span> <span class="n">sig1</span><span class="p">,</span> <span class="n">sig2</span><span class="p">,</span> <span class="n">sig3</span><span class="p">,</span> <span class="n">sig4</span><span class="p">,</span> <span class="n">sig5</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.sum_5NormalGaussian" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>The sum of 5 Gaussian function</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.DoseResp" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">DoseResp</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">A1</span><span class="o">=-</span><span class="mf">3.3</span><span class="p">,</span> <span class="n">A2</span><span class="o">=-</span><span class="mf">2.9</span><span class="p">,</span> <span class="n">LOGx0</span><span class="o">=</span><span class="mi">480000</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.DoseResp" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Dose-response curve with variable Hill slope given by parameter 'p'.
+Origin's Category: Pharmacology
+* Params:
+                Names=A1,A2,LOGx0,p
+                Meanings=bottom asymptote,top asymptote, center, hill slope
+Initiate params: pars = mod.make_params(A1=-3.3, A2=-2.9, LOGx0=480000, p=1.2)</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.BiDoseResp" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">BiDoseResp</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">A1</span><span class="o">=-</span><span class="mf">3.3</span><span class="p">,</span> <span class="n">A2</span><span class="o">=-</span><span class="mf">2.9</span><span class="p">,</span> <span class="n">LOGx01</span><span class="o">=</span><span class="mi">175000</span><span class="p">,</span> <span class="n">LOGx02</span><span class="o">=</span><span class="mi">480000</span><span class="p">,</span> <span class="n">h1</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">h2</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.BiDoseResp" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Biphasic Dose Response Function,
+Origin's Category: Pharmacology
+* Params:
+                Names=A1, A2, LOGx01, LOGx02, h1, h2, p
+                Meanings=Bottom, Top, 1<sup>st</sup> EC50, 2<sup>nd</sup> EC50, slope1, slope2, proportion
+Initiate params: pars = mod.make_params(A1=0, A2=100, LOGx01=-8, LOGx02=-4, h1=0.8, h2=1.2, p=0.5)</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.Carreau" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">Carreau</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">A1</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">A2</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">2.2</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.Carreau" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Carreau-Yasuda model to describe pseudoplastic flow with asymptotic viscosities at zero and infinite shear rates
+Origin's Category: Rheology
+* Params:
+                Names = A1,A2,t,a,n    &gt;0         (lower bound)
+                Meanings = zero shear viscosity,infinite shear viscosity,time constant,transition control factor,power index
+Initiate params: pars = mod.make_params(A1=-3.3, A2=-2.9, t=2.0, a=2.2, n=0.2)</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.Cross" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">Cross</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">A1</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">A2</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.Cross" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Cross model to describe pseudoplastic flow with asymptotic viscosities at zero and infinite shear rates
+Origin's Category: Rheology
+* Params:
+                Names = A1,A2,t,m      &gt;0         (lower bound)
+                Meanings = zero shear viscosity,infinite shear viscosity,time constant,power index
+Initiate params: pars = mod.make_params(A1=0.1, A2=3, t=1000, m=0.9)</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thamd.utils.fit.user_lmfit.UserLmfit.GammaCFD" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">GammaCFD</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></code>
+
+<a href="#thamd.utils.fit.user_lmfit.UserLmfit.GammaCFD" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Gamma cumulative distribution function
+Origin's Category: Statistics
+* Params:
+                Names = y0,A1,a,b          (A1,a,b &gt;0)
+                Meanings = Offset,Amplitude,Shape,Scale
+Initiate params: pars = mod.make_params(A1=0.1, A2=3, t=1000, m=0.9)</p>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../utils/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Utils">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Utils
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 <a href="https://thangckt.github.io">thangckt</a>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.expand", "navigation.indexes", "navigation.tracking", "navigation.top", "search.suggest", "toc.follow", "navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.header", "navigation.footer"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.482e4c9f.min.js"></script>
+      
+        <script src="../_extend_theme/extra_js/gg_adsense.js"></script>
+      
+    
+  </body>
+</html>
