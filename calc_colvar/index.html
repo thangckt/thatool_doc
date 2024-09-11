@@ -50,9 +50,9 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../_extend_theme/extra_css/full_width.css">
+      <link rel="stylesheet" href="../_extra_theme/extra_css/full_width.css">
     
-      <link rel="stylesheet" href="../_extend_theme/extra_css/font_size.css">
+      <link rel="stylesheet" href="../_extra_theme/extra_css/font_size.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1829,11 +1829,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../utils/" class="md-nav__link">
+      <a href="../util/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Utils
+    Util
   </span>
   
 
@@ -1850,11 +1850,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../utils_fit/" class="md-nav__link">
+      <a href="../util_fit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Utils fit
+    Util fit
   </span>
   
 
@@ -2979,7 +2979,7 @@
 
     <div class="doc doc-contents first">
 
-      <p>This module contains classes and functions to compute Order parameters, Collective variables,...</p>
+        <p>This module contains classes and functions to compute Order parameters, Collective variables,...</p>
 
 
 
@@ -3005,7 +3005,7 @@
     <div class="doc doc-contents ">
 
 
-      <p>Create an Object of SWITCHING FUNCTION</p>
+        <p>Create an Object of SWITCHING FUNCTION</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3074,7 +3074,7 @@ Dmin, Dmax : are the bounds at which the switching take affect</p>
     <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">sw</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">SwitchFunc</span><span class="o">.</span><span class="n">RATIONAL</span><span class="p">(</span><span class="n">r0</span><span class="o">=</span><span class="mf">6.3</span><span class="p">,</span> <span class="n">d0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
 
-      <p>create some intiatial attributes...</p>
+        <p>create some intiatial attributes...</p>
 
 
 
@@ -3191,7 +3191,7 @@ Dmin, Dmax : are the bounds at which the switching take affect</p>
 
     <div class="doc doc-contents ">
 
-      <p>compute &amp; return value and derivation of sw function
+        <p>compute &amp; return value and derivation of sw function
 Input x can be a scalar or a 1d numpy ndarray</p>
 
     </div>
@@ -3219,7 +3219,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
     <div class="doc doc-contents ">
 
 
-      <p>create some intiatial attributes...</p>
+        <p>create some intiatial attributes...</p>
 
 
 
@@ -3264,7 +3264,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
 
     <div class="doc doc-contents ">
 
-      <p>compute value of sw function</p>
+        <p>compute value of sw function</p>
 
     </div>
 
@@ -3281,7 +3281,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
 
     <div class="doc doc-contents ">
 
-      <p>compute derivative of sw function</p>
+        <p>compute derivative of sw function</p>
 
     </div>
 
@@ -3308,7 +3308,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
     <div class="doc doc-contents ">
 
 
-      <p>Create an Object of SWITCHING FUNCTION</p>
+        <p>Create an Object of SWITCHING FUNCTION</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3346,10 +3346,10 @@ Input x can be a scalar or a 1d numpy ndarray</p>
 
 <p><span class="doc-section-title">Examples:</span></p>
     
-      <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>        <span class="n">sw</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">SwitchFunc</span><span class="o">.</span><span class="n">CUBIC</span><span class="p">(</span><span class="n">d0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">dmax</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>        <span class="n">sw</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">SwitchFunc</span><span class="o">.</span><span class="n">CUBIC</span><span class="p">(</span><span class="n">d0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">dmax</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
-      <p>create some intiatial attributes...</p>
+        <p>create some intiatial attributes...</p>
 
 
 
@@ -3413,7 +3413,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
 
     <div class="doc doc-contents ">
 
-      <p>compute &amp; return value and derivation of sw function</p>
+        <p>compute &amp; return value and derivation of sw function</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3472,7 +3472,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
     <div class="doc doc-contents ">
 
 
-      <p>create some intiatial attributes...</p>
+        <p>create some intiatial attributes...</p>
 
 
 
@@ -3638,7 +3638,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
 
     <div class="doc doc-contents ">
 
-      <p>find Dmin and Dmax of function based on given tolerance</p>
+        <p>find Dmin and Dmax of function based on given tolerance</p>
 
     </div>
 
@@ -3655,7 +3655,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
 
     <div class="doc doc-contents ">
 
-      <p>Estimate a and b parameters of SMAP function based on given <code>R0</code>, <code>Dmax</code> and <code>Dmin</code>.
+        <p>Estimate a and b parameters of SMAP function based on given <code>R0</code>, <code>Dmax</code> and <code>Dmin</code>.
 This version employs <code>scipy.optimize.minimize</code></p>
 
 
@@ -3747,7 +3747,7 @@ This version employs <code>scipy.optimize.minimize</code></p>
 
     <div class="doc doc-contents ">
 
-      <p>Estimate a and b parameters of SMAP function based on given <code>R0</code>, <code>Dmax</code> and <code>Dmin</code>.
+        <p>Estimate a and b parameters of SMAP function based on given <code>R0</code>, <code>Dmax</code> and <code>Dmin</code>.
 This version use manual search.</p>
 
 
@@ -3875,7 +3875,7 @@ This version use manual search.</p>
 
     <div class="doc doc-contents ">
 
-      <p>The Coordination is the size of input "Points", this function just weight it with a switching function
+        <p>The Coordination is the size of input "Points", this function just weight it with a switching function
 * Compulsory Inputs:
 ** optional Inputs:
         switchFunc=[1,1...,1] : Nx1 array, contain values of switching function s(Rj) (Rj is positions of atom j)
@@ -3931,7 +3931,7 @@ By Cao Thang, Aug 2020</p>
 
     <div class="doc doc-contents ">
 
-      <p>Order Parameter based on pair functions of Angles in the first shell:</p>
+        <p>Order Parameter based on pair functions of Angles in the first shell:</p>
 
 
 <details class="agrs" open>
@@ -4017,7 +4017,7 @@ switchFunc=[1,1...,1] : Nx1 array, contain values of switching function s(Rj) (R
 
     <div class="doc doc-contents ">
 
-      <p>compute origincal Stainhardt of l-th order
+        <p>compute origincal Stainhardt of l-th order
 Args:
         ql_i   : a vector of (2l+1) complex components, qlm(i) vector of atom i
 Returns:
@@ -4038,7 +4038,7 @@ Returns:
 
     <div class="doc doc-contents ">
 
-      <p>compute Local Stainhardt of l-th order (modified Steinhardt as: 10.1021/acs.jctc.6b01073)
+        <p>compute Local Stainhardt of l-th order (modified Steinhardt as: 10.1021/acs.jctc.6b01073)
 Args:
         ql_i   : 1x(2l+1) array, vector of (2l+1) complex components, qlm(i) vector of atom i
         qlm_j   : Nx(2l+1) array, rows are vectors of (2l+1) complex components, qlm(j) of all neighbors j of atom i
@@ -4093,7 +4093,7 @@ Returns:
 
     <div class="doc doc-contents ">
 
-      <p>Function to Calculate FCC CUBIC parameters.</p>
+        <p>Function to Calculate FCC CUBIC parameters.</p>
 <p>By thangckt, Mar 2020</p>
 
 
@@ -4208,7 +4208,7 @@ Returns:
 
     <div class="doc doc-contents ">
 
-      <p>Function to Calculate Order Parameter with multi_vectors K.</p>
+        <p>Function to Calculate Order Parameter with multi_vectors K.</p>
 <p>By thangckt, Apr 2019</p>
 
 
@@ -4286,7 +4286,7 @@ Returns:
 
     <div class="doc doc-contents ">
 
-      <p>Function to convert reciprocal vectors G to be used in <code>localCRYSTALLINITY</code>.</p>
+        <p>Function to convert reciprocal vectors G to be used in <code>localCRYSTALLINITY</code>.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -4382,7 +4382,7 @@ Returns:
 
     <div class="doc doc-contents ">
 
-      <p>Function to Calculate FCC CUBIC parameters.</p>
+        <p>Function to Calculate FCC CUBIC parameters.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -4482,7 +4482,7 @@ Returns:
 
     <div class="doc doc-contents ">
 
-      <p>find Nearest_Neighbors, return generator of Nearest_IDs, "Nearest relative-Position vetors from atom i"
+        <p>find Nearest_Neighbors, return generator of Nearest_IDs, "Nearest relative-Position vetors from atom i"
 Ver 2: spatial.cKDTree</p>
 <p>thangckt, Sep 2019. Update: Aug 2022 to use generator</p>
 
@@ -4590,7 +4590,7 @@ Ver 2: spatial.cKDTree</p>
 
     <div class="doc doc-contents ">
 
-      <p>find Nearest_Neighbors, return list of Nearest_IDs, "Nearest relative-Position vetors from atom i"
+        <p>find Nearest_Neighbors, return list of Nearest_IDs, "Nearest relative-Position vetors from atom i"
 Ver 2: spatial.cKDTree</p>
 
 
@@ -4731,7 +4731,7 @@ Rij_Bonds (np.array): Nx1 list of scalars, contain Rij_bonds from Ref.atom to Ne
 
     <div class="doc doc-contents ">
 
-      <p>Compute vector of Spherical Harmonics for a set of point (ylm vector have (2l+1) components)</p>
+        <p>Compute vector of Spherical Harmonics for a set of point (ylm vector have (2l+1) components)</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -4867,7 +4867,7 @@ Rij_Bonds (np.array): Nx1 list of scalars, contain Rij_bonds from Ref.atom to Ne
     <div class="doc doc-contents ">
 
 
-      <p>Create an Object of SWITCHING FUNCTION</p>
+        <p>Create an Object of SWITCHING FUNCTION</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -4936,7 +4936,7 @@ Dmin, Dmax : are the bounds at which the switching take affect</p>
     <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">sw</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">SwitchFunc</span><span class="o">.</span><span class="n">RATIONAL</span><span class="p">(</span><span class="n">r0</span><span class="o">=</span><span class="mf">6.3</span><span class="p">,</span> <span class="n">d0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
 
-      <p>create some intiatial attributes...</p>
+        <p>create some intiatial attributes...</p>
 
 
 
@@ -5038,7 +5038,7 @@ Dmin, Dmax : are the bounds at which the switching take affect</p>
 
     <div class="doc doc-contents ">
 
-      <p>compute &amp; return value and derivation of sw function
+        <p>compute &amp; return value and derivation of sw function
 Input x can be a scalar or a 1d numpy ndarray</p>
 
     </div>
@@ -5081,7 +5081,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
     <div class="doc doc-contents ">
 
 
-      <p>create some intiatial attributes...</p>
+        <p>create some intiatial attributes...</p>
 
 
 
@@ -5126,7 +5126,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
 
     <div class="doc doc-contents ">
 
-      <p>compute value of sw function</p>
+        <p>compute value of sw function</p>
 
     </div>
 
@@ -5143,7 +5143,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
 
     <div class="doc doc-contents ">
 
-      <p>compute derivative of sw function</p>
+        <p>compute derivative of sw function</p>
 
     </div>
 
@@ -5170,7 +5170,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
     <div class="doc doc-contents ">
 
 
-      <p>Create an Object of SWITCHING FUNCTION</p>
+        <p>Create an Object of SWITCHING FUNCTION</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -5208,10 +5208,10 @@ Input x can be a scalar or a 1d numpy ndarray</p>
 
 <p><span class="doc-section-title">Examples:</span></p>
     
-      <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>        <span class="n">sw</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">SwitchFunc</span><span class="o">.</span><span class="n">CUBIC</span><span class="p">(</span><span class="n">d0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">dmax</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>        <span class="n">sw</span> <span class="o">=</span> <span class="n">thamd</span><span class="o">.</span><span class="n">SwitchFunc</span><span class="o">.</span><span class="n">CUBIC</span><span class="p">(</span><span class="n">d0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">dmax</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
-      <p>create some intiatial attributes...</p>
+        <p>create some intiatial attributes...</p>
 
 
 
@@ -5275,7 +5275,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
 
     <div class="doc doc-contents ">
 
-      <p>compute &amp; return value and derivation of sw function</p>
+        <p>compute &amp; return value and derivation of sw function</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -5334,7 +5334,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
     <div class="doc doc-contents ">
 
 
-      <p>create some intiatial attributes...</p>
+        <p>create some intiatial attributes...</p>
 
 
 
@@ -5500,7 +5500,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
 
     <div class="doc doc-contents ">
 
-      <p>find Dmin and Dmax of function based on given tolerance</p>
+        <p>find Dmin and Dmax of function based on given tolerance</p>
 
     </div>
 
@@ -5517,7 +5517,7 @@ Input x can be a scalar or a 1d numpy ndarray</p>
 
     <div class="doc doc-contents ">
 
-      <p>Estimate a and b parameters of SMAP function based on given <code>R0</code>, <code>Dmax</code> and <code>Dmin</code>.
+        <p>Estimate a and b parameters of SMAP function based on given <code>R0</code>, <code>Dmax</code> and <code>Dmin</code>.
 This version employs <code>scipy.optimize.minimize</code></p>
 
 
@@ -5609,7 +5609,7 @@ This version employs <code>scipy.optimize.minimize</code></p>
 
     <div class="doc doc-contents ">
 
-      <p>Estimate a and b parameters of SMAP function based on given <code>R0</code>, <code>Dmax</code> and <code>Dmin</code>.
+        <p>Estimate a and b parameters of SMAP function based on given <code>R0</code>, <code>Dmax</code> and <code>Dmin</code>.
 This version use manual search.</p>
 
 
@@ -5745,9 +5745,9 @@ This version use manual search.</p>
     <div class="doc doc-contents ">
 
 
-      <p>Voro ++ library</p>
+        <p>Voro ++ library</p>
 
-      
+        
 
 
 
@@ -5773,7 +5773,7 @@ This version use manual search.</p>
 
     <div class="doc doc-contents ">
 
-      <p>compute atomic-volume of each atom in Bulk models
+        <p>compute atomic-volume of each atom in Bulk models
 Args:
         P        : Nx3 Matrix contain positions of atoms
         box      : simulation box
@@ -5803,7 +5803,7 @@ Returns:
 
     <div class="doc doc-contents ">
 
-      <p>compute atomic-volume of each atom in Plate models
+        <p>compute atomic-volume of each atom in Plate models
 update Ver2: copy layer 2<sup>nd</sup> and 3<sup>rd</sup> to cover free surface, offset distance = inter-layer distance. So, no need to input offset value
 Args:
         P        : Nx3 Matrix contain positions of atoms
@@ -5835,7 +5835,7 @@ Returns:
 
     <div class="doc doc-contents ">
 
-      <p>compute atomic-volume of each atom in Bulk models
+        <p>compute atomic-volume of each atom in Bulk models
 Args:
         P        : Nx3 Matrix contain positions of atoms
         box      : simulation box
@@ -5860,7 +5860,7 @@ Returns:
 
     <div class="doc doc-contents ">
 
-      <p>compute atomic-volume of each atom in Plate models
+        <p>compute atomic-volume of each atom in Plate models
 update Ver2: copy layer 2<sup>nd</sup> and 3<sup>rd</sup> to cover free surface, offset distance = inter-layer distance. So, no need to input offset value
 Args:
         P        : Nx3 Matrix contain positions of atoms
@@ -5901,7 +5901,7 @@ Returns:
 
     <div class="doc doc-contents ">
 
-      <p>Extract atoms of outermost layers, based on Voronoi analysis
+        <p>Extract atoms of outermost layers, based on Voronoi analysis
 Args:
           P   : Nx3 Matrix contain positions of atoms
           bound_cond=(1, 1, 0)  : tuple of boundary condtions
@@ -5928,7 +5928,7 @@ By Cao Thang, Jan 2020</p>
 
     <div class="doc doc-contents ">
 
-      <p>Extract atoms on free surface, are atoms have Voronoi with max(faceArea) &gt;= max_edge**2
+        <p>Extract atoms on free surface, are atoms have Voronoi with max(faceArea) &gt;= max_edge**2
 Agrs:
     P   : Nx3 Matrix contain positions of atoms
     bound_cond=(1, 1, 0)  : tuple of boundary condtions
@@ -6069,7 +6069,7 @@ only 1 pair of surface is detect each time</p>
     
       <script src="../assets/javascripts/bundle.482e4c9f.min.js"></script>
       
-        <script src="../_extend_theme/extra_js/gg_adsense.js"></script>
+        <script src="../_extra_theme/extra_js/gg_adsense.js"></script>
       
     
   </body>

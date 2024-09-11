@@ -50,9 +50,9 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../_extend_theme/extra_css/full_width.css">
+      <link rel="stylesheet" href="../_extra_theme/extra_css/full_width.css">
     
-      <link rel="stylesheet" href="../_extend_theme/extra_css/font_size.css">
+      <link rel="stylesheet" href="../_extra_theme/extra_css/font_size.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1565,11 +1565,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../utils/" class="md-nav__link">
+      <a href="../util/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Utils
+    Util
   </span>
   
 
@@ -1586,11 +1586,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../utils_fit/" class="md-nav__link">
+      <a href="../util_fit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Utils fit
+    Util fit
   </span>
   
 
@@ -2499,7 +2499,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Calculates the 3D Cartesian coordinates of atoms of of (n,m) CNT.</p>
+        <p>Calculates the 3D Cartesian coordinates of atoms of of (n,m) CNT.</p>
 <p>thangckt, Aug 2022</p>
 
 
@@ -2578,7 +2578,7 @@
           </div>
         </li>
     </ul>
-      <p>Notes
+        <p>Notes
         <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>n=1, m=0 : is the unit cell for Zigzag
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>n=1, m=1 : is the unit cell for Armchair
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>n&gt;m      : unit cell is automatically computed
@@ -2631,7 +2631,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Calculates the 3D Cartesian coordinates of atoms of (n,m)graphene sheet/ Graphite</p>
+        <p>Calculates the 3D Cartesian coordinates of atoms of (n,m)graphene sheet/ Graphite</p>
 <p>thangckt, Nov 2019 (update 2022)</p>
 
 
@@ -2738,7 +2738,7 @@
           </div>
         </li>
     </ul>
-      <p>Notes
+        <p>Notes
         <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>n=1, m=0 : is the unit cell for Zigzag
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>n=1, m=1 : is the unit cell for Armchair
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>n&gt;m      : unit cell is automatically computed
@@ -2791,7 +2791,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Function to create atomic coordinates for crystal model</p>
+        <p>Function to create atomic coordinates for crystal model</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2885,7 +2885,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Shortcut to create CUBIC crystal, as subclass of ortthoRHOMBIC</p>
+        <p>Shortcut to create CUBIC crystal, as subclass of ortthoRHOMBIC</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3011,7 +3011,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Function to add "Periodic Images" of atoms at Periodic Boundaries (with a specific cutoff distance)
+        <p>Function to add "Periodic Images" of atoms at Periodic Boundaries (with a specific cutoff distance)
 By Thang, June 2019 (update 2022)</p>
 
 
@@ -3070,7 +3070,7 @@ By Thang, June 2019 (update 2022)</p>
 
 <p><span class="doc-section-title">Examples:</span></p>
     <p>```py</p>
-      <div class="codehilite"><pre><span></span><code>df = add_periodic_image(P, box, bound_cond=[1 1 0], cutoff=5)
+        <div class="codehilite"><pre><span></span><code>df = add_periodic_image(P, box, bound_cond=[1 1 0], cutoff=5)
     ```
 </code></pre></div>
 
@@ -3089,7 +3089,7 @@ By Thang, June 2019 (update 2022)</p>
 
     <div class="doc doc-contents ">
 
-      <p>Function to wrap atom positions at Periodic Boundaries
+        <p>Function to wrap atom positions at Periodic Boundaries
 By Thang, June 2019 (update 2022)</p>
 
 
@@ -3134,7 +3134,7 @@ By Thang, June 2019 (update 2022)</p>
           </div>
         </li>
     </ul>
-      <p>Examples:
+        <p>Examples:
         <code>py
     df = wrap_coord_PBC(P, box, bound_cond=[1 1 0], cutoff=5)</code></p>
 
@@ -3153,7 +3153,7 @@ By Thang, June 2019 (update 2022)</p>
 
     <div class="doc doc-contents ">
 
-      <p>Compute nearest-neighbor shells for FCC crystal</p>
+        <p>Compute nearest-neighbor shells for FCC crystal</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3195,7 +3195,7 @@ By Thang, June 2019 (update 2022)</p>
 
     <div class="doc doc-contents ">
 
-      <p>Generate orientation and dimensions of simulation box.</p>
+        <p>Generate orientation and dimensions of simulation box.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3268,7 +3268,7 @@ By Thang, June 2019 (update 2022)</p>
 
     <div class="doc doc-contents ">
 
-      <p>Generate orirentations of simulation box.
+        <p>Generate orirentations of simulation box.
 Args:
     zDirect (str): specify the direction of z-side. Defaults to '001', mean nothing is happen.
     xDirect (str): specify the direction of z-side.  Defaults to None.</p>
@@ -3332,7 +3332,7 @@ Args:
 
     <div class="doc doc-contents ">
 
-      <p>compute parameters (epsilon &amp; sigma) of LJ potential at interface
+        <p>compute parameters (epsilon &amp; sigma) of LJ potential at interface
 Note that in LAMMPS: 'Lorentz_Berthelot'='arithmetic'   <a href="https://tinyurl.com/yzpwg2hs">https://tinyurl.com/yzpwg2hs</a></p>
 
 
@@ -3354,7 +3354,7 @@ Note that in LAMMPS: 'Lorentz_Berthelot'='arithmetic'   <a href="https://tinyurl
           </div>
         </li>
     </ul>
-      <div class="codehilite"><pre><span></span><code>combining_rule=&#39;arithmetic&#39; (also &#39;Lorentz_Berthelot&#39;)
+        <div class="codehilite"><pre><span></span><code>combining_rule=&#39;arithmetic&#39; (also &#39;Lorentz_Berthelot&#39;)
             + &#39;arithmetic&#39;/&#39;Lorentz_Berthelot&#39;
             + &#39;geometric&#39;
             + &#39;sixthpower&#39;
@@ -3372,7 +3372,7 @@ Note that in LAMMPS: 'Lorentz_Berthelot'='arithmetic'   <a href="https://tinyurl
   <summary>Notes</summary>
   <p>energy unit is kcal/mol, but in OPLSaa of Foyer is kJ/mol.
 types in 2 dict must either completely different or indentical</p>
-</details>      <p>Examples:
+</details>        <p>Examples:
 PMMA/h_BN interface
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">dict_group1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;element&#39;</span><span class="p">:[</span><span class="s1">&#39;CT&#39;</span><span class="p">,</span><span class="s1">&#39;CT&#39;</span><span class="p">,</span><span class="s1">&#39;CT&#39;</span><span class="p">,</span><span class="s1">&#39;CT&#39;</span><span class="p">,</span><span class="s1">&#39;HC&#39;</span><span class="p">,</span><span class="s1">&#39;HC&#39;</span><span class="p">,</span><span class="s1">&#39;C_2&#39;</span><span class="p">,</span><span class="s1">&#39;O_2&#39;</span><span class="p">,</span><span class="s1">&#39;OS&#39;</span><span class="p">,</span><span class="s1">&#39;CT&#39;</span><span class="p">,</span><span class="s1">&#39;HC&#39;</span><span class="p">],</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        <span class="s1">&#39;atom_name&#39;</span><span class="p">:[</span><span class="s1">&#39;opls_135&#39;</span><span class="p">,</span><span class="s1">&#39;opls_136&#39;</span><span class="p">,</span><span class="s1">&#39;opls_137&#39;</span><span class="p">,</span><span class="s1">&#39;opls_139&#39;</span><span class="p">,</span><span class="s1">&#39;opls_140&#39;</span><span class="p">,</span><span class="s1">&#39;opls_282&#39;</span><span class="p">,</span><span class="s1">&#39;opls_465&#39;</span><span class="p">,</span><span class="s1">&#39;opls_466&#39;</span><span class="p">,</span><span class="s1">&#39;opls_467&#39;</span><span class="p">,</span><span class="s1">&#39;opls_468&#39;</span><span class="p">,</span><span class="s1">&#39;opls_469&#39;</span><span class="p">],</span>
@@ -3435,7 +3435,7 @@ PMMA/h_BN interface
     <div class="doc doc-contents ">
 
 
-      <p>We can express a rotation using direction-cosines-matrix (DCM) or Euler-angles (phi,theta,psi)</p>
+        <p>We can express a rotation using direction-cosines-matrix (DCM) or Euler-angles (phi,theta,psi)</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3610,7 +3610,7 @@ PMMA/h_BN interface
 
     <div class="doc doc-contents ">
 
-      <p>Calculate direction-cosines-matrix (DCM) between 2 coordinates systems</p>
+        <p>Calculate direction-cosines-matrix (DCM) between 2 coordinates systems</p>
 
 
 <p><span class="doc-section-title">Returns:</span></p>
@@ -3644,7 +3644,7 @@ PMMA/h_BN interface
 
     <div class="doc doc-contents ">
 
-      <p>Calculate Rotation-matrix (R) as transpose of DCM
+        <p>Calculate Rotation-matrix (R) as transpose of DCM
 By Cao Thang, Apr 2019,  Update: May2020</p>
 
     </div>
@@ -3662,7 +3662,7 @@ By Cao Thang, Apr 2019,  Update: May2020</p>
 
     <div class="doc doc-contents ">
 
-      <p>Calculate Rotation_Matrix Euler Angles (EA) between 2 coordinates systems (ZXZ proper Euler angles)
+        <p>Calculate Rotation_Matrix Euler Angles (EA) between 2 coordinates systems (ZXZ proper Euler angles)
 This is just for testing, since we dont know whether input angles yield orthogonal axis or not</p>
 
 
@@ -3726,7 +3726,7 @@ This is just for testing, since we dont know whether input angles yield orthogon
 
     <div class="doc doc-contents ">
 
-      <p>Calculate Euler Angles (EA) between 2 coordinates systems (intrinsic ZXZ proper Euler angles)
+        <p>Calculate Euler Angles (EA) between 2 coordinates systems (intrinsic ZXZ proper Euler angles)
 <a href="https://en.wikipedia.org/wiki/Euler_angles#Definition_by_intrinsic_rotations">https://en.wikipedia.org/wiki/Euler_angles#Definition_by_intrinsic_rotations</a>
 <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.transform.Rotation.as_euler.html#r72d546869407-1">https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.transform.Rotation.as_euler.html#r72d546869407-1</a></p>
 
@@ -3782,7 +3782,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
 
     <div class="doc doc-contents ">
 
-      <p>Calculate Euler Angles (EA) between 2 coordinates systems (proper Eulerian angles)</p>
+        <p>Calculate Euler Angles (EA) between 2 coordinates systems (proper Eulerian angles)</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3845,7 +3845,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
 
     <div class="doc doc-contents ">
 
-      <p>Rotate a set of points (or set of vectors) from a OLD-coords to NEW-coords</p>
+        <p>Rotate a set of points (or set of vectors) from a OLD-coords to NEW-coords</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3900,7 +3900,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
 
     <div class="doc doc-contents ">
 
-      <p>Rotate array of points about 1 axis</p>
+        <p>Rotate array of points about 1 axis</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3959,7 +3959,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
 
     <div class="doc doc-contents ">
 
-      <p>check right_hand_rule orthogonal of 3 vectors</p>
+        <p>check right_hand_rule orthogonal of 3 vectors</p>
 
     </div>
 
@@ -3976,7 +3976,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
 
     <div class="doc doc-contents ">
 
-      <p>give 2 vectors, then guess the third vector that satisfy right_hand_rule</p>
+        <p>give 2 vectors, then guess the third vector that satisfy right_hand_rule</p>
 
     </div>
 
@@ -3993,7 +3993,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
 
     <div class="doc doc-contents ">
 
-      <p>Convert cartesian coordinates to <a href="https://en.wikipedia.org/wiki/Spherical_coordinate_system">Spherical coordinates</a></p>
+        <p>Convert cartesian coordinates to <a href="https://en.wikipedia.org/wiki/Spherical_coordinate_system">Spherical coordinates</a></p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -4068,7 +4068,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
 
     <div class="doc doc-contents ">
 
-      <p>This module contains some data for various ForceField. Data obtained from simulation</p>
+        <p>This module contains some data for various ForceField. Data obtained from simulation</p>
 
 
 
@@ -4094,7 +4094,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
     <div class="doc doc-contents ">
 
 
-      <p>Create an Object (class) of Potential, contain some pre-setup information</p>
+        <p>Create an Object (class) of Potential, contain some pre-setup information</p>
 <div class="codehilite"><pre><span></span><code>    - Cu: Mishin2001,  Mendelev2008, Foiles1986
 </code></pre></div>
 
@@ -4204,7 +4204,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
         </li>
     </ul>
 
-      <p>Stored DATA (these data are compute from several simulations, or from papers)</p>
+        <p>Stored DATA (these data are compute from several simulations, or from papers)</p>
 
 
 
@@ -4382,7 +4382,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
 
     <div class="doc doc-contents ">
 
-      <p>Compute lattice constant at a specific temperature T.</p>
+        <p>Compute lattice constant at a specific temperature T.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -4424,7 +4424,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
 
     <div class="doc doc-contents ">
 
-      <p>Compute atomic volume at a specific temperature T.</p>
+        <p>Compute atomic volume at a specific temperature T.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -4466,7 +4466,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
 
     <div class="doc doc-contents ">
 
-      <p>Compute free energy barrier/atom of melting. For a system of N atoms  <span class="arithmatex">\(F = f*N^(2/3)\)</span> , then barrier/atom  <span class="arithmatex">\(f = F/N^(2/3)\)</span>. This method return f(T)</p>
+        <p>Compute free energy barrier/atom of melting. For a system of N atoms  <span class="arithmatex">\(F = f*N^(2/3)\)</span> , then barrier/atom  <span class="arithmatex">\(f = F/N^(2/3)\)</span>. This method return f(T)</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -4508,7 +4508,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
 
     <div class="doc doc-contents ">
 
-      <p>Estimate value of FCCUBIC parameter in bulk solid/liquid at a specific temperature T.</p>
+        <p>Estimate value of FCCUBIC parameter in bulk solid/liquid at a specific temperature T.</p>
 
     </div>
 
@@ -4535,7 +4535,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
     <div class="doc doc-contents ">
 
 
-      <p>Create an Object (class) of Potential, contain some pre-setup information</p>
+        <p>Create an Object (class) of Potential, contain some pre-setup information</p>
 
 
 
@@ -4689,7 +4689,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
 
     <div class="doc doc-contents ">
 
-      <p>This module contains classes and functions to build models of atomic polymers
+        <p>This module contains classes and functions to build models of atomic polymers
 See this Python package:
 [1] mBuild: <a href="https://mbuild.mosdef.org/en/stable/">https://mbuild.mosdef.org/en/stable/</a></p>
 <p>See the files:
@@ -4726,7 +4726,7 @@ ef_using_mBuild_foyer.ipynb</p>
 
     <div class="doc doc-contents ">
 
-      <p>build polyPMMA from monomers</p>
+        <p>build polyPMMA from monomers</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -4783,7 +4783,7 @@ ef_using_mBuild_foyer.ipynb</p>
 
     <div class="doc doc-contents ">
 
-      <p>Packing polymer chains into box, and write LAMMPS file
+        <p>Packing polymer chains into box, and write LAMMPS file
 Packing based on either density or box_size.</p>
 
 
@@ -4891,7 +4891,7 @@ Packing based on either density or box_size.</p>
 
     <div class="doc doc-contents ">
 
-      <p>This module contains classes to build models of atomic polymers
+        <p>This module contains classes to build models of atomic polymers
 See this Python package:
 [1] pysimm: A python package for simulation of molecular systems, 10.1016/j.softx.2016.12.002
 source code: <a href="https://github.com/polysimtools/pysimm">https://github.com/polysimtools/pysimm</a></p>
@@ -5004,7 +5004,7 @@ source code: <a href="https://github.com/polysimtools/pysimm">https://github.com
     
       <script src="../assets/javascripts/bundle.482e4c9f.min.js"></script>
       
-        <script src="../_extend_theme/extra_js/gg_adsense.js"></script>
+        <script src="../_extra_theme/extra_js/gg_adsense.js"></script>
       
     
   </body>

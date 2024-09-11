@@ -50,9 +50,9 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../_extend_theme/extra_css/full_width.css">
+      <link rel="stylesheet" href="../_extra_theme/extra_css/full_width.css">
     
-      <link rel="stylesheet" href="../_extend_theme/extra_css/font_size.css">
+      <link rel="stylesheet" href="../_extra_theme/extra_css/font_size.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -942,6 +942,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#thamd.qflow.machine_unist.sge_template" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;sge_template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#thamd.qflow.machine_unist.Tachyon" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;Tachyon
@@ -1060,6 +1069,15 @@
   
     <nav class="md-nav" aria-label=" resource_unist">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.qflow.resource_unist.tachyon_template" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;tachyon_template
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#thamd.qflow.resource_unist.Tachyon_lammps_ib" class="md-nav__link">
@@ -1280,11 +1298,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../utils/" class="md-nav__link">
+      <a href="../util/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Utils
+    Util
   </span>
   
 
@@ -1301,11 +1319,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../utils_fit/" class="md-nav__link">
+      <a href="../util_fit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Utils fit
+    Util fit
   </span>
   
 
@@ -1597,6 +1615,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#thamd.qflow.machine_unist.sge_template" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;sge_template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#thamd.qflow.machine_unist.Tachyon" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;Tachyon
@@ -1715,6 +1742,15 @@
   
     <nav class="md-nav" aria-label=" resource_unist">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thamd.qflow.resource_unist.tachyon_template" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;tachyon_template
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#thamd.qflow.resource_unist.Tachyon_lammps_ib" class="md-nav__link">
@@ -1909,7 +1945,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Define support functions for qflow package.</p>
+        <p>Define support functions for qflow package.</p>
 
 
 
@@ -1934,7 +1970,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Read node list from file.
+        <p>Read node list from file.
     Support delimiter: '|', ',', ';', ':', ' ', '
 '</p>
 <div class="codehilite"><pre><span></span><code><span class="n">Args</span><span class="o">:</span>
@@ -1959,7 +1995,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Format <code>qsub_string</code> for ignore nodes.</p>
+        <p>Format <code>qsub_string</code> for ignore nodes.</p>
 
     </div>
 
@@ -1976,7 +2012,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Format <code>qsub_string</code> for selected nodes.</p>
+        <p>Format <code>qsub_string</code> for selected nodes.</p>
 
     </div>
 
@@ -2012,6 +2048,25 @@
 
 
 
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.qflow.machine_unist.sge_template" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">sge_template</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;context_type&#39;</span><span class="p">:</span> <span class="s1">&#39;SSHContext&#39;</span><span class="p">,</span> <span class="s1">&#39;batch_type&#39;</span><span class="p">:</span> <span class="s1">&#39;SGE&#39;</span><span class="p">,</span> <span class="s1">&#39;local_root&#39;</span><span class="p">:</span> <span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="s1">&#39;remote_root&#39;</span><span class="p">:</span> <span class="s1">&#39;/home1/p001cao/work/w24_tmp&#39;</span><span class="p">,</span> <span class="s1">&#39;remote_profile&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;hostname&#39;</span><span class="p">:</span> <span class="s1">&#39;10.0.7.53&#39;</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;p001cao&#39;</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="s1">&#39;p001cao&#39;</span><span class="p">,</span> <span class="s1">&#39;port&#39;</span><span class="p">:</span> <span class="mi">2022</span><span class="p">,</span> <span class="s1">&#39;timeout&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}}</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#thamd.qflow.machine_unist.sge_template" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
 
 
 <div class="doc doc-object doc-function">
@@ -2025,7 +2080,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Define Machine for running jobs on Tachyon cluster at UNIST.</p>
+        <p>Define Machine for running jobs on Tachyon cluster at UNIST.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2057,7 +2112,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Define Machine for running jobs on Tachyon cluster at UNIST.</p>
+        <p>Define Machine for running jobs on Tachyon cluster at UNIST.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2089,7 +2144,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Define Machine for running jobs on Tachyon cluster at UNIST.</p>
+        <p>Define Machine for running jobs on Tachyon cluster at UNIST.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2121,7 +2176,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Define Machine for running jobs on Tachyon cluster at UNIST.</p>
+        <p>Define Machine for running jobs on Tachyon cluster at UNIST.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2153,7 +2208,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Define Machine for running jobs on CAN cluster at UNIST.</p>
+        <p>Define Machine for running jobs on CAN cluster at UNIST.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2194,7 +2249,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Define the template for qsub job submission.</p>
+        <p>Define the template for qsub job submission.</p>
 
 
 
@@ -2219,7 +2274,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Return the example script for submiting SGE job.</p>
+        <p>Return the example script for submiting SGE job.</p>
 
     </div>
 
@@ -2236,7 +2291,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Return the windows batch script for submitting DP dispatcher.</p>
+        <p>Return the windows batch script for submitting DP dispatcher.</p>
 
     </div>
 
@@ -2253,7 +2308,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Return the example script for running command in cmd.</p>
+        <p>Return the example script for running command in cmd.</p>
 
     </div>
 
@@ -2270,7 +2325,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Return the example script for running command in cmd.</p>
+        <p>Return the example script for running command in cmd.</p>
 
     </div>
 
@@ -2287,7 +2342,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Return the example script for using dpdispatcher.</p>
+        <p>Return the example script for using dpdispatcher.</p>
 
     </div>
 
@@ -2323,6 +2378,25 @@
 
 
 
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="thamd.qflow.resource_unist.tachyon_template" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">tachyon_template</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;group_size&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;queue_name&#39;</span><span class="p">:</span> <span class="s1">&#39;ib.q&#39;</span><span class="p">,</span> <span class="s1">&#39;kwargs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;pe_name&#39;</span><span class="p">:</span> <span class="s1">&#39;mpi_8&#39;</span><span class="p">,</span> <span class="s1">&#39;job_name&#39;</span><span class="p">:</span> <span class="s1">&#39;zDP&#39;</span><span class="p">},</span> <span class="s1">&#39;cpu_per_node&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;custom_flags&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;#$ -l  h_rt=168:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;#$ -l  mem_used=600M&#39;</span><span class="p">],</span> <span class="s1">&#39;source_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;/etc/profile.d/modules.sh&#39;</span><span class="p">],</span> <span class="s1">&#39;module_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;mpi/openmpi4.1.7-clang17-IB&#39;</span><span class="p">,</span> <span class="s1">&#39;lammps/llvmOMPI4-dev&#39;</span><span class="p">],</span> <span class="s1">&#39;envs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;OMP_NUM_THREADS&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;OMPI_MCA_btl_openib_allow_ib&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;OMPI_MCA_btl&#39;</span><span class="p">:</span> <span class="s1">&#39;^tcp&#39;</span><span class="p">}}</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#thamd.qflow.resource_unist.tachyon_template" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
 
 
 <div class="doc doc-object doc-function">
@@ -2336,7 +2410,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Define Resources for running LAMMPS on Tachyon cluster at UNIST, only InfiniBand nodes.</p>
+        <p>Define Resources for running LAMMPS on Tachyon cluster at UNIST, only InfiniBand nodes.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2368,7 +2442,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Define Resources for running LAMMPS on Tachyon cluster at UNIST, only use TCP.</p>
+        <p>Define Resources for running LAMMPS on Tachyon cluster at UNIST, only use TCP.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2400,7 +2474,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Define Resources for running GPAW on Tachyon cluster at UNIST.</p>
+        <p>Define Resources for running GPAW on Tachyon cluster at UNIST.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2432,7 +2506,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Define Resources for running GPAW on Tachyon cluster at UNIST.</p>
+        <p>Define Resources for running GPAW on Tachyon cluster at UNIST.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2524,7 +2598,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Define Resources for running LAMMPS on Eagle cluster at UNIST.</p>
+        <p>Define Resources for running LAMMPS on Eagle cluster at UNIST.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2605,7 +2679,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Define Resources for running LAMMPS on Eagle cluster at UNIST.</p>
+        <p>Define Resources for running LAMMPS on Eagle cluster at UNIST.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2648,7 +2722,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Define Resources for running LAMMPS on Tachyon cluster at UNIST.</p>
+        <p>Define Resources for running LAMMPS on Tachyon cluster at UNIST.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2690,7 +2764,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Define Resources for running LAMMPS on Tachyon cluster at UNIST.</p>
+        <p>Define Resources for running LAMMPS on Tachyon cluster at UNIST.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2848,7 +2922,7 @@
     
       <script src="../assets/javascripts/bundle.482e4c9f.min.js"></script>
       
-        <script src="../_extend_theme/extra_js/gg_adsense.js"></script>
+        <script src="../_extra_theme/extra_js/gg_adsense.js"></script>
       
     
   </body>

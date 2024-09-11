@@ -50,9 +50,9 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../_extend_theme/extra_css/full_width.css">
+      <link rel="stylesheet" href="../_extra_theme/extra_css/full_width.css">
     
-      <link rel="stylesheet" href="../_extend_theme/extra_css/font_size.css">
+      <link rel="stylesheet" href="../_extra_theme/extra_css/font_size.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1151,11 +1151,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../utils/" class="md-nav__link">
+      <a href="../util/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Utils
+    Util
   </span>
   
 
@@ -1172,11 +1172,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../utils_fit/" class="md-nav__link">
+      <a href="../util_fit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Utils fit
+    Util fit
   </span>
   
 
@@ -1647,7 +1647,7 @@
     <div class="doc doc-contents ">
 
 
-      <p>Create an Object (class) of Potential, contain some pre-setup information for Energy barrier for LogMFD calculation.
+        <p>Create an Object (class) of Potential, contain some pre-setup information for Energy barrier for LogMFD calculation.
 Energy barrier of System does not depend on CV (same value for energy CV: meanCV, nAtomLiquid,...)
 * Attributes:
         Element         :
@@ -1662,7 +1662,7 @@ Energy barrier of System does not depend on CV (same value for energy CV: meanCV
         Latt_Const      : compute lattice constant at a specific temperature</li>
 </ul>
 
-      <p>Element         : 'Al', 'Cu',...
+        <p>Element         : 'Al', 'Cu',...
 Potential_Name  :
         'Cu' : 'Mishin-2001'; 'Foiles-1986';...
         'Al' : 'Mishin-1999'; 'Sheng-2011';...
@@ -1770,7 +1770,7 @@ thickness       : thickness of plate</p>
 
     <div class="doc doc-contents ">
 
-      <p>for a system of N atoms  𝐹=𝑓∗𝑁^(&#8532;) , then perAtom barrier  𝑓=𝐹/𝑁^(&#8532;). This method return f(T)</p>
+        <p>for a system of N atoms  𝐹=𝑓∗𝑁^(&#8532;) , then perAtom barrier  𝑓=𝐹/𝑁^(&#8532;). This method return f(T)</p>
 
     </div>
 
@@ -1787,7 +1787,7 @@ thickness       : thickness of plate</p>
 
     <div class="doc doc-contents ">
 
-      <p>Value of CV at intersection point of histogram as function y = a + bx</p>
+        <p>Value of CV at intersection point of histogram as function y = a + bx</p>
 
     </div>
 
@@ -1813,7 +1813,7 @@ thickness       : thickness of plate</p>
 
     <div class="doc doc-contents ">
 
-      <p>The function to compute LogPD-based MeanForce</p>
+        <p>The function to compute LogPD-based MeanForce</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -1862,7 +1862,7 @@ thickness       : thickness of plate</p>
 <p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">free_energy</span><span class="o">.</span><span class="n">replica_logPD_intergration</span><span class="p">(</span><span class="n">logmfd_files</span><span class="p">,</span> <span class="n">replica_files</span><span class="p">)</span>
 </code></pre></div>
-      <p>Requisites:</p>
+        <p>Requisites:</p>
 <div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="kr">Run</span><span class="w"> </span><span class="nb">log</span><span class="n">MFD</span><span class="w"> </span><span class="n">simulations</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">produce</span><span class="w"> </span><span class="err">`</span><span class="n">replica_</span><span class="o">*/</span><span class="nb">log</span><span class="n">mfd</span><span class="mf">.</span><span class="n">out</span><span class="err">`</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="err">`</span><span class="n">replica_</span><span class="o">*/</span><span class="n">replica</span><span class="mf">.</span><span class="n">out</span><span class="err">`</span>
 
 <span class="err">```</span>
@@ -1920,7 +1920,7 @@ thickness       : thickness of plate</p>
 
     <div class="doc doc-contents ">
 
-      <p>compute Replica_MD_Average from output of MD.</p>
+        <p>compute Replica_MD_Average from output of MD.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -1952,7 +1952,7 @@ thickness       : thickness of plate</p>
   <ol>
 <li><code>Replica_*</code> files from separate MD simulations</li>
 </ol>
-</details>      <p>Thang, Jul2020 (update: Sep 2021)</p>
+</details>        <p>Thang, Jul2020 (update: Sep 2021)</p>
 
     </div>
 
@@ -1984,7 +1984,7 @@ thickness       : thickness of plate</p>
 
     <div class="doc doc-contents ">
 
-      <p>define lamda(x)</p>
+        <p>define lamda(x)</p>
 
     </div>
 
@@ -2001,7 +2001,7 @@ thickness       : thickness of plate</p>
 
     <div class="doc doc-contents ">
 
-      <p>compute Average Work from output of SteerMD.</p>
+        <p>compute Average Work from output of SteerMD.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2035,7 +2035,7 @@ thickness       : thickness of plate</p>
           </div>
         </li>
     </ul>
-      <p>Requisites:
+        <p>Requisites:
 1. Replica_* files from separate MD simulations</p>
 
 
@@ -2191,7 +2191,7 @@ thickness       : thickness of plate</p>
 
     <div class="doc doc-contents ">
 
-      <p>Compute Free energy difference in TI method - Lambda integration along Adiabatic Switching path</p>
+        <p>Compute Free energy difference in TI method - Lambda integration along Adiabatic Switching path</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2248,7 +2248,7 @@ thickness       : thickness of plate</p>
 
     <div class="doc doc-contents ">
 
-      <p>Compute Free energy difference in TI method - Lambda integration along Reversible Scaling path</p>
+        <p>Compute Free energy difference in TI method - Lambda integration along Reversible Scaling path</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2342,7 +2342,7 @@ thickness       : thickness of plate</p>
 
     <div class="doc doc-contents ">
 
-      <p>this func. is to compute the excess Helmholtz freeEnergy as Eq.(25) by R.Paula Leite 2016.
+        <p>this func. is to compute the excess Helmholtz freeEnergy as Eq.(25) by R.Paula Leite 2016.
 J.Chem.Phys.145,no.19:194101. <a href="https://doi.org/10.1063/1.4967775">https://doi.org/10.1063/1.4967775</a>.
                         p  :           # UFM p-parameter
                         x = b*rho  :   # adimensional variable, involved UFM-sigma parameter, rho in unit [1/A^3]</p>
@@ -2473,7 +2473,7 @@ J.Chem.Phys.145,no.19:194101. <a href="https://doi.org/10.1063/1.4967775">https:
     
       <script src="../assets/javascripts/bundle.482e4c9f.min.js"></script>
       
-        <script src="../_extend_theme/extra_js/gg_adsense.js"></script>
+        <script src="../_extra_theme/extra_js/gg_adsense.js"></script>
       
     
   </body>

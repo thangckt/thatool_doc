@@ -50,9 +50,9 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../_extend_theme/extra_css/full_width.css">
+      <link rel="stylesheet" href="../_extra_theme/extra_css/full_width.css">
     
-      <link rel="stylesheet" href="../_extend_theme/extra_css/font_size.css">
+      <link rel="stylesheet" href="../_extra_theme/extra_css/font_size.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1277,11 +1277,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../utils/" class="md-nav__link">
+      <a href="../util/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Utils
+    Util
   </span>
   
 
@@ -1298,11 +1298,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../utils_fit/" class="md-nav__link">
+      <a href="../util_fit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Utils fit
+    Util fit
   </span>
   
 
@@ -1875,7 +1875,7 @@
 
     <div class="doc doc-contents first">
 
-      <p>This module contains classes and functions to process molecular dynamics trajectories.</p>
+        <p>This module contains classes and functions to process molecular dynamics trajectories.</p>
 
 
 
@@ -1901,7 +1901,7 @@
     <div class="doc doc-contents ">
 
 
-      <p>Create an Object for a single-FRAME of trajectories from MD simulation.</p>
+        <p>Create an Object for a single-FRAME of trajectories from MD simulation.</p>
 <p>This class create a data-object (single configuration) for the analysis of computing data from LAMMPS. The file formats implemented in this class</p>
 <p><img alt="image" src="https://icme.hpc.msstate.edu/mediawiki/images/e/e7/4kovito.gif" /></p>
 <ul>
@@ -1998,10 +1998,10 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">da</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">data_file</span><span class="o">=</span><span class="s1">&#39;mydata.dat&#39;</span><span class="p">)</span>  <span class="c1"># from DATA file</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">da</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">pdb_file</span><span class="o">=</span><span class="s1">&#39;test.pdb&#39;</span><span class="p">)</span>     <span class="c1"># from PDB file</span>
 </code></pre></div>
-      <p>Refs:
+        <p>Refs:
     [1]. <a href="https://stackoverflow.com/questions/36484000/use-an-object-method-with-the-initializer-same-line">Use chain mutator calls</a></p>
 
-      <p>initilize the Frame object</p>
+        <p>initilize the Frame object</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2604,7 +2604,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>The method to create new FRAME object with input data.</p>
+        <p>The method to create new FRAME object with input data.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2674,7 +2674,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>The method to make an indepedent copy of Frame Obj. Then, the change values of the fields of the new object, the old object should not be affected by that.</p>
+        <p>The method to make an indepedent copy of Frame Obj. Then, the change values of the fields of the new object, the old object should not be affected by that.</p>
 
 
 <p><span class="doc-section-title">Returns:</span></p>
@@ -2692,7 +2692,7 @@
 <p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">da1</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </code></pre></div>
-      <p>Refs:
+        <p>Refs:
     [1]. "shallow copying" vs "deep copying": <a href="https://stackoverflow.com/questions/3975376/understanding-dict-copy-shallow-or-deep/3975388#3975388">https://stackoverflow.com/questions/3975376/understanding-dict-copy-shallow-or-deep/3975388#3975388</a></p>
 
     </div>
@@ -2710,7 +2710,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>The method to check whether something is existed in system or not.</p>
+        <p>The method to check whether something is existed in system or not.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2784,10 +2784,10 @@
     <div class="doc doc-contents ">
 
 
-      <p>Create an Object for a multi-FRAMEs of trajectories from MD simulation.
+        <p>Create an Object for a multi-FRAMEs of trajectories from MD simulation.
 - read frome XYZ file</p>
 
-      <p>initilize the TrajFrame object</p>
+        <p>initilize the TrajFrame object</p>
 
 
 <details class="notes" open>
@@ -2837,7 +2837,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>The <strong>method</strong> create Multi-FRAME object by reading XYZ file.</p>
+        <p>The <strong>method</strong> create Multi-FRAME object by reading XYZ file.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2988,7 +2988,7 @@
     
       <script src="../assets/javascripts/bundle.482e4c9f.min.js"></script>
       
-        <script src="../_extend_theme/extra_js/gg_adsense.js"></script>
+        <script src="../_extra_theme/extra_js/gg_adsense.js"></script>
       
     
   </body>
