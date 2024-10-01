@@ -25,7 +25,7 @@ setup(
     author=get_property("__author__", package_name),
     description=get_property("__description__", package_name),
     long_description=get_property("__long_description__", package_name),
-    author_email=get_property("__author_email__", package_name),
+    author_email=get_property("__email__", package_name),
     version=__version__,
     ### Chose a license from here: https://help.github.com/articles/licensing-a-repository
     license="MIT",
