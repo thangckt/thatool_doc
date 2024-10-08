@@ -15177,7 +15177,7 @@ Args:
     <div class="doc doc-contents ">
 
         <p>Function to read data in matrix form, in which number of values in each line are NOT equal (missing values)
-This cannot be read by Numpy, Pandas,...</p>
+This cannot be read by Numpy, <code>polars</code>,...</p>
 <p>The names of columns are extracted from <code>header_line</code> or set by <code>column_names</code>.
 If both <code>column_names</code> and <code>header_line</code> are not available, the default column's name is: 0 1 2...</p>
 
@@ -15252,7 +15252,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 
 
 <h5 id="thmd.io.read_data.matrix" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">matrix</span><span class="p">(</span><span class="n">file_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">header_line</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">column_names</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">usecols</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">matrix</span><span class="p">(</span><span class="n">file_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">header_line</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">column_names</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">usecols</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pl</span><span class="o">.</span><span class="n">DataFrame</span></code>
 
 <a href="#thmd.io.read_data.matrix" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -15310,10 +15310,10 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>df</code></b> (              <code><span title="pandas.DataFrame">DataFrame</span></code>
+<b><code>df</code></b> (              <code><span title="polars.DataFrame">DataFrame</span></code>
 )          –
           <div class="doc-md-description">
-            <p>pandas DataFrame</p>
+            <p><code>polars</code> DataFrame</p>
           </div>
         </li>
     </ul>
@@ -15326,7 +15326,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 
 
 <h5 id="thmd.io.read_data.logMFD" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">logMFD</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">logMFD</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pl</span><span class="o">.</span><span class="n">DataFrame</span></code>
 
 <a href="#thmd.io.read_data.logMFD" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -15374,10 +15374,10 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>df</code></b> (              <code><span title="pandas.DataFrame">DataFrame</span></code>
+<b><code>df</code></b> (              <code><span title="polars.DataFrame">DataFrame</span></code>
 )          –
           <div class="doc-md-description">
-            <p>pandas DataFrame</p>
+            <p><code>polars</code> DataFrame</p>
           </div>
         </li>
     </ul>
@@ -15390,7 +15390,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 
 
 <h5 id="thmd.io.read_data.lammps_var" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">lammps_var</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">lammps_var</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">var_names</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#thmd.io.read_data.lammps_var" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -15411,7 +15411,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>var_name</code></b>
+          <b><code>var_names</code></b>
               (<code>list</code>, default:
                   <code>None</code>
 )
@@ -15426,10 +15426,10 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>ds</code></b> (              <code><span title="pandas.Series">Series</span></code>
+<b><code>df</code></b> (              <code><span title="polars.DataFrame">DataFrame</span></code>
 )          –
           <div class="doc-md-description">
-            <p>pandas Series contains variable in Lammps file</p>
+            <p><code>polars</code> DataFrame contains variable in Lammps file</p>
           </div>
         </li>
     </ul>
@@ -15546,7 +15546,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 )
           –
           <div class="doc-md-description">
-            <p>read 'note' column in pd.DataFrame. Default to False.</p>
+            <p>read 'note' column in pl.DataFrame. Default to False.</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
