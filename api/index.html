@@ -2138,6 +2138,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#thmd.io.read_block.average_df_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;average_df_list
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6710,6 +6719,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thmd.io.read_block.average_df_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;average_df_list
+    </span>
+  </a>
   
 </li>
         
@@ -14365,7 +14383,16 @@ It generates atomic displacements, computes force constants, and calculates phon
 
 <details class="notes" open>
   <summary>Notes</summary>
-  <p>run 0 without data</p>
+  <ul>
+<li>run 0 without data</li>
+</ul>
+</details>
+
+<details class="udpate" open>
+  <summary>Udpate</summary>
+  <ul>
+<li>2024-10-10: use Polars DataFrame instead of Pandas Series</li>
+</ul>
 </details>
 
 
@@ -14452,7 +14479,7 @@ Args:
 
 
 <h5 id="thmd.io.read_block.LmpRDF" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">LmpRDF</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">LmpRDF</span><span class="p">(</span><span class="n">file_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span></code>
 
 <a href="#thmd.io.read_block.LmpRDF" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -14475,7 +14502,7 @@ Args:
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="thmd.io.read_block.LmpRDF.frame">frame</span></code></b>
-              (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+              (<code><span title="polars.DataFrame">DataFrame</span></code>)
           –
           <div class="doc-md-description">
             <p>3d pandas Frame (multi-row-index DataFrame)</p>
@@ -14551,7 +14578,7 @@ Args:
 
 
 <h6 id="thmd.io.read_block.LmpRDF.read_RDF" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">read_RDF</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">read_RDF</span><span class="p">(</span><span class="n">file_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span></code>
 
 <a href="#thmd.io.read_block.LmpRDF.read_RDF" class="headerlink" title="Permanent link">&para;</a></h6>
 
@@ -14605,7 +14632,7 @@ Args:
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>df</code></b> (              <code><span title="pandas.DataFrame">DataFrame</span></code>
+<b><code>df</code></b> (              <code><span title="polars.DataFrame">DataFrame</span></code>
 )          –
           <div class="doc-md-description">
             <p>Average of RDF</p>
@@ -14653,7 +14680,7 @@ Args:
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="thmd.io.read_block.LmpAveChunk.frame">frame</span></code></b>
-              (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+              (<code><span title="polars.DataFrame">DataFrame</span></code>)
           –
           <div class="doc-md-description">
             <p>3d pandas Frame (multi-row-index DataFrame).</p>
@@ -14860,7 +14887,8 @@ Args:
 
 
 <p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">RDF</span> <span class="o">=</span> <span class="n">thaFileType</span><span class="o">.</span><span class="n">PlumHistogram</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s1">&#39;myRDF.txt&#39;</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">thmd.io.read_block</span> <span class="kn">import</span> <span class="n">PlumHistogram</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">RDF</span> <span class="o">=</span> <span class="n">PlumHistogram</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s1">&#39;myRDF.txt&#39;</span><span class="p">)</span>
 </code></pre></div>
 
         <p>initiate object</p>
@@ -14961,7 +14989,7 @@ Args:
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>df</code></b> (              <code><span title="pandas.DataFrame">DataFrame</span></code>
+<b><code>df</code></b> (              <code><span title="polars.DataFrame">DataFrame</span></code>
 )          –
           <div class="doc-md-description">
             <p>DataFrame of avergave histogram</p>
@@ -15130,6 +15158,48 @@ Args:
 
 </div>
 
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="thmd.io.read_block.average_df_list" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">average_df_list</span><span class="p">(</span><span class="n">list_df</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">pl</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">pl</span><span class="o">.</span><span class="n">DataFrame</span></code>
+
+<a href="#thmd.io.read_block.average_df_list" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>compute average of list of DataFrame</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>list_df</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>list of DataFrame</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>df</code></b> (              <code>DataFrame</code>
+)          –
+          <div class="doc-md-description">
+            <p>Average of list of DataFrame</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
 
 
 
