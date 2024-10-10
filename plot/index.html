@@ -1530,11 +1530,10 @@
         <p>This module provides functions and class to produce publication-quality figures. The main idea is to create a handy class which setup all necessary parameters for plotting, and then just call its methods to produce the publication-quality figures.</p>
 <p>The core class is the <code>Plotter</code>, which is built on top of <a href="https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html"><code>matplotlib.pyplot</code></a>. The <code>Plotter</code>, therefore, has all useful functions from <code>matplotlib.pyplot</code>.</p>
 <p>Assume we have a data frame <code>df</code>:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">})</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">polars</span> <span class="k">as</span> <span class="nn">pl</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">})</span>
 </code></pre></div></p>
 <p>Then, use the <code>Plotter().plt</code> to plot the data as a normal <code>matplotlib.pyplot</code> object. Adapt all functions from <code>matplotlib.pyplot</code>.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">thmd.plot</span> <span class="kn">import</span> <span class="n">Plotter</span>
@@ -1815,7 +1814,7 @@
 
 
 <h4 id="thmd.plot.Plotter.set_minor_locator" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xminor</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">yminor</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">ax</span><span class="p">:</span> <span class="nb">object</span><span class="p">,</span> <span class="n">xminor</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">yminor</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></code>
 
 <a href="#thmd.plot.Plotter.set_minor_locator" class="headerlink" title="Permanent link">&para;</a></h4>
 
