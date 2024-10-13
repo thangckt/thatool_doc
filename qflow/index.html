@@ -1982,6 +1982,48 @@
 
 
 
+
+
+<p><span class="doc-section-title">Modules:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.help_function" href="../api/#thmd.qflow.help_function">help_function</a></code></b>
+          –
+          <div class="doc-md-description">
+            <p>Define support functions for qflow package.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.machine_unist" href="../api/#thmd.qflow.machine_unist">machine_unist</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.qsub_script" href="../api/#thmd.qflow.qsub_script">qsub_script</a></code></b>
+          –
+          <div class="doc-md-description">
+            <p>Define the template for qsub job submission.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist" href="../api/#thmd.qflow.resource_unist">resource_unist</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
   <div class="doc doc-children">
 
 
@@ -2006,6 +2048,41 @@
     <div class="doc doc-contents ">
 
         <p>Define support functions for qflow package.</p>
+
+
+
+
+
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.help_function.read_nodes" href="../api/#thmd.qflow.help_function.read_nodes">read_nodes</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Read node list from file.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.help_function.format_ignore_string" href="../api/#thmd.qflow.help_function.format_ignore_string">format_ignore_string</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Format <code>qsub_string</code> for ignore nodes.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.help_function.format_select_string" href="../api/#thmd.qflow.help_function.format_select_string">format_select_string</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Format <code>qsub_string</code> for selected nodes.</p>
+            </div>
+          </li>
+    </ul>
+
+
 
 
 
@@ -2100,6 +2177,67 @@
 
 
 
+
+
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.machine_unist.Tachyon" href="../api/#thmd.qflow.machine_unist.Tachyon">Tachyon</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Define Machine for running jobs on Tachyon cluster at UNIST.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.machine_unist.Eagle" href="../api/#thmd.qflow.machine_unist.Eagle">Eagle</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Define Machine for running jobs on Tachyon cluster at UNIST.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.machine_unist.Lion" href="../api/#thmd.qflow.machine_unist.Lion">Lion</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Define Machine for running jobs on Tachyon cluster at UNIST.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.machine_unist.Leopard" href="../api/#thmd.qflow.machine_unist.Leopard">Leopard</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Define Machine for running jobs on Tachyon cluster at UNIST.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.machine_unist.CanCentosGpu" href="../api/#thmd.qflow.machine_unist.CanCentosGpu">CanCentosGpu</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Define Machine for running jobs on CAN cluster at UNIST.</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.machine_unist.sge_template" href="../api/#thmd.qflow.machine_unist.sge_template">sge_template</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+    </ul>
+
+
+
   <div class="doc doc-children">
 
 
@@ -2146,7 +2284,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>remote_path</code></b>
+            <b><code>remote_path</code></b>
               (<code>str</code>, default:
                   <code>&#39;/home1/p001cao/work/w24_dpjob&#39;</code>
 )
@@ -2178,7 +2316,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>remote_path</code></b>
+            <b><code>remote_path</code></b>
               (<code>str</code>, default:
                   <code>&#39;/uwork/p001cao/work/w24_dpjob&#39;</code>
 )
@@ -2210,7 +2348,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>remote_path</code></b>
+            <b><code>remote_path</code></b>
               (<code>str</code>, default:
                   <code>&#39;/uwork/p001cao/work/w24_dpjob&#39;</code>
 )
@@ -2242,7 +2380,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>remote_path</code></b>
+            <b><code>remote_path</code></b>
               (<code>str</code>, default:
                   <code>&#39;/uwork/p001cao/work/w24_dpjob&#39;</code>
 )
@@ -2274,7 +2412,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>remote_path</code></b>
+            <b><code>remote_path</code></b>
               (<code>str</code>, default:
                   <code>&#39;/home/thang/work/w24_dpjob&#39;</code>
 )
@@ -2310,6 +2448,55 @@
     <div class="doc doc-contents ">
 
         <p>Define the template for qsub job submission.</p>
+
+
+
+
+
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.qsub_script.qsub_sge_job" href="../api/#thmd.qflow.qsub_script.qsub_sge_job">qsub_sge_job</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Return the example script for submiting SGE job.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.qsub_script.winBAT_submit_dispatcher" href="../api/#thmd.qflow.qsub_script.winBAT_submit_dispatcher">winBAT_submit_dispatcher</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Return the windows batch script for submitting DP dispatcher.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.qsub_script.winBAT_cmd" href="../api/#thmd.qflow.qsub_script.winBAT_cmd">winBAT_cmd</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Return the example script for running command in cmd.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.qsub_script.winBAT_wsl" href="../api/#thmd.qflow.qsub_script.winBAT_wsl">winBAT_wsl</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Return the example script for running command in cmd.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.qsub_script.python_dispatcher" href="../api/#thmd.qflow.qsub_script.python_dispatcher">python_dispatcher</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Return the example script for using dpdispatcher.</p>
+            </div>
+          </li>
+    </ul>
+
+
 
 
 
@@ -2430,6 +2617,130 @@
 
 
 
+
+
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist.Tachyon_lammps_ib" href="../api/#thmd.qflow.resource_unist.Tachyon_lammps_ib">Tachyon_lammps_ib</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Define Resources for running LAMMPS on Tachyon cluster at UNIST, only InfiniBand nodes.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist.Tachyon_lammps_tcp" href="../api/#thmd.qflow.resource_unist.Tachyon_lammps_tcp">Tachyon_lammps_tcp</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Define Resources for running LAMMPS on Tachyon cluster at UNIST, only use TCP.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist.Tachyon_gpaw_ib" href="../api/#thmd.qflow.resource_unist.Tachyon_gpaw_ib">Tachyon_gpaw_ib</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Define Resources for running GPAW on Tachyon cluster at UNIST.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist.Tachyon_gpaw_ucx" href="../api/#thmd.qflow.resource_unist.Tachyon_gpaw_ucx">Tachyon_gpaw_ucx</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Define Resources for running GPAW on Tachyon cluster at UNIST.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist.Tachyon_gpaw_tcp" href="../api/#thmd.qflow.resource_unist.Tachyon_gpaw_tcp">Tachyon_gpaw_tcp</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist.Tachyon_lammps_ase" href="../api/#thmd.qflow.resource_unist.Tachyon_lammps_ase">Tachyon_lammps_ase</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist.Tachyon_ase_ib" href="../api/#thmd.qflow.resource_unist.Tachyon_ase_ib">Tachyon_ase_ib</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist.Tachyon_ase_tcp" href="../api/#thmd.qflow.resource_unist.Tachyon_ase_tcp">Tachyon_ase_tcp</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist.Lion_lammps" href="../api/#thmd.qflow.resource_unist.Lion_lammps">Lion_lammps</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Define Resources for running LAMMPS on Eagle cluster at UNIST.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist.Leopard_lammps" href="../api/#thmd.qflow.resource_unist.Leopard_lammps">Leopard_lammps</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist.Eagle_lammps" href="../api/#thmd.qflow.resource_unist.Eagle_lammps">Eagle_lammps</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Define Resources for running LAMMPS on Eagle cluster at UNIST.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist.CanCentosGpu_lammps" href="../api/#thmd.qflow.resource_unist.CanCentosGpu_lammps">CanCentosGpu_lammps</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Define Resources for running LAMMPS on Tachyon cluster at UNIST.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist.CanCentosGpu_gpaw" href="../api/#thmd.qflow.resource_unist.CanCentosGpu_gpaw">CanCentosGpu_gpaw</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Define Resources for running LAMMPS on Tachyon cluster at UNIST.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist.CanCentosGpu_ase" href="../api/#thmd.qflow.resource_unist.CanCentosGpu_ase">CanCentosGpu_ase</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+    </ul>
+
+
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.qflow.resource_unist.tachyon_template" href="../api/#thmd.qflow.resource_unist.tachyon_template">tachyon_template</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+    </ul>
+
+
+
   <div class="doc doc-children">
 
 
@@ -2476,7 +2787,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>n_cpu</code></b>
+            <b><code>n_cpu</code></b>
               (<code>int</code>, default:
                   <code>16</code>
 )
@@ -2508,7 +2819,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>n_cpu</code></b>
+            <b><code>n_cpu</code></b>
               (<code>int</code>, default:
                   <code>8</code>
 )
@@ -2540,7 +2851,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>n_cpu</code></b>
+            <b><code>n_cpu</code></b>
               (<code>int</code>, default:
                   <code>16</code>
 )
@@ -2572,7 +2883,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>n_cpu</code></b>
+            <b><code>n_cpu</code></b>
               (<code>int</code>, default:
                   <code>16</code>
 )
@@ -2664,7 +2975,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>n_cpu</code></b>
+            <b><code>n_cpu</code></b>
               (<code>int</code>, default:
                   <code>12</code>
 )
@@ -2674,7 +2985,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>queue_name</code></b>
+            <b><code>queue_name</code></b>
               (<code>str</code>, default:
                   <code>&#39;lion-normal.q&#39;</code>
 )
@@ -2686,7 +2997,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>pe_name</code></b>
+            <b><code>pe_name</code></b>
               (<code>str</code>, default:
                   <code>&#39;lion-normal&#39;</code>
 )
@@ -2698,7 +3009,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>time</code></b>
+            <b><code>time</code></b>
               (<code>str</code>, default:
                   <code>&#39;168:00:00&#39;</code>
 )
@@ -2745,7 +3056,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>n_cpu</code></b>
+            <b><code>n_cpu</code></b>
               (<code>int</code>, default:
                   <code>10</code>
 )
@@ -2755,7 +3066,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>pe_name</code></b>
+            <b><code>pe_name</code></b>
               (<code>str</code>, default:
                   <code>&#39;mpi_10&#39;</code>
 )
@@ -2788,7 +3099,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>pe_name</code></b>
+            <b><code>pe_name</code></b>
               (<code>str</code>, default:
                   <code>&#39;mpi_12&#39;</code>
 )
@@ -2798,7 +3109,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>n_cpu</code></b>
+            <b><code>n_cpu</code></b>
               (<code>int</code>, default:
                   <code>12</code>
 )
@@ -2830,7 +3141,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>pe_name</code></b>
+            <b><code>pe_name</code></b>
               (<code>str</code>, default:
                   <code>&#39;mpi_12&#39;</code>
 )
@@ -2840,7 +3151,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>n_cpu</code></b>
+            <b><code>n_cpu</code></b>
               (<code>int</code>, default:
                   <code>12</code>
 )

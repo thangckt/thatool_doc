@@ -1447,6 +1447,62 @@
 
 
 
+
+
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_data.matrix_lost" href="../api/#thmd.io.read_data.matrix_lost">matrix_lost</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Function to read data in matrix form, in which number of values in each line are NOT equal (missing values)</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_data.matrix" href="../api/#thmd.io.read_data.matrix">matrix</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Function to read Data that is as a regular matrix.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_data.logMFD" href="../api/#thmd.io.read_data.logMFD">logMFD</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Function to read data from LogMFD calculation.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_data.lammps_var" href="../api/#thmd.io.read_data.lammps_var">lammps_var</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Function to extract variable values from LAMMPS input file.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_data.plumed_var" href="../api/#thmd.io.read_data.plumed_var">plumed_var</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Function to extract variable values from PLUMED input file.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_data.list_matrix_in_dir" href="../api/#thmd.io.read_data.list_matrix_in_dir">list_matrix_in_dir</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>read data from all *.txt files in current and sub-folders.</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+
   <div class="doc doc-children">
 
 
@@ -1477,7 +1533,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>file_name</code></b>
+            <b><code>file_name</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1485,7 +1541,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>header_line</code></b>
+            <b><code>header_line</code></b>
               (<code>int</code>, default:
                   <code>None</code>
 )
@@ -1495,7 +1551,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>column_names</code></b>
+            <b><code>column_names</code></b>
               (<code>list</code>, default:
                   <code>None</code>
 )
@@ -1505,7 +1561,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>comment</code></b>
+            <b><code>comment</code></b>
               (<code>str</code>, default:
                   <code>&#39;#&#39;</code>
 )
@@ -1520,7 +1576,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>df</code></b> (              <code><span title="polars.DataFrame">DataFrame</span></code>
+<b><code>df</code></b> (              <code>DataFrame</code>
 )          –
           <div class="doc-md-description">
             <p>polars DataFrame</p>
@@ -1559,7 +1615,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>file_name</code></b>
+            <b><code>file_name</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1567,7 +1623,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>header_line</code></b>
+            <b><code>header_line</code></b>
               (<code>int</code>, default:
                   <code>None</code>
 )
@@ -1577,7 +1633,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>column_names</code></b>
+            <b><code>column_names</code></b>
               (<code>list[str]</code>, default:
                   <code>None</code>
 )
@@ -1587,7 +1643,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>usecols</code></b>
+            <b><code>usecols</code></b>
               (<code>tuple[int]</code>, default:
                   <code>None</code>
 )
@@ -1602,7 +1658,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>df</code></b> (              <code><span title="polars.DataFrame">DataFrame</span></code>
+<b><code>df</code></b> (              <code>DataFrame</code>
 )          –
           <div class="doc-md-description">
             <p><code>polars</code> DataFrame</p>
@@ -1631,7 +1687,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>file_name</code></b>
+            <b><code>file_name</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1639,7 +1695,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>dim</code></b>
+            <b><code>dim</code></b>
               (<code>int</code>, default:
                   <code>1</code>
 )
@@ -1666,7 +1722,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>df</code></b> (              <code><span title="polars.DataFrame">DataFrame</span></code>
+<b><code>df</code></b> (              <code>DataFrame</code>
 )          –
           <div class="doc-md-description">
             <p><code>polars</code> DataFrame</p>
@@ -1695,7 +1751,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>file_name</code></b>
+            <b><code>file_name</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1703,7 +1759,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>var_names</code></b>
+            <b><code>var_names</code></b>
               (<code>list</code>, default:
                   <code>None</code>
 )
@@ -1718,7 +1774,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>df</code></b> (              <code><span title="polars.DataFrame">DataFrame</span></code>
+<b><code>df</code></b> (              <code>DataFrame</code>
 )          –
           <div class="doc-md-description">
             <p><code>polars</code> DataFrame contains variable in Lammps file</p>
@@ -1747,7 +1803,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>file_name</code></b>
+            <b><code>file_name</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1755,7 +1811,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>var_name</code></b>
+            <b><code>var_name</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1763,7 +1819,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>block_name</code></b>
+            <b><code>block_name</code></b>
               (<code>str</code>, default:
                   <code>None</code>
 )
@@ -1812,7 +1868,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>search_key</code></b>
+            <b><code>search_key</code></b>
               (<code>str</code>, default:
                   <code>&#39;deform_&#39;</code>
 )
@@ -1822,7 +1878,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>file_ext</code></b>
+            <b><code>file_ext</code></b>
               (<code>str</code>, default:
                   <code>&#39;.txt&#39;</code>
 )
@@ -1832,7 +1888,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>read_note</code></b>
+            <b><code>read_note</code></b>
               (<code>bool</code>, default:
                   <code>False</code>
 )
@@ -1842,7 +1898,7 @@ If both <code>column_names</code> and <code>header_line</code> are not available
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>recursive</code></b>
+            <b><code>recursive</code></b>
               (<code>bool</code>, default:
                   <code>True</code>
 )

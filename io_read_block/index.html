@@ -1673,6 +1673,60 @@
 
 
 
+
+
+
+
+<p><span class="doc-section-title">Classes:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.LmpLogFile" href="../api/#thmd.io.read_block.LmpLogFile">LmpLogFile</a></code></b>
+          –
+          <div class="doc-md-description">
+            <p>Create an Object of LOG file.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.LmpRDF" href="../api/#thmd.io.read_block.LmpRDF">LmpRDF</a></code></b>
+          –
+          <div class="doc-md-description">
+            <p>class to read Radial Distribution Fuction (RDF) file from Lammps compute</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.LmpAveChunk" href="../api/#thmd.io.read_block.LmpAveChunk">LmpAveChunk</a></code></b>
+          –
+          <div class="doc-md-description">
+            <p>class to read Radial Distribution Fuction (RDF) file from Lammps compute</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.PlumHistogram" href="../api/#thmd.io.read_block.PlumHistogram">PlumHistogram</a></code></b>
+          –
+          <div class="doc-md-description">
+            <p>Create an Object of DUMP file</p>
+          </div>
+        </li>
+    </ul>
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.average_df_list" href="../api/#thmd.io.read_block.average_df_list">average_df_list</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>compute average of list of DataFrame</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+
   <div class="doc doc-children">
 
 
@@ -1716,7 +1770,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>logfile</code></b>
+            <b><code>logfile</code></b>
               (<code>str</code>, default:
                   <code>None</code>
 )
@@ -1731,13 +1785,34 @@
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>Obj</code></b> (              <code><a class="autorefs autorefs-internal" title="thmd.io.read_block.LmpLogFile" href="../api/#thmd.io.read_block.LmpLogFile">LmpLogFile</a></code>
+<b><code>Obj</code></b> (              <code>LmpLogFile</code>
 )          –
           <div class="doc-md-description">
             <p>LmpLogFile object</p>
           </div>
         </li>
     </ul>
+
+
+
+
+
+
+
+
+
+<p><span class="doc-section-title">Methods:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.LmpLogFile.read_log" href="../api/#thmd.io.read_block.LmpLogFile.read_log">read_log</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Read LAMMPS logfile</p>
+            </div>
+          </li>
+    </ul>
+
+
 
 
 
@@ -1771,7 +1846,7 @@ Args:
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>Obj</code></b> (              <code><a class="autorefs autorefs-internal" title="thmd.io.read_block.LmpLogFile" href="../api/#thmd.io.read_block.LmpLogFile">LmpLogFile</a></code>
+<b><code>Obj</code></b> (              <code>LmpLogFile</code>
 )          –
           <div class="doc-md-description">
             <p>LmpLogFile object</p>
@@ -1819,7 +1894,7 @@ Args:
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="thmd.io.read_block.LmpRDF.frame">frame</span></code></b>
-              (<code><span title="polars.DataFrame">DataFrame</span></code>)
+              (<code>DataFrame</code>)
           –
           <div class="doc-md-description">
             <p>3d pandas Frame (multi-row-index DataFrame)</p>
@@ -1852,7 +1927,7 @@ Args:
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>file_name</code></b>
+            <b><code>file_name</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1865,7 +1940,7 @@ Args:
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>Obj</code></b> (              <code><a class="autorefs autorefs-internal" title="thmd.io.read_block.LmpAveChunk" href="../api/#thmd.io.read_block.LmpAveChunk">LmpAveChunk</a></code>
+<b><code>Obj</code></b> (              <code>LmpAveChunk</code>
 )          –
           <div class="doc-md-description">
             <p>LmpAveChunk object</p>
@@ -1877,6 +1952,34 @@ Args:
 <p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">RDF</span> <span class="o">=</span> <span class="n">LmpAveChunk</span><span class="p">(</span><span class="s1">&#39;rdf.txt&#39;</span><span class="p">)</span>
 </code></pre></div>
+
+
+
+
+
+
+
+
+
+<p><span class="doc-section-title">Methods:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.LmpRDF.read_RDF" href="../api/#thmd.io.read_block.LmpRDF.read_RDF">read_RDF</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Args:</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.LmpRDF.compute_AveRDF" href="../api/#thmd.io.read_block.LmpRDF.compute_AveRDF">compute_AveRDF</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>compute average of RDF over all frames</p>
+            </div>
+          </li>
+    </ul>
+
+
 
 
 
@@ -1907,7 +2010,7 @@ Args:
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>file_name</code></b>
+            <b><code>file_name</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1920,7 +2023,7 @@ Args:
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>Obj</code></b> (              <code><a class="autorefs autorefs-internal" title="thmd.io.read_block.LmpRDF" href="../api/#thmd.io.read_block.LmpRDF">LmpRDF</a></code>
+<b><code>Obj</code></b> (              <code>LmpRDF</code>
 )          –
           <div class="doc-md-description">
             <p>LmpRDF object</p>
@@ -1949,7 +2052,7 @@ Args:
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>df</code></b> (              <code><span title="polars.DataFrame">DataFrame</span></code>
+<b><code>df</code></b> (              <code>DataFrame</code>
 )          –
           <div class="doc-md-description">
             <p>Average of RDF</p>
@@ -1997,7 +2100,7 @@ Args:
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="thmd.io.read_block.LmpAveChunk.frame">frame</span></code></b>
-              (<code><span title="polars.DataFrame">DataFrame</span></code>)
+              (<code>DataFrame</code>)
           –
           <div class="doc-md-description">
             <p>3d pandas Frame (multi-row-index DataFrame).</p>
@@ -2030,7 +2133,7 @@ Args:
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>file_name</code></b>
+            <b><code>file_name</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -2043,7 +2146,7 @@ Args:
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>Obj</code></b> (              <code><a class="autorefs autorefs-internal" title="thmd.io.read_block.LmpAveChunk" href="../api/#thmd.io.read_block.LmpAveChunk">LmpAveChunk</a></code>
+<b><code>Obj</code></b> (              <code>LmpAveChunk</code>
 )          –
           <div class="doc-md-description">
             <p>LmpAveChunk object</p>
@@ -2055,6 +2158,34 @@ Args:
 <p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">RDF</span> <span class="o">=</span> <span class="n">LmpAveChunk</span><span class="p">(</span><span class="s1">&#39;LmpAveChunk.txt&#39;</span><span class="p">)</span>
 </code></pre></div>
+
+
+
+
+
+
+
+
+
+<p><span class="doc-section-title">Methods:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.LmpAveChunk.read_AveChunk" href="../api/#thmd.io.read_block.LmpAveChunk.read_AveChunk">read_AveChunk</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Args:</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.LmpAveChunk.compute_AveChunk" href="../api/#thmd.io.read_block.LmpAveChunk.compute_AveChunk">compute_AveChunk</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>compute average of RDF over all frames</p>
+            </div>
+          </li>
+    </ul>
+
+
 
 
 
@@ -2085,7 +2216,7 @@ Args:
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>file_name</code></b>
+            <b><code>file_name</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -2098,7 +2229,7 @@ Args:
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>Obj</code></b> (              <code><a class="autorefs autorefs-internal" title="thmd.io.read_block.LmpAveChunk" href="../api/#thmd.io.read_block.LmpAveChunk">LmpAveChunk</a></code>
+<b><code>Obj</code></b> (              <code>LmpAveChunk</code>
 )          –
           <div class="doc-md-description">
             <p>LmpAveChunk object</p>
@@ -2214,7 +2345,7 @@ Args:
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>file_name</code></b>
+            <b><code>file_name</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -2227,13 +2358,69 @@ Args:
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>Obj</code></b> (              <code><a class="autorefs autorefs-internal" title="thmd.io.read_block.PlumHistogram" href="../api/#thmd.io.read_block.PlumHistogram">PlumHistogram</a></code>
+<b><code>Obj</code></b> (              <code>PlumHistogram</code>
 )          –
           <div class="doc-md-description">
             <p>PlumHistogram object</p>
           </div>
         </li>
     </ul>
+
+
+
+
+
+
+
+
+
+<p><span class="doc-section-title">Methods:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.PlumHistogram.read_histogram" href="../api/#thmd.io.read_block.PlumHistogram.read_histogram">read_histogram</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Args:</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.PlumHistogram.compute_average_histogram" href="../api/#thmd.io.read_block.PlumHistogram.compute_average_histogram">compute_average_histogram</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>compute average of histogram over all frames</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.PlumHistogram.areaHisto" href="../api/#thmd.io.read_block.PlumHistogram.areaHisto">areaHisto</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.PlumHistogram.fit_std_gaussian" href="../api/#thmd.io.read_block.PlumHistogram.fit_std_gaussian">fit_std_gaussian</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Fit the average-histogarm to Standard Gaussian function</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.PlumHistogram.find_tail" href="../api/#thmd.io.read_block.PlumHistogram.find_tail">find_tail</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Find tail of distribution function</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.read_block.PlumHistogram.find_center" href="../api/#thmd.io.read_block.PlumHistogram.find_center">find_center</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Find tail of distribution function</p>
+            </div>
+          </li>
+    </ul>
+
+
 
 
 
@@ -2264,7 +2451,7 @@ Args:
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>file_name</code></b>
+            <b><code>file_name</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -2277,7 +2464,7 @@ Args:
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>Obj</code></b> (              <code><a class="autorefs autorefs-internal" title="thmd.io.read_block.PlumHistogram" href="../api/#thmd.io.read_block.PlumHistogram">PlumHistogram</a></code>
+<b><code>Obj</code></b> (              <code>PlumHistogram</code>
 )          –
           <div class="doc-md-description">
             <p>update PlumHistogram object</p>
@@ -2306,7 +2493,7 @@ Args:
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>df</code></b> (              <code><span title="polars.DataFrame">DataFrame</span></code>
+<b><code>df</code></b> (              <code>DataFrame</code>
 )          –
           <div class="doc-md-description">
             <p>DataFrame of avergave histogram</p>
@@ -2379,7 +2566,7 @@ Args:
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>tol</code></b>
+            <b><code>tol</code></b>
               (<code>float</code>, default:
                   <code>0.0001</code>
 )
@@ -2389,7 +2576,7 @@ Args:
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>gridSize</code></b>
+            <b><code>gridSize</code></b>
               (<code>float</code>, default:
                   <code>1e-06</code>
 )
@@ -2440,7 +2627,7 @@ Args:
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>gridSize</code></b>
+            <b><code>gridSize</code></b>
               (<code>float</code>, default:
                   <code>1e-06</code>
 )
@@ -2493,7 +2680,7 @@ Args:
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>list_df</code></b>
+            <b><code>list_df</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">

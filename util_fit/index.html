@@ -2087,6 +2087,95 @@
 
 
 
+
+
+<p><span class="doc-section-title">Modules:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.curve_intersect" href="../api/#thmd.util.fit.curve_intersect">curve_intersect</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.fit_root" href="../api/#thmd.util.fit.fit_root">fit_root</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit" href="../api/#thmd.util.fit.user_lmfit">user_lmfit</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+    </ul>
+
+
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.curve_intersect_shapely" href="../api/#thmd.util.fit.curve_intersect_shapely">curve_intersect_shapely</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>find the intersection points between 2 lines</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.polyfit" href="../api/#thmd.util.fit.polyfit">polyfit</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Polynomial fitting for y = f(x) relation, which returns uncertainties of coefficients.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.find_slope" href="../api/#thmd.util.fit.find_slope">find_slope</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Compute slope of a linear relation y = A + B*x.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.find_roots" href="../api/#thmd.util.fit.find_roots">find_roots</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>find roots for y = f(x) relation in polynomial form.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.find_extrema" href="../api/#thmd.util.fit.find_extrema">find_extrema</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>find extrema points (der=0) for y = f(x) relation in polynomial form.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.find_convergence" href="../api/#thmd.util.fit.find_convergence">find_convergence</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>y is a function of x, then find value of x that y converge with a tolerance &lt; tol.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.extrapolate" href="../api/#thmd.util.fit.extrapolate">extrapolate</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+    </ul>
+
+
+
+
+
   <div class="doc doc-children">
 
 
@@ -2149,7 +2238,7 @@ The fitted polynomial(s) are in the form</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>x,y</code></b>
+            <b><code>x,y</code></b>
               (<code>array</code>)
           –
           <div class="doc-md-description">
@@ -2157,7 +2246,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>deg</code></b>
+            <b><code>deg</code></b>
               (<code>int</code>, default:
                   <code>1</code>
 )
@@ -2167,7 +2256,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>sigma_y</code></b>
+            <b><code>sigma_y</code></b>
               (<code>array</code>, default:
                   <code>None</code>
 )
@@ -2177,7 +2266,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>uncert</code></b>
+            <b><code>uncert</code></b>
               (<code>bool</code>, default:
                   <code>False</code>
 )
@@ -2187,7 +2276,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>**kwargs</code></b>
+            <b><code>**kwargs</code></b>
           –
           <div class="doc-md-description">
             <p>additional arguments, adapt all args from <code>np.polyfit</code></p>
@@ -2235,7 +2324,7 @@ The fitted polynomial(s) are in the form</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>x</code></b>
+            <b><code>x</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2243,7 +2332,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>y</code></b>
+            <b><code>y</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2278,7 +2367,7 @@ The fitted polynomial(s) are in the form</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>x</code></b>
+            <b><code>x</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2286,7 +2375,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>y</code></b>
+            <b><code>y</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2294,7 +2383,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>order</code></b>
+            <b><code>order</code></b>
               (<code>int</code>, default:
                   <code>1</code>
 )
@@ -2338,7 +2427,7 @@ The fitted polynomial(s) are in the form</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>x</code></b>
+            <b><code>x</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2346,7 +2435,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>y</code></b>
+            <b><code>y</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2354,7 +2443,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>order</code></b>
+            <b><code>order</code></b>
               (<code>int</code>, default:
                   <code>2</code>
 )
@@ -2364,7 +2453,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>retun_fit</code></b>
+            <b><code>retun_fit</code></b>
               (<code>bool</code>, default:
                   <code>False</code>
 )
@@ -2408,7 +2497,7 @@ The fitted polynomial(s) are in the form</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>x</code></b>
+            <b><code>x</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2416,7 +2505,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>y</code></b>
+            <b><code>y</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2424,7 +2513,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>tol</code></b>
+            <b><code>tol</code></b>
               (<code>float</code>, default:
                   <code>1e-06</code>
 )
@@ -2434,7 +2523,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>grid_size</code></b>
+            <b><code>grid_size</code></b>
               (<code>float</code>, default:
                   <code>None</code>
 )
@@ -2444,7 +2533,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>convergence_side</code></b>
+            <b><code>convergence_side</code></b>
               (<code>str</code>, default:
                   <code>&#39;right&#39;</code>
 )
@@ -2512,6 +2601,27 @@ The fitted polynomial(s) are in the form</p>
 
 
 
+
+
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.curve_intersect.curve_intersect_shapely" href="../api/#thmd.util.fit.curve_intersect.curve_intersect_shapely">curve_intersect_shapely</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>find the intersection points between 2 lines</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+
   <div class="doc doc-children">
 
 
@@ -2571,7 +2681,7 @@ Args:
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>curve1</code></b>
+            <b><code>curve1</code></b>
               (<code>array like</code>)
           –
           <div class="doc-md-description">
@@ -2579,7 +2689,7 @@ Args:
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>curve2</code></b>
+            <b><code>curve2</code></b>
               (<code>array like</code>)
           –
           <div class="doc-md-description">
@@ -2587,7 +2697,7 @@ Args:
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>degree</code></b>
+            <b><code>degree</code></b>
               (<code>int</code>, default:
                   <code>3</code>
 )
@@ -2597,7 +2707,7 @@ Args:
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>bounds</code></b>
+            <b><code>bounds</code></b>
               (<code>tuple</code>, default:
                   <code>None</code>
 )
@@ -2651,6 +2761,62 @@ Args:
 
 
 
+
+
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.fit_root.polyfit" href="../api/#thmd.util.fit.fit_root.polyfit">polyfit</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Polynomial fitting for y = f(x) relation, which returns uncertainties of coefficients.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.fit_root.find_slope" href="../api/#thmd.util.fit.fit_root.find_slope">find_slope</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Compute slope of a linear relation y = A + B*x.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.fit_root.find_roots" href="../api/#thmd.util.fit.fit_root.find_roots">find_roots</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>find roots for y = f(x) relation in polynomial form.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.fit_root.find_extrema" href="../api/#thmd.util.fit.fit_root.find_extrema">find_extrema</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>find extrema points (der=0) for y = f(x) relation in polynomial form.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.fit_root.find_convergence" href="../api/#thmd.util.fit.fit_root.find_convergence">find_convergence</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>y is a function of x, then find value of x that y converge with a tolerance &lt; tol.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.fit_root.extrapolate" href="../api/#thmd.util.fit.fit_root.extrapolate">extrapolate</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+    </ul>
+
+
+
+
+
   <div class="doc doc-children">
 
 
@@ -2681,7 +2847,7 @@ The fitted polynomial(s) are in the form</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>x,y</code></b>
+            <b><code>x,y</code></b>
               (<code>array</code>)
           –
           <div class="doc-md-description">
@@ -2689,7 +2855,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>deg</code></b>
+            <b><code>deg</code></b>
               (<code>int</code>, default:
                   <code>1</code>
 )
@@ -2699,7 +2865,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>sigma_y</code></b>
+            <b><code>sigma_y</code></b>
               (<code>array</code>, default:
                   <code>None</code>
 )
@@ -2709,7 +2875,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>uncert</code></b>
+            <b><code>uncert</code></b>
               (<code>bool</code>, default:
                   <code>False</code>
 )
@@ -2719,7 +2885,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>**kwargs</code></b>
+            <b><code>**kwargs</code></b>
           –
           <div class="doc-md-description">
             <p>additional arguments, adapt all args from <code>np.polyfit</code></p>
@@ -2767,7 +2933,7 @@ The fitted polynomial(s) are in the form</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>x</code></b>
+            <b><code>x</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2775,7 +2941,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>y</code></b>
+            <b><code>y</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2810,7 +2976,7 @@ The fitted polynomial(s) are in the form</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>x</code></b>
+            <b><code>x</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2818,7 +2984,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>y</code></b>
+            <b><code>y</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2826,7 +2992,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>order</code></b>
+            <b><code>order</code></b>
               (<code>int</code>, default:
                   <code>1</code>
 )
@@ -2870,7 +3036,7 @@ The fitted polynomial(s) are in the form</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>x</code></b>
+            <b><code>x</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2878,7 +3044,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>y</code></b>
+            <b><code>y</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2886,7 +3052,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>order</code></b>
+            <b><code>order</code></b>
               (<code>int</code>, default:
                   <code>2</code>
 )
@@ -2896,7 +3062,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>retun_fit</code></b>
+            <b><code>retun_fit</code></b>
               (<code>bool</code>, default:
                   <code>False</code>
 )
@@ -2940,7 +3106,7 @@ The fitted polynomial(s) are in the form</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>x</code></b>
+            <b><code>x</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2948,7 +3114,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>y</code></b>
+            <b><code>y</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2956,7 +3122,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>tol</code></b>
+            <b><code>tol</code></b>
               (<code>float</code>, default:
                   <code>1e-06</code>
 )
@@ -2966,7 +3132,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>grid_size</code></b>
+            <b><code>grid_size</code></b>
               (<code>float</code>, default:
                   <code>None</code>
 )
@@ -2976,7 +3142,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>convergence_side</code></b>
+            <b><code>convergence_side</code></b>
               (<code>str</code>, default:
                   <code>&#39;right&#39;</code>
 )
@@ -3047,7 +3213,7 @@ The fitted polynomial(s) are in the form</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>x,y</code></b>
+            <b><code>x,y</code></b>
               (<code>array</code>)
           –
           <div class="doc-md-description">
@@ -3055,7 +3221,7 @@ The fitted polynomial(s) are in the form</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>sigma_y</code></b>
+            <b><code>sigma_y</code></b>
               (<code>array</code>, default:
                   <code>None</code>
 )
@@ -3119,6 +3285,27 @@ The fitted polynomial(s) are in the form</p>
 
 
 
+
+
+
+
+<p><span class="doc-section-title">Classes:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit" href="../api/#thmd.util.fit.user_lmfit.UserLmfit">UserLmfit</a></code></b>
+          –
+          <div class="doc-md-description">
+            <p>The class contains set of objective function of fitting use by LMFIT package</p>
+          </div>
+        </li>
+    </ul>
+
+
+
+
+
+
+
   <div class="doc doc-children">
 
 
@@ -3162,6 +3349,153 @@ arguments (and, in certain cases, keyword arguments – see below) are used for 
 </li>
 </ul>
 <p>Ex: func = thmd.CurveLib.Linear(x)</p>
+
+
+
+
+
+
+
+
+
+<p><span class="doc-section-title">Methods:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.Linear" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.Linear">Linear</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>this func is available in LMFIT, just play as an example here</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.inverseTemperature" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.inverseTemperature">inverseTemperature</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.ExpDecay" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.ExpDecay">ExpDecay</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.sizeEffect" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.sizeEffect">sizeEffect</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>system size-dependence on term N^(&#8532;</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.unNormalGaussian" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.unNormalGaussian">unNormalGaussian</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The unNormalize Gaussian function</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.NormalGaussian" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.NormalGaussian">NormalGaussian</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The Normalize Gaussian function</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.sum_2unNormalGaussian" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.sum_2unNormalGaussian">sum_2unNormalGaussian</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The sum of 2 Gaussian function</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.sum_3unNormalGaussian" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.sum_3unNormalGaussian">sum_3unNormalGaussian</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The sum of 3 Gaussian function</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.sum_4unNormalGaussian" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.sum_4unNormalGaussian">sum_4unNormalGaussian</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The sum of 4 Gaussian function</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.sum_5unNormalGaussian" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.sum_5unNormalGaussian">sum_5unNormalGaussian</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The sum of 5 Gaussian function</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.sum_2NormalGaussian" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.sum_2NormalGaussian">sum_2NormalGaussian</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The sum of 2 Gaussian function</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.sum_3NormalGaussian" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.sum_3NormalGaussian">sum_3NormalGaussian</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The sum of 3 Gaussian function</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.sum_4NormalGaussian" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.sum_4NormalGaussian">sum_4NormalGaussian</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The sum of 4 Gaussian function</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.sum_5NormalGaussian" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.sum_5NormalGaussian">sum_5NormalGaussian</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The sum of 5 Gaussian function</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.DoseResp" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.DoseResp">DoseResp</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Dose-response curve with variable Hill slope given by parameter 'p'.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.BiDoseResp" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.BiDoseResp">BiDoseResp</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Biphasic Dose Response Function,</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.Carreau" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.Carreau">Carreau</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Carreau-Yasuda model to describe pseudoplastic flow with asymptotic viscosities at zero and infinite shear rates</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.Cross" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.Cross">Cross</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Cross model to describe pseudoplastic flow with asymptotic viscosities at zero and infinite shear rates</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.util.fit.user_lmfit.UserLmfit.GammaCFD" href="../api/#thmd.util.fit.user_lmfit.UserLmfit.GammaCFD">GammaCFD</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Gamma cumulative distribution function</p>
+            </div>
+          </li>
+    </ul>
+
+
 
 
 

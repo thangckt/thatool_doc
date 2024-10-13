@@ -1322,6 +1322,55 @@
 
 
 
+
+
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.model.box_tool.add_periodic_image" href="../api/#thmd.model.box_tool.add_periodic_image">add_periodic_image</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Function to add "Periodic Images" of atoms at Periodic Boundaries (with a specific cutoff distance)</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.model.box_tool.wrap_coord_PBC" href="../api/#thmd.model.box_tool.wrap_coord_PBC">wrap_coord_PBC</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Function to wrap atom positions at Periodic Boundaries</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.model.box_tool.shell_fcc" href="../api/#thmd.model.box_tool.shell_fcc">shell_fcc</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Compute nearest-neighbor shells for FCC crystal</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.model.box_tool.box_generate" href="../api/#thmd.model.box_tool.box_generate">box_generate</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Generate orientation and dimensions of simulation box.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.model.box_tool.box_orient" href="../api/#thmd.model.box_tool.box_orient">box_orient</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Generate orirentations of simulation box.</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+
   <div class="doc doc-children">
 
 
@@ -1350,7 +1399,7 @@ By Thang, June 2019 (update 2022)</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>points</code></b>
+            <b><code>points</code></b>
               (<code>2d-list np.array pd.DataFrame</code>)
           –
           <div class="doc-md-description">
@@ -1358,7 +1407,7 @@ By Thang, June 2019 (update 2022)</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>box</code></b>
+            <b><code>box</code></b>
               (<code>3d-list array</code>)
           –
           <div class="doc-md-description">
@@ -1366,7 +1415,7 @@ By Thang, June 2019 (update 2022)</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>bound_cond</code></b>
+            <b><code>bound_cond</code></b>
               (<code>list</code>, default:
                   <code>[1, 1, 1]</code>
 )
@@ -1376,7 +1425,7 @@ By Thang, June 2019 (update 2022)</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>cutoff</code></b>
+            <b><code>cutoff</code></b>
               (<code>float</code>, default:
                   <code>6.5</code>
 )
@@ -1391,7 +1440,7 @@ By Thang, June 2019 (update 2022)</p>
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>df</code></b> (              <code><span title="pandas.DataFrame">DataFrame</span></code>
+<b><code>df</code></b> (              <code>DataFrame</code>
 )          –
           <div class="doc-md-description">
             <p>contains original atoms and image atoms with remark colum df['image'].</p>
@@ -1428,7 +1477,7 @@ By Thang, June 2019 (update 2022)</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>points</code></b>
+            <b><code>points</code></b>
               (<code>2d-list np.array pd.DataFrame</code>)
           –
           <div class="doc-md-description">
@@ -1436,7 +1485,7 @@ By Thang, June 2019 (update 2022)</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>box</code></b>
+            <b><code>box</code></b>
               (<code>3d-list array</code>)
           –
           <div class="doc-md-description">
@@ -1444,7 +1493,7 @@ By Thang, June 2019 (update 2022)</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>bound_cond</code></b>
+            <b><code>bound_cond</code></b>
               (<code>list</code>, default:
                   <code>[1, 1, 1]</code>
 )
@@ -1459,7 +1508,7 @@ By Thang, June 2019 (update 2022)</p>
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>df</code></b> (              <code><span title="pandas.DataFrame">DataFrame</span></code>
+<b><code>df</code></b> (              <code>DataFrame</code>
 )          –
           <div class="doc-md-description">
             <p>contains atom positions.</p>
@@ -1491,7 +1540,7 @@ By Thang, June 2019 (update 2022)</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>a</code></b>
+            <b><code>a</code></b>
               (<code>float</code>)
           –
           <div class="doc-md-description">
@@ -1533,7 +1582,7 @@ By Thang, June 2019 (update 2022)</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>box_size</code></b>
+            <b><code>box_size</code></b>
               (<code>list</code>, default:
                   <code>[1, 1, 1]</code>
 )
@@ -1543,7 +1592,7 @@ By Thang, June 2019 (update 2022)</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>zDirect</code></b>
+            <b><code>zDirect</code></b>
               (<code>str</code>, default:
                   <code>&#39;001&#39;</code>
 )
@@ -1553,7 +1602,7 @@ By Thang, June 2019 (update 2022)</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>xDirect</code></b>
+            <b><code>xDirect</code></b>
               (<code>str</code>, default:
                   <code>None</code>
 )

@@ -1556,6 +1556,39 @@
 </details>
 
 
+
+
+
+
+<p><span class="doc-section-title">Classes:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.plot.Plotter" href="../api/#thmd.plot.Plotter">Plotter</a></code></b>
+          –
+          <div class="doc-md-description">
+            <p>Class to produce publication-quality figures with matplotlib.</p>
+          </div>
+        </li>
+    </ul>
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.plot.set_plot_style" href="../api/#thmd.plot.set_plot_style">set_plot_style</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Set style for matplotlib</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+
   <div class="doc doc-children">
 
 
@@ -1585,15 +1618,15 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>df</code></b>
-              (<code><span title="pd.DataFrame">DataFrame</span></code>)
+            <b><code>df</code></b>
+              (<code>DataFrame</code>)
           –
           <div class="doc-md-description">
             <p>input data in form of pd.DataFrame. When no input data, create Plotter object will also sets style for matplotlib.</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>style</code></b>
+            <b><code>style</code></b>
               (<code>str</code>, default:
                   <code>&#39;thang&#39;</code>
 )
@@ -1610,6 +1643,81 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">plt</span> <span class="o">=</span> <span class="n">Plotter</span><span class="p">()</span><span class="o">.</span><span class="n">plt</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">])</span>
 </code></pre></div>
+
+
+
+
+
+
+
+
+
+<p><span class="doc-section-title">Methods:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.plot.Plotter.savefig" href="../api/#thmd.plot.Plotter.savefig">savefig</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Save figure to file. Adapt all keywords arguments from <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html"><code>matplotlib.pyplot.savefig()</code></a> method.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.plot.Plotter.set_style" href="../api/#thmd.plot.Plotter.set_style">set_style</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.plot.Plotter.set_minor_locator" href="../api/#thmd.plot.Plotter.set_minor_locator">set_minor_locator</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Set minor locator for axes</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.plot.Plotter.plt" href="../api/#thmd.plot.Plotter.plt">plt</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.plot.Plotter.COLOR" href="../api/#thmd.plot.Plotter.COLOR">COLOR</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.plot.Plotter.MARKER" href="../api/#thmd.plot.Plotter.MARKER">MARKER</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.plot.Plotter.LINE" href="../api/#thmd.plot.Plotter.LINE">LINE</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.plot.Plotter.info" href="../api/#thmd.plot.Plotter.info">info</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+    </ul>
 
 
 
@@ -1736,7 +1844,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>file_name</code></b>
+            <b><code>file_name</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1853,7 +1961,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>style</code></b>
+            <b><code>style</code></b>
               (<code>str</code>, default:
                   <code>&#39;thang&#39;</code>
 )
@@ -1868,7 +1976,7 @@
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>plt</code></b> (              <code><span title="matplotlib.pyplot">pyplot</span></code>
+<b><code>plt</code></b> (              <code>pyplot</code>
 )          –
           <div class="doc-md-description">
             <p>the <a href="https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html"><code>matplotlib.pyplot</code></a> object</p>

@@ -1499,6 +1499,83 @@
 
 
 
+
+
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.latex.get_citekeys" href="../api/#thmd.latex.get_citekeys">get_citekeys</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Extract all citekeys from a list of <code>.tex</code> files.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.latex.select_entries" href="../api/#thmd.latex.select_entries">select_entries</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Select bibliography entries from a Bibtex <code>.bib</code> file</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.latex.write_bibtex" href="../api/#thmd.latex.write_bibtex">write_bibtex</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Write bibliography data to a Bibtex <code>.bib</code> file</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.latex.minimize_bibtex" href="../api/#thmd.latex.minimize_bibtex">minimize_bibtex</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Minimize the <code>.bib</code> file so that it contains only entries that are cited in the <code>.tex</code> files.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.latex.check_bibtex" href="../api/#thmd.latex.check_bibtex">check_bibtex</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Check for missing fields in the bibtex entries. Based on the <code>type</code> of the entry, there are <a href="https://www.bibtex.com/e/entry-types/">mandatory fields</a>. This function is to check if any of mandatory fields is missing.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.latex.tex2doc" href="../api/#thmd.latex.tex2doc">tex2doc</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Convert a Latex source <code>.tex</code> file to a Microsoft Word <code>.docx</code> file.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.latex.tex2pdf" href="../api/#thmd.latex.tex2pdf">tex2pdf</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Convert a Latex source <code>.tex</code> file to a Microsoft Word <code>.docx</code> file.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.latex.replace_acronyms" href="../api/#thmd.latex.replace_acronyms">replace_acronyms</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Check and replace if acronyms are used in a <code>.tex</code> file.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.latex.count_cited_journals" href="../api/#thmd.latex.count_cited_journals">count_cited_journals</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Count the number of times each journal is cited in the <code>.bib</code> file.</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+
   <div class="doc doc-children">
 
 
@@ -1526,8 +1603,8 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>tex_files</code></b>
-              (<code><span title="typing.Union">Union</span>[str, list]</code>)
+            <b><code>tex_files</code></b>
+              (<code>Union[str, list]</code>)
           –
           <div class="doc-md-description">
             <p>paths to <code>.tex</code> files</p>
@@ -1568,7 +1645,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>citekeys</code></b>
+            <b><code>citekeys</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -1576,7 +1653,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>bib_file</code></b>
+            <b><code>bib_file</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1589,7 +1666,7 @@
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>BibliographyData</code></b> (              <code><span title="pybtex.database.BibliographyData">BibliographyData</span></code>
+<b><code>BibliographyData</code></b> (              <code>BibliographyData</code>
 )          –
           <div class="doc-md-description">
             <p>selected bibliography entries. See <a href="https://docs.pybtex.org/api/parsing.html#id3">pybtex.database.BibliographyData</a></p>
@@ -1618,15 +1695,15 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>bib_data</code></b>
-              (<code><span title="pybtex.database.BibliographyData">BibliographyData</span></code>)
+            <b><code>bib_data</code></b>
+              (<code>BibliographyData</code>)
           –
           <div class="doc-md-description">
             <p>bibliography entries. See <a href="https://docs.pybtex.org/api/parsing.html#id3">pybtex.database.BibliographyData</a></p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>out_file</code></b>
+            <b><code>out_file</code></b>
               (<code>str</code>, default:
                   <code>&#39;reference.bib&#39;</code>
 )
@@ -1658,15 +1735,15 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>tex_files</code></b>
-              (<code><span title="typing.Union">Union</span>[str, list]</code>)
+            <b><code>tex_files</code></b>
+              (<code>Union[str, list]</code>)
           –
           <div class="doc-md-description">
             <p>path to <code>.tex</code> files</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>bib_file</code></b>
+            <b><code>bib_file</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1674,7 +1751,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>out_file</code></b>
+            <b><code>out_file</code></b>
               (<code>str</code>, default:
                   <code>&#39;reference_min.bib&#39;</code>
 )
@@ -1706,7 +1783,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>bib_file</code></b>
+            <b><code>bib_file</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1714,7 +1791,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>verbose</code></b>
+            <b><code>verbose</code></b>
               (<code>bool</code>, default:
                   <code>True</code>
 )
@@ -1724,7 +1801,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>logfile</code></b>
+            <b><code>logfile</code></b>
               (<code>bool</code>, default:
                   <code>False</code>
 )
@@ -1734,7 +1811,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>lower_key</code></b>
+            <b><code>lower_key</code></b>
               (<code>bool</code>, default:
                   <code>False</code>
 )
@@ -1776,7 +1853,7 @@ Need to install <code>pandoc</code> and <code>panflute</code> first.
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>tex_file</code></b>
+            <b><code>tex_file</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1784,7 +1861,7 @@ Need to install <code>pandoc</code> and <code>panflute</code> first.
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>out_file</code></b>
+            <b><code>out_file</code></b>
               (<code>str</code>, default:
                   <code>&#39;output.docx&#39;</code>
 )
@@ -1794,7 +1871,7 @@ Need to install <code>pandoc</code> and <code>panflute</code> first.
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>bib_file</code></b>
+            <b><code>bib_file</code></b>
               (<code>str</code>, default:
                   <code>None</code>
 )
@@ -1871,7 +1948,7 @@ Need to install <code>pandoc</code> and <code>panflute</code> first.
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>tex_file</code></b>
+            <b><code>tex_file</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1879,7 +1956,7 @@ Need to install <code>pandoc</code> and <code>panflute</code> first.
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>out_file</code></b>
+            <b><code>out_file</code></b>
               (<code>str</code>, default:
                   <code>&#39;output.pdf&#39;</code>
 )
@@ -1889,7 +1966,7 @@ Need to install <code>pandoc</code> and <code>panflute</code> first.
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>bib_file</code></b>
+            <b><code>bib_file</code></b>
               (<code>str</code>, default:
                   <code>None</code>
 )
@@ -1968,7 +2045,7 @@ Need to install <code>pandoc</code> and <code>panflute</code> first.
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>bib_file</code></b>
+            <b><code>bib_file</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">

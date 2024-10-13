@@ -1685,6 +1685,74 @@
 
 
 
+
+
+
+
+<p><span class="doc-section-title">Classes:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.logmfd.LogMFD_FCCUBIC" href="../api/#thmd.calc.free_energy.logmfd.LogMFD_FCCUBIC">LogMFD_FCCUBIC</a></code></b>
+          –
+          <div class="doc-md-description">
+            <p>Create an Object (class) of Potential, contain some pre-setup information for Energy barrier for LogMFD calculation.</p>
+          </div>
+        </li>
+    </ul>
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.logmfd.replica_logPD_integration" href="../api/#thmd.calc.free_energy.logmfd.replica_logPD_integration">replica_logPD_integration</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The function to compute LogPD-based MeanForce</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.logmfd.replica_MD_average" href="../api/#thmd.calc.free_energy.logmfd.replica_MD_average">replica_MD_average</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>compute Replica_MD_Average from output of MD.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.logmfd.exp_normalize" href="../api/#thmd.calc.free_energy.logmfd.exp_normalize">exp_normalize</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.logmfd.read_df" href="../api/#thmd.calc.free_energy.logmfd.read_df">read_df</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>define lamda(x)</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.logmfd.replica_SteerMD" href="../api/#thmd.calc.free_energy.logmfd.replica_SteerMD">replica_SteerMD</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>compute Average Work from output of SteerMD.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.logmfd.find_basin_logmfd_profile" href="../api/#thmd.calc.free_energy.logmfd.find_basin_logmfd_profile">find_basin_logmfd_profile</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Args:</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+
   <div class="doc doc-children">
 
 
@@ -1729,6 +1797,67 @@ Potential_Name  :
 modelType       : 'Bulk' or 'Plate'
 zDirect         : '001' or '110' or '111' or
 thickness       : thickness of plate</p>
+
+
+
+
+
+
+
+
+
+<p><span class="doc-section-title">Methods:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.logmfd.LogMFD_FCCUBIC.meltingBarrier" href="../api/#thmd.calc.free_energy.logmfd.LogMFD_FCCUBIC.meltingBarrier">meltingBarrier</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>for a system of N atoms  𝐹=𝑓∗𝑁^(&#8532;) , then perAtom barrier  𝑓=𝐹/𝑁^(&#8532;). This method return f(T)</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.logmfd.LogMFD_FCCUBIC.histo_point" href="../api/#thmd.calc.free_energy.logmfd.LogMFD_FCCUBIC.histo_point">histo_point</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Value of CV at intersection point of histogram as function y = a + bx</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.logmfd.LogMFD_FCCUBIC.Element" href="../api/#thmd.calc.free_energy.logmfd.LogMFD_FCCUBIC.Element">Element</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.logmfd.LogMFD_FCCUBIC.Potential_Name" href="../api/#thmd.calc.free_energy.logmfd.LogMFD_FCCUBIC.Potential_Name">Potential_Name</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.logmfd.LogMFD_FCCUBIC.melt_barrier_coeff" href="../api/#thmd.calc.free_energy.logmfd.LogMFD_FCCUBIC.melt_barrier_coeff">melt_barrier_coeff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.logmfd.LogMFD_FCCUBIC.histo_point_coeff" href="../api/#thmd.calc.free_energy.logmfd.LogMFD_FCCUBIC.histo_point_coeff">histo_point_coeff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+    </ul>
 
 
 
@@ -1879,7 +2008,7 @@ thickness       : thickness of plate</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>logmfd_files</code></b>
+            <b><code>logmfd_files</code></b>
               (<code>list[str]</code>)
           –
           <div class="doc-md-description">
@@ -1887,7 +2016,7 @@ thickness       : thickness of plate</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>replica_files</code></b>
+            <b><code>replica_files</code></b>
               (<code>list[str]</code>)
           –
           <div class="doc-md-description">
@@ -1895,7 +2024,7 @@ thickness       : thickness of plate</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>beta</code></b>
+            <b><code>beta</code></b>
               (<code>float</code>, default:
                   <code>1.0</code>
 )
@@ -1986,7 +2115,7 @@ thickness       : thickness of plate</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>MD_out_files</code></b>
+            <b><code>MD_out_files</code></b>
               (<code>list[str]</code>)
           –
           <div class="doc-md-description">
@@ -2067,14 +2196,14 @@ thickness       : thickness of plate</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>SteerMD_files</code></b>
+            <b><code>SteerMD_files</code></b>
           –
           <div class="doc-md-description">
             <p>|<code>list</code>| of "SteerMD.txt" files</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>beta</code></b>
+            <b><code>beta</code></b>
               (<code>= 1.0/(TEMP*kB</code>, default:
                   <code>1.0</code>
 )
@@ -2125,15 +2254,15 @@ thickness       : thickness of plate</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>ldf</code></b>
-              (<code>list[<span title="pandas.DataFrame">DataFrame</span>]</code>)
+            <b><code>ldf</code></b>
+              (<code>list[DataFrame]</code>)
           –
           <div class="doc-md-description">
             <p>list of <code>pd.DataFrames</code> of <code>LogMFD.out</code> files</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>mfd_interval</code></b>
+            <b><code>mfd_interval</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -2141,7 +2270,7 @@ thickness       : thickness of plate</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>hill_region</code></b>
+            <b><code>hill_region</code></b>
               (<code>1x2 list</code>, default:
                   <code>[0.2, 0.6]</code>
 )
@@ -2156,28 +2285,28 @@ thickness       : thickness of plate</p>
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>df_min_right</code></b> (              <code><span title="pandas.DataFrame">DataFrame</span></code>
+<b><code>df_min_right</code></b> (              <code>DataFrame</code>
 )          –
           <div class="doc-md-description">
             <p>DataFrame of right basin minima</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-<b><code>df_min_left</code></b> (              <code><span title="pandas.DataFrame">DataFrame</span></code>
+<b><code>df_min_left</code></b> (              <code>DataFrame</code>
 )          –
           <div class="doc-md-description">
             <p>DataFrame of left basin minima</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-<b><code>df_max</code></b> (              <code><span title="pandas.DataFrame">DataFrame</span></code>
+<b><code>df_max</code></b> (              <code>DataFrame</code>
 )          –
           <div class="doc-md-description">
             <p>DataFrame of maxima energy</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-<b><code>df_diff</code></b> (              <code><span title="pandas.DataFrame">DataFrame</span></code>
+<b><code>df_diff</code></b> (              <code>DataFrame</code>
 )          –
           <div class="doc-md-description">
             <p>DataFrame of energy difference between minima and maxima</p>
@@ -2208,6 +2337,53 @@ thickness       : thickness of plate</p>
 <a href="#thmd.calc.free_energy.TImethod" class="headerlink" title="Permanent link">&para;</a></h2>
 
     <div class="doc doc-contents first">
+
+
+
+
+
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.TImethod.AS_integration" href="../api/#thmd.calc.free_energy.TImethod.AS_integration">AS_integration</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Compute Free energy difference in TI method - Lambda integration along Adiabatic Switching path</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.TImethod.RS_integration" href="../api/#thmd.calc.free_energy.TImethod.RS_integration">RS_integration</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Compute Free energy difference in TI method - Lambda integration along Reversible Scaling path</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.TImethod.Helmholtz_excess_UF" href="../api/#thmd.calc.free_energy.TImethod.Helmholtz_excess_UF">Helmholtz_excess_UF</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>this func. is to compute the excess Helmholtz freeEnergy as Eq.(25) by R.Paula Leite 2016.</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.TImethod.kB" href="../api/#thmd.calc.free_energy.TImethod.kB">kB</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+    </ul>
 
 
 
@@ -2257,7 +2433,7 @@ thickness       : thickness of plate</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>forwFile</code></b>
+            <b><code>forwFile</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -2265,7 +2441,7 @@ thickness       : thickness of plate</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>backFile</code></b>
+            <b><code>backFile</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -2314,7 +2490,7 @@ thickness       : thickness of plate</p>
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>forwFile</code></b>
+            <b><code>forwFile</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -2322,7 +2498,7 @@ thickness       : thickness of plate</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>backFile</code></b>
+            <b><code>backFile</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -2330,7 +2506,7 @@ thickness       : thickness of plate</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>T0</code></b>
+            <b><code>T0</code></b>
               (<code>float</code>, default:
                   <code>0</code>
 )
@@ -2340,7 +2516,7 @@ thickness       : thickness of plate</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>F0</code></b>
+            <b><code>F0</code></b>
               (<code>float</code>, default:
                   <code>0</code>
 )
@@ -2350,9 +2526,9 @@ thickness       : thickness of plate</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>kB</code></b>
+            <b><code>kB</code></b>
               (<code>float</code>, default:
-                  <code><a class="autorefs autorefs-internal" title="thmd.calc.free_energy.TImethod.kB" href="../api/#thmd.calc.free_energy.TImethod.kB">kB</a></code>
+                  <code>kB</code>
 )
           –
           <div class="doc-md-description">

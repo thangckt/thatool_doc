@@ -1939,6 +1939,34 @@
 
 
 
+
+
+
+
+<p><span class="doc-section-title">Classes:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame" href="#thmd.io.traj.Frame">Frame</a></code></b>
+          –
+          <div class="doc-md-description">
+            <p>Create an Object for a single-FRAME of trajectories from MD simulation.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Traj" href="#thmd.io.traj.Traj">Traj</a></code></b>
+          –
+          <div class="doc-md-description">
+            <p>Create an Object for a multi-FRAMEs of trajectories from MD simulation.</p>
+          </div>
+        </li>
+    </ul>
+
+
+
+
+
+
+
   <div class="doc doc-children">
 
 
@@ -2000,7 +2028,7 @@
         </li>
         <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.box" href="#thmd.io.traj.Frame.box">box</a></code></b>
-              (<code><span title="numpy.array">array</span></code>)
+              (<code>array</code>)
           –
           <div class="doc-md-description">
             <p>3x2 array, the box size</p>
@@ -2008,7 +2036,7 @@
         </li>
         <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.box_angle" href="#thmd.io.traj.Frame.box_angle">box_angle</a></code></b>
-              (<code><span title="numpy.array">array</span></code>)
+              (<code>array</code>)
           –
           <div class="doc-md-description">
             <p>1x3 array, the box angle</p>
@@ -2016,7 +2044,7 @@
         </li>
         <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.atom" href="#thmd.io.traj.Frame.atom">atom</a></code></b>
-              (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+              (<code>DataFrame</code>)
           –
           <div class="doc-md-description">
             <p>DataFrame of per-atom values</p>
@@ -2032,7 +2060,7 @@
         </li>
         <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.mass" href="#thmd.io.traj.Frame.mass">mass</a></code></b>
-              (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+              (<code>DataFrame</code>)
           –
           <div class="doc-md-description">
             <p>DataFrame of per-type masses</p>
@@ -2067,7 +2095,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>dump_file</code></b>
+            <b><code>dump_file</code></b>
               (<code>str</code>, default:
                   <code>None</code>
 )
@@ -2077,7 +2105,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>data_file</code></b>
+            <b><code>data_file</code></b>
               (<code>str</code>, default:
                   <code>None</code>
 )
@@ -2087,7 +2115,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>pdb_file</code></b>
+            <b><code>pdb_file</code></b>
               (<code>str</code>, default:
                   <code>None</code>
 )
@@ -2097,7 +2125,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>xyz_file</code></b>
+            <b><code>xyz_file</code></b>
               (<code>str</code>, default:
                   <code>None</code>
 )
@@ -2107,8 +2135,8 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>from_df</code></b>
-              (<code><span title="pandas.DataFrame">DataFrame</span></code>, default:
+            <b><code>from_df</code></b>
+              (<code>DataFrame</code>, default:
                   <code>None</code>
 )
           –
@@ -2117,7 +2145,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>atom_style</code></b>
+            <b><code>atom_style</code></b>
               (<code>str</code>, default:
                   <code>&#39;auto&#39;</code>
 )
@@ -2127,7 +2155,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>box</code></b>
+            <b><code>box</code></b>
               (<code>np.array list</code>, default:
                   <code>None</code>
 )
@@ -2137,7 +2165,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>box_angle</code></b>
+            <b><code>box_angle</code></b>
               (<code>np.array list</code>, default:
                   <code>None</code>
 )
@@ -2152,7 +2180,7 @@
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>Obj</code></b> (              <code><a class="autorefs autorefs-internal" title="thmd.io.traj.md_traj.Frame" href="../api/#thmd.io.traj.md_traj.Frame">Frame</a></code>
+<b><code>Obj</code></b> (              <code>Frame</code>
 )          –
           <div class="doc-md-description">
             <p>object of trajectories</p>
@@ -2165,6 +2193,225 @@
   <summary>Notes</summary>
   <p>Use mutator, so do not use self.* when define value</p>
 </details>
+
+
+
+
+
+
+
+
+<p><span class="doc-section-title">Methods:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.create_DATA" href="#thmd.io.traj.Frame.create_DATA">create_DATA</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The method to create new FRAME object with input data.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.copy" href="#thmd.io.traj.Frame.copy">copy</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The method to make an indepedent copy of Frame Obj. Then, the change values of the fields of the new object, the old object should not be affected by that.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.check_exist" href="#thmd.io.traj.Frame.check_exist">check_exist</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The method to check whether something is existed in system or not.</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.filename" href="#thmd.io.traj.Frame.filename">filename</a></code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.timestep" href="#thmd.io.traj.Frame.timestep">timestep</a></code></b>
+              (<code>int</code>)
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.decimals" href="#thmd.io.traj.Frame.decimals">decimals</a></code></b>
+              (<code>int</code>)
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.box" href="#thmd.io.traj.Frame.box">box</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.box_angle" href="#thmd.io.traj.Frame.box_angle">box_angle</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.prop_key" href="#thmd.io.traj.Frame.prop_key">prop_key</a></code></b>
+              (<code>list[str]</code>)
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.atom" href="#thmd.io.traj.Frame.atom">atom</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.mass" href="#thmd.io.traj.Frame.mass">mass</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.pair_coeff" href="#thmd.io.traj.Frame.pair_coeff">pair_coeff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.bond_coeff" href="#thmd.io.traj.Frame.bond_coeff">bond_coeff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.angle_coeff" href="#thmd.io.traj.Frame.angle_coeff">angle_coeff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.dihedral_coeff" href="#thmd.io.traj.Frame.dihedral_coeff">dihedral_coeff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.improper_coeff" href="#thmd.io.traj.Frame.improper_coeff">improper_coeff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.bondBond_coeff" href="#thmd.io.traj.Frame.bondBond_coeff">bondBond_coeff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.bondAngle_coeff" href="#thmd.io.traj.Frame.bondAngle_coeff">bondAngle_coeff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.middleBondTorsion_coeff" href="#thmd.io.traj.Frame.middleBondTorsion_coeff">middleBondTorsion_coeff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.endBondTorsion_coeff" href="#thmd.io.traj.Frame.endBondTorsion_coeff">endBondTorsion_coeff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.angleTorsion_coeff" href="#thmd.io.traj.Frame.angleTorsion_coeff">angleTorsion_coeff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.angleAngleTorsion_coeff" href="#thmd.io.traj.Frame.angleAngleTorsion_coeff">angleAngleTorsion_coeff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.bondBond13_coeff" href="#thmd.io.traj.Frame.bondBond13_coeff">bondBond13_coeff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.angleAngle_coeff" href="#thmd.io.traj.Frame.angleAngle_coeff">angleAngle_coeff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.bond" href="#thmd.io.traj.Frame.bond">bond</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.angle" href="#thmd.io.traj.Frame.angle">angle</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.dihedral" href="#thmd.io.traj.Frame.dihedral">dihedral</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Frame.improper" href="#thmd.io.traj.Frame.improper">improper</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+    </ul>
+
 
 
 
@@ -2670,16 +2917,16 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>DataFrame</code></b>
-              (<code><span title="pandas.DataFrame">DataFrame</span></code>)
+            <b><code>DataFrame</code></b>
+              (<code>DataFrame</code>)
           –
           <div class="doc-md-description">
             <p>of input data</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>box</code></b>
-              (<code><span title="numpy.array">array</span></code>, default:
+            <b><code>box</code></b>
+              (<code>array</code>, default:
                   <code>None</code>
 )
           –
@@ -2688,8 +2935,8 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>box_angle</code></b>
-              (<code><span title="numpy.array">array</span></code>, default:
+            <b><code>box_angle</code></b>
+              (<code>array</code>, default:
                   <code>None</code>
 )
           –
@@ -2703,7 +2950,7 @@
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>Obj</code></b> (              <code><a class="autorefs autorefs-internal" title="thmd.io.traj.md_traj.Frame" href="../api/#thmd.io.traj.md_traj.Frame">Frame</a></code>
+<b><code>Obj</code></b> (              <code>Frame</code>
 )          –
           <div class="doc-md-description">
             <p>update Frame</p>
@@ -2740,7 +2987,7 @@
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>Obj</code></b> (              <code><a class="autorefs autorefs-internal" title="thmd.io.traj.md_traj.Frame" href="../api/#thmd.io.traj.md_traj.Frame">Frame</a></code>
+<b><code>Obj</code></b> (              <code>Frame</code>
 )          –
           <div class="doc-md-description">
             <p>new Frame Obj.</p>
@@ -2776,7 +3023,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>atom_types</code></b>
+            <b><code>atom_types</code></b>
               (<code>list</code>, default:
                   <code>None</code>
 )
@@ -2786,7 +3033,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code>mass_types</code></b>
+            <b><code>mass_types</code></b>
               (<code>list</code>, default:
                   <code>None</code>
 )
@@ -2857,6 +3104,40 @@
 
 
 
+
+
+
+
+
+<p><span class="doc-section-title">Methods:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Traj.readXYZ" href="#thmd.io.traj.Traj.readXYZ">readXYZ</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The <strong>method</strong> create Multi-FRAME object by reading XYZ file.</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="thmd.io.traj.Traj.decimals" href="#thmd.io.traj.Traj.decimals">decimals</a></code></b>
+              (<code>int</code>)
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+    </ul>
+
+
+
+
   <div class="doc doc-children">
 
 
@@ -2903,7 +3184,7 @@
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code>filename</code></b>
+            <b><code>filename</code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
