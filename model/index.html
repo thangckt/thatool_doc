@@ -2717,7 +2717,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-<b><code>box</code></b> (              <code>array</code>
+<b><code>box</code></b> (              <code><span title="numpy.array">array</span></code>
 )          –
           <div class="doc-md-description">
             <p>Simulation box</p>
@@ -2898,7 +2898,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-<b><code>box</code></b> (              <code>array</code>
+<b><code>box</code></b> (              <code><span title="numpy.array">array</span></code>
 )          –
           <div class="doc-md-description">
             <p>Simulation box</p>
@@ -3055,21 +3055,21 @@
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>points</code></b> (              <code>array</code>
+<b><code>points</code></b> (              <code><span title="numpy.array">array</span></code>
 )          –
           <div class="doc-md-description">
             <p>Nx3 array contain positions of atoms.</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-<b><code>box</code></b> (              <code>array</code>
+<b><code>box</code></b> (              <code><span title="numpy.array">array</span></code>
 )          –
           <div class="doc-md-description">
             <p>3x2 array contain size of box contain lattice ([[xlo, xhi], [ylo, yhi], [zlo, zhi]])</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-<b><code>unit_box</code></b> (              <code>array</code>
+<b><code>unit_box</code></b> (              <code><span title="numpy.array">array</span></code>
 )          –
           <div class="doc-md-description">
             <p>3x2 array contain size of unit cell</p>
@@ -3149,21 +3149,21 @@
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>points</code></b> (              <code>array</code>
+<b><code>points</code></b> (              <code><span title="numpy.array">array</span></code>
 )          –
           <div class="doc-md-description">
             <p>Nx3 array contain positions of atoms.</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-<b><code>box</code></b> (              <code>array</code>
+<b><code>box</code></b> (              <code><span title="numpy.array">array</span></code>
 )          –
           <div class="doc-md-description">
             <p>3x2 array contain size of box contain lattice ([[xlo, xhi], [ylo, yhi], [zlo, zhi]])</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-<b><code>unit_box</code></b> (              <code>array</code>
+<b><code>unit_box</code></b> (              <code><span title="numpy.array">array</span></code>
 )          –
           <div class="doc-md-description">
             <p>3x2 array contain size of unit cell</p>
@@ -3315,7 +3315,7 @@ By Thang, June 2019 (update 2022)</p>
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>df</code></b> (              <code>DataFrame</code>
+<b><code>df</code></b> (              <code><span title="pandas.DataFrame">DataFrame</span></code>
 )          –
           <div class="doc-md-description">
             <p>contains original atoms and image atoms with remark colum df['image'].</p>
@@ -3383,7 +3383,7 @@ By Thang, June 2019 (update 2022)</p>
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>df</code></b> (              <code>DataFrame</code>
+<b><code>df</code></b> (              <code><span title="pandas.DataFrame">DataFrame</span></code>
 )          –
           <div class="doc-md-description">
             <p>contains atom positions.</p>
@@ -3773,7 +3773,7 @@ PMMA/h_BN interface
     <ul>
         <li class="doc-section-item field-body">
             <b><code>old_orient</code></b>
-              (<code>array / list</code>, default:
+              (<code><span title="numpy.array">array</span> / list</code>, default:
                   <code>[[1, 0, 0], [0, 1, 0], [0, 0, 1]]</code>
 )
           –
@@ -3783,7 +3783,7 @@ PMMA/h_BN interface
         </li>
         <li class="doc-section-item field-body">
             <b><code>new_orient</code></b>
-              (<code>array / list</code>, default:
+              (<code><span title="numpy.array">array</span> / list</code>, default:
                   <code>[[1, 0, 0], [0, 1, 0], [0, 0, 1]]</code>
 )
           –
@@ -4119,7 +4119,7 @@ This is just for testing, since we dont know whether input angles yield orthogon
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>Q</code></b> (              <code>array</code>
+<b><code>Q</code></b> (              <code><span title="numpy.array">array</span></code>
 )          –
           <div class="doc-md-description">
             <p>3x3 array, the rotation matrix or matrix of direction cosines</p>
@@ -4427,7 +4427,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
     <ul>
         <li class="doc-section-item field-body">
             <b><code>xyz</code></b>
-              (<code>array</code>)
+              (<code><span title="numpy.array">array</span></code>)
           –
           <div class="doc-md-description">
             <p>Mx3 array contain Cartesian coordinates (X, Y, Z)</p>
@@ -4439,7 +4439,7 @@ phi,theta,psi = BT.EulerAngle(unit='deg')</p>
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>shpCoord</code></b> (              <code>array</code>
+<b><code>shpCoord</code></b> (              <code><span title="numpy.array">array</span></code>
 )          –
           <div class="doc-md-description">
             <p>Mx3 array contain Spherical coordinates (R, theta, phi). Also (radial distance, polar angle, azimuthal(longitude) angle)</p>
@@ -5399,7 +5399,7 @@ ef_using_mBuild_foyer.ipynb</p>
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>chain</code></b> (              <code>compound</code>
+<b><code>chain</code></b> (              <code><span title="mb.compound">compound</span></code>
 )          –
           <div class="doc-md-description">
             <p>polymer chain</p>
@@ -5445,7 +5445,7 @@ Packing based on either density or box_size.</p>
     <ul>
         <li class="doc-section-item field-body">
             <b><code>chain</code></b>
-              (<code>compound</code>)
+              (<code><span title="mb.compound">compound</span></code>)
           –
           <div class="doc-md-description">
             <p>polymer chain</p>
